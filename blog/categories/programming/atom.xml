@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
 
-  <title><![CDATA[Category: noise | some guy on the Internet]]></title>
-  <link href="http://someguyontheinter.net/blog/categories/noise/atom.xml" rel="self"/>
+  <title><![CDATA[Category: programming | some guy on the Internet]]></title>
+  <link href="http://someguyontheinter.net/blog/categories/programming/atom.xml" rel="self"/>
   <link href="http://someguyontheinter.net/"/>
   <updated>2014-03-30T18:48:07-04:00</updated>
   <id>http://someguyontheinter.net/</id>
@@ -39,47 +39,6 @@
 <p>-steve</p>
 
 <p>P.S. And of course, the section on swearing made me think of <a href="https://web.archive.org/web/20060529181955/http://blog.airdrop.org/archives/000014.html">The Terrible Mr. Grimshaw</a> (audio, NSFW).  Hooray once again for <a href="https://archive.org">archive.org</a>!</p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Hello World]]></title>
-    <link href="http://someguyontheinter.net/blog/hello-world/"/>
-    <updated>2014-03-30T12:43:50-04:00</updated>
-    <id>http://someguyontheinter.net/blog/hello-world</id>
-    <content type="html"><![CDATA[<p>Apparently it is high time I had an actual blog.</p>
-
-<!-- more -->
-
-
-<h2>How The Sausage Is Made</h2>
-
-<p>This blog is written, generated, and published via the following stack:</p>
-
-<ul>
-<li><a href="http://www.vim.org">Vim</a>
-
-<ul>
-<li><a href="https://github.com/plasticboy/vim-markdown">vim-markdown</a></li>
-<li><a href="https://github.com/tpope/vim-git">vim-git</a></li>
-<li><a href="https://github.com/scrooloose/vim-fugitive">fugitive</a></li>
-</ul>
-</li>
-<li><a href="http://octopress.org">Octopress</a>
-
-<ul>
-<li><a href="https://github.com/erikzaadi/solarized-octopress-theme">Solarized Octopress Theme</a></li>
-</ul>
-</li>
-<li><a href="https://aws.amazon.com/s3">AWS S3</a>
-
-<ul>
-<li><a href="https://aws.amazon.com/cloudfront">AWS CloudFront</a></li>
-<li><a href="https://github.com/laurilehmijoki/s3_website">s3_website</a></li>
-</ul>
-</li>
-</ul>
-
 ]]></content>
   </entry>
   
