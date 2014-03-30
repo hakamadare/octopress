@@ -8,6 +8,8 @@ categories: noise, tools
 
 Apparently it is high time I had an actual blog.
 
+<!-- more -->
+
 ## How The Sausage Is Made
 
 This blog is written, generated, and published via the following stack:
