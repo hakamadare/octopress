@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
 
-  <title><![CDATA[Category: noise, | some guy on the Internet]]></title>
+  <title><![CDATA[Category: noise | some guy on the Internet]]></title>
   <link href="http://someguyontheinter.net/blog/categories/noise/atom.xml" rel="self"/>
   <link href="http://someguyontheinter.net/"/>
-  <updated>2014-03-30T14:05:50-04:00</updated>
+  <updated>2014-03-30T14:14:17-04:00</updated>
   <id>http://someguyontheinter.net/</id>
   <author>
     <name><![CDATA[Steve Huff]]></name>
