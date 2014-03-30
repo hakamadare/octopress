@@ -3,7 +3,7 @@ layout: post
 title: "Hello World"
 date: 2014-03-30 12:43:50 -0400
 comments: true
-categories: noise, tools
+categories: noise tools
 ---
 
 Apparently it is high time I had an actual blog.
