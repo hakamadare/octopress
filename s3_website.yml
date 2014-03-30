@@ -7,3 +7,8 @@ gzip_zopfli: true
 s3_reduced_redundancy: true
 cloudfront_invalidate_root: true
 cloudfront_distribution_id: E37J0D59XZB9ZC
+cloudfront_distribution_config:
+  aliases:
+    quantity: 1
+    items:
+      CNAME: someguyontheinter.net
