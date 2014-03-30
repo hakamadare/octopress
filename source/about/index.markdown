@@ -11,7 +11,6 @@ Hi folks!  I'm Steve Huff; I work for [RunKeeper](http://runkeeper.com) as a Dev
 Let's see how many links I can come up with:
 
 * [GitHub](https://github.com/hakamadare)
-* [Puppet Forge](
 * [CPAN](https://metacpan.org/author/SHUFF)
 * [Twitter](https://twitter.com/hakamadare)
 * [Open Source Report Card](http://osrc.dfm.io/hakamadare)
