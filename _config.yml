@@ -72,7 +72,7 @@ encoding: utf-8
 
 # Github repositories
 github_user: hakamadare
-github_repo_count: 0
+github_repo_count: 5
 github_show_profile_link: true
 github_skip_forks: true
 
