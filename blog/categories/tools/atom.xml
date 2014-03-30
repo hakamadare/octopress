@@ -4,7 +4,7 @@
   <title><![CDATA[Category: tools | some guy on the Internet]]></title>
   <link href="http://someguyontheinter.net/blog/categories/tools/atom.xml" rel="self"/>
   <link href="http://someguyontheinter.net/"/>
-  <updated>2014-03-30T13:00:47-04:00</updated>
+  <updated>2014-03-30T14:05:50-04:00</updated>
   <id>http://someguyontheinter.net/</id>
   <author>
     <name><![CDATA[Steve Huff]]></name>
@@ -19,6 +19,9 @@
     <updated>2014-03-30T12:43:50-04:00</updated>
     <id>http://someguyontheinter.net/blog/hello-world</id>
     <content type="html"><![CDATA[<p>Apparently it is high time I had an actual blog.</p>
+
+<!-- more -->
+
 
 <h2>How The Sausage Is Made</h2>
 
