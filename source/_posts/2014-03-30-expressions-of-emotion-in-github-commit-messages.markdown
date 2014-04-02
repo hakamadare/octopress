@@ -19,7 +19,7 @@ It is exactly what it sounds like; NLP plus stats plus the GitHub datastream.  S
 * "lol, I dunno what I'm doing (JavaScript)"
 * "Still, I'm a bit surprised of the result, not because Perl is the winner, but because PHP does not seem to surprise people that often, which does not reflect my experience with this language at all."
 
-Seriously, just go read it.
+Seriously, just go read it.  It's awesome.
 
 -steve
 
