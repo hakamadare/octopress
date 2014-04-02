@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
 
-  <title><![CDATA[some guy on the Internet]]></title>
-  <link href="http://someguyontheinter.net/atom.xml" rel="self"/>
+  <title><![CDATA[Category: work | some guy on the Internet]]></title>
+  <link href="http://someguyontheinter.net/blog/categories/work/atom.xml" rel="self"/>
   <link href="http://someguyontheinter.net/"/>
   <updated>2014-04-01T23:50:57-04:00</updated>
   <id>http://someguyontheinter.net/</id>
@@ -20,7 +20,7 @@
     <id>http://someguyontheinter.net/blog/first-day-at-runkeeper</id>
     <content type="html"><![CDATA[<p>I&rsquo;m winding down at the end of my first day at <a href="http://runkeeper.com">RunKeeper</a>, and I&rsquo;m still walking on air :)  Today started with me apparently being a bit jittery while shaving this morning:</p>
 
-<p><img class="center" src="http://someguyontheinter.net/images/shaving_cuts.jpg" width="240" height="320" title="&#34;ouch&#34;" alt="&#34;ouch&#34;"></p>
+<p><img class="center" src="/images/shaving_cuts.jpg" width="240" height="320" title="&ldquo;ouch&rdquo;" ></p>
 
 <p>and ended with me running (while wearing <a href="http://www.amazon.com/Sanita-457806M-20-Professional-Cabrio-Clog/dp/B001CWYZME">clogs</a>, ow) to North Station to catch the commuter rail, and today was STILL awesome.</p>
 
@@ -52,76 +52,6 @@
 <p>-steve</p>
 
 <p>P.S. Oh right, I had also stumbled belatedly onto this Garamond silliness via <a href="http://www.thomasphinney.com/2014/03/saving-400m-font/">this excellent refutation</a>.  My only contribution to the debate, such as it is, is to suggest that Garamond is weaksauce and that real toner-savers use <a href="http://ecofont.com/">Ecofont</a>.</p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Exploring Expressions of Emotion in GitHub Commit Messages]]></title>
-    <link href="http://someguyontheinter.net/blog/expressions-of-emotion-in-github-commit-messages/"/>
-    <updated>2014-03-30T18:30:53-04:00</updated>
-    <id>http://someguyontheinter.net/blog/expressions-of-emotion-in-github-commit-messages</id>
-    <content type="html"><![CDATA[<p>I&rsquo;m mad with power!  I have <a href="http://docs.aws.amazon.com/AmazonCloudFront/latest/APIReference/">CloudFront API access</a> and I&rsquo;m not afraid to use it!  I sound my <a href="https://en.wikipedia.org/wiki/Song_of_Myself">barbaric yawp</a> over the roofs of the world!</p>
-
-<p>Reading the documentation for the <a href="http://osrc.dfm.io/">Open Source Report Card</a> led me to the following gem:</p>
-
-<h3><a href="http://geeksta.net/geeklog/exploring-expressions-emotions-github-commit-messages/">Exploring Expressions of Emotion in GitHub Commit Messages</a></h3>
-
-<p>It is exactly what it sounds like; NLP plus stats plus the GitHub datastream.  Some of my favorite bits:</p>
-
-<ul>
-<li>&ldquo;What stands out in the anger chart compared to the rest is the prominent gap between the &#8220;most angry language&rdquo; VimL and the other languages.&#8221;</li>
-<li>&ldquo;regexes are fun and pleasant to work with, in the same way that oranges are purple&rdquo;</li>
-<li>&ldquo;lol, I dunno what I&rsquo;m doing (JavaScript)&rdquo;</li>
-<li>&ldquo;Still, I&rsquo;m a bit surprised of the result, not because Perl is the winner, but because PHP does not seem to surprise people that often, which does not reflect my experience with this language at all.&rdquo;</li>
-</ul>
-
-
-<p>Seriously, just go read it.</p>
-
-<p>-steve</p>
-
-<p>P.S. And of course, the section on swearing made me think of <a href="https://web.archive.org/web/20060529181955/http://blog.airdrop.org/archives/000014.html">The Terrible Mr. Grimshaw</a> (audio, NSFW).  Hooray once again for <a href="https://archive.org">archive.org</a>!</p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Hello World]]></title>
-    <link href="http://someguyontheinter.net/blog/hello-world/"/>
-    <updated>2014-03-30T12:43:50-04:00</updated>
-    <id>http://someguyontheinter.net/blog/hello-world</id>
-    <content type="html"><![CDATA[<p>Apparently it is high time I had an actual blog.</p>
-
-<!-- more -->
-
-
-<h2>How The Sausage Is Made</h2>
-
-<p>This blog is written, generated, and published via the following stack:</p>
-
-<ul>
-<li><a href="http://www.vim.org">Vim</a>
-
-<ul>
-<li><a href="https://github.com/plasticboy/vim-markdown">vim-markdown</a></li>
-<li><a href="https://github.com/tpope/vim-git">vim-git</a></li>
-<li><a href="https://github.com/scrooloose/vim-fugitive">fugitive</a></li>
-</ul>
-</li>
-<li><a href="http://octopress.org">Octopress</a>
-
-<ul>
-<li><a href="https://github.com/erikzaadi/solarized-octopress-theme">Solarized Octopress Theme</a></li>
-</ul>
-</li>
-<li><a href="https://aws.amazon.com/s3">AWS S3</a>
-
-<ul>
-<li><a href="https://aws.amazon.com/cloudfront">AWS CloudFront</a></li>
-<li><a href="https://github.com/laurilehmijoki/s3_website">s3_website</a></li>
-</ul>
-</li>
-</ul>
-
 ]]></content>
   </entry>
   
