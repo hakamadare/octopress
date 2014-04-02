@@ -24,3 +24,4 @@ Seriously, just go read it.
 -steve
 
 P.S. And of course, the section on swearing made me think of [The Terrible Mr. Grimshaw](https://web.archive.org/web/20060529181955/http://blog.airdrop.org/archives/000014.html) (audio, NSFW).  Hooray once again for [archive.org](https://archive.org)!
+
