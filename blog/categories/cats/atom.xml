@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
 
-  <title><![CDATA[Category: tools | some guy on the Internet]]></title>
-  <link href="http://someguyontheinter.net/blog/categories/tools/atom.xml" rel="self"/>
+  <title><![CDATA[Category: cats | some guy on the Internet]]></title>
+  <link href="http://someguyontheinter.net/blog/categories/cats/atom.xml" rel="self"/>
   <link href="http://someguyontheinter.net/"/>
   <updated>2014-04-02T20:42:34-04:00</updated>
   <id>http://someguyontheinter.net/</id>
@@ -29,47 +29,6 @@
 <p>Earlier today I had been adding Vim plugins to my dotfiles repository, pulling them in as <a href="http://git-scm.com/docs/git-submodule">Git submodules</a> for use with <a href="https://github.com/tpope/vim-pathogen">Pathogen</a>.  I installed a couple of plugins and then generated the Vim help tags for them, which led to a minor unsightliness when the generated tags file showed up as untracked changes in my dotfiles directory.</p>
 
 <p><a href="https://github.com/tpope">Tim Pope</a> suggests working around this problem by setting a <a href="http://git-scm.com/docs/gitignore">global excludes file</a>, but I am vaguely concerned that this will just create a landmine that I will step on at some future time when I want to be capturing some entirely unrelated file called <code>tags</code>.  Instead I discovered that <a href="http://www.nils-haldenwang.de/frameworks-and-tools/git/how-to-ignore-changes-in-git-submodules">this fellow has the exact same problem</a>, and his solution works great for me.  Thanks, Nils!</p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Hello World]]></title>
-    <link href="http://someguyontheinter.net/blog/hello-world/"/>
-    <updated>2014-03-30T12:43:50-04:00</updated>
-    <id>http://someguyontheinter.net/blog/hello-world</id>
-    <content type="html"><![CDATA[<p>Apparently it is high time I had an actual blog.</p>
-
-<!-- more -->
-
-
-<h2>How The Sausage Is Made</h2>
-
-<p>This blog is written, generated, and published via the following stack:</p>
-
-<ul>
-<li><a href="http://www.vim.org">Vim</a>
-
-<ul>
-<li><a href="https://github.com/plasticboy/vim-markdown">vim-markdown</a></li>
-<li><a href="https://github.com/tpope/vim-git">vim-git</a></li>
-<li><a href="https://github.com/scrooloose/vim-fugitive">fugitive</a></li>
-</ul>
-</li>
-<li><a href="http://octopress.org">Octopress</a>
-
-<ul>
-<li><a href="https://github.com/erikzaadi/solarized-octopress-theme">Solarized Octopress Theme</a></li>
-</ul>
-</li>
-<li><a href="https://aws.amazon.com/s3">AWS S3</a>
-
-<ul>
-<li><a href="https://aws.amazon.com/cloudfront">AWS CloudFront</a></li>
-<li><a href="https://github.com/laurilehmijoki/s3_website">s3_website</a></li>
-</ul>
-</li>
-</ul>
-
 ]]></content>
   </entry>
   

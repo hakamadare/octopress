@@ -4,7 +4,7 @@
   <title><![CDATA[Category: programming | some guy on the Internet]]></title>
   <link href="http://someguyontheinter.net/blog/categories/programming/atom.xml" rel="self"/>
   <link href="http://someguyontheinter.net/"/>
-  <updated>2014-04-02T19:29:19-04:00</updated>
+  <updated>2014-04-02T20:42:34-04:00</updated>
   <id>http://someguyontheinter.net/</id>
   <author>
     <name><![CDATA[Steve Huff]]></name>
@@ -12,6 +12,25 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[You Had One Job]]></title>
+    <link href="http://someguyontheinter.net/blog/you-had-one-job/"/>
+    <updated>2014-04-02T20:06:13-04:00</updated>
+    <id>http://someguyontheinter.net/blog/you-had-one-job</id>
+    <content type="html"><![CDATA[<p>On the way home today I encountered one of our housemates, also homeward bound, and as we came in the front door I was chattering happily about my second day at work.  I have tasks!  Tasks that I can perform!  This is really exciting.</p>
+
+<p>I was, however, interrupted mid-sentence by a crash from the hallway, where Elijah (one of our cats) had knocked a box of tissues from the shelf to the floor.  He was standing by it staring at me, and I got the distinct sense that this was a warning shot across my bows, indicating that I should shut up about trivialities and focus on the much more important topic of his dinner.</p>
+
+<p><img class="center" src="images/one_job.jpg" width="746" height="550" title="&ldquo;you had one job&rdquo;" ></p>
+
+<h3>Vim, Pathogen, and dirty submodules</h3>
+
+<p>Earlier today I had been adding Vim plugins to my dotfiles repository, pulling them in as <a href="http://git-scm.com/docs/git-submodule">Git submodules</a> for use with <a href="https://github.com/tpope/vim-pathogen">Pathogen</a>.  I installed a couple of plugins and then generated the Vim help tags for them, which led to a minor unsightliness when the generated tags file showed up as untracked changes in my dotfiles directory.</p>
+
+<p><a href="https://github.com/tpope">Tim Pope</a> suggests working around this problem by setting a <a href="http://git-scm.com/docs/gitignore">global excludes file</a>, but I am vaguely concerned that this will just create a landmine that I will step on at some future time when I want to be capturing some entirely unrelated file called <code>tags</code>.  Instead I discovered that <a href="http://www.nils-haldenwang.de/frameworks-and-tools/git/how-to-ignore-changes-in-git-submodules">this fellow has the exact same problem</a>, and his solution works great for me.  Thanks, Nils!</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Exploring Expressions of Emotion in GitHub Commit Messages]]></title>
