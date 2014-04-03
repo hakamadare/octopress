@@ -16,3 +16,5 @@ I was, however, interrupted mid-sentence by a crash from the hallway, where Elij
 Earlier today I had been adding Vim plugins to my dotfiles repository, pulling them in as [Git submodules](http://git-scm.com/docs/git-submodule) for use with [Pathogen](https://github.com/tpope/vim-pathogen).  I installed a couple of plugins and then generated the Vim help tags for them, which led to a minor unsightliness when the generated tags file showed up as untracked changes in my dotfiles directory.
 
 [Tim Pope](https://github.com/tpope) suggests working around this problem by setting a [global excludes file](http://git-scm.com/docs/gitignore), but I am vaguely concerned that this will just create a landmine that I will step on at some future time when I want to be capturing some entirely unrelated file called `tags`.  Instead I discovered that [this fellow has the exact same problem](http://www.nils-haldenwang.de/frameworks-and-tools/git/how-to-ignore-changes-in-git-submodules), and his solution works great for me.  Thanks, Nils!
+
+-steve
