@@ -4,7 +4,7 @@
   <title><![CDATA[Category: noise | some guy on the Internet]]></title>
   <link href="http://someguyontheinter.net/blog/categories/noise/atom.xml" rel="self"/>
   <link href="http://someguyontheinter.net/"/>
-  <updated>2014-04-03T21:40:48-04:00</updated>
+  <updated>2014-04-03T21:43:25-04:00</updated>
   <id>http://someguyontheinter.net/</id>
   <author>
     <name><![CDATA[Steve Huff]]></name>
@@ -29,10 +29,10 @@
   </entry>
   
   <entry>
-    <title type="html"><![CDATA[Exploring Expressions of Emotion in GitHub Commit Messages]]></title>
-    <link href="http://someguyontheinter.net/blog/exploring-expressions-of-emotion-in-github-commit-messages/"/>
+    <title type="html"><![CDATA[GitHub Commit Messages]]></title>
+    <link href="http://someguyontheinter.net/blog/github-commit-messages/"/>
     <updated>2014-03-30T18:30:53-04:00</updated>
-    <id>http://someguyontheinter.net/blog/exploring-expressions-of-emotion-in-github-commit-messages</id>
+    <id>http://someguyontheinter.net/blog/github-commit-messages</id>
     <content type="html"><![CDATA[<p>I&rsquo;m mad with power!  I have <a href="http://docs.aws.amazon.com/AmazonCloudFront/latest/APIReference/">CloudFront API access</a> and I&rsquo;m not afraid to use it!  I sound my <a href="https://en.wikipedia.org/wiki/Song_of_Myself">barbaric yawp</a> over the roofs of the world!</p>
 
 <p>Reading the documentation for the <a href="http://osrc.dfm.io/">Open Source Report Card</a> led me to the following gem:</p>
