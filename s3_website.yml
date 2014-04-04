@@ -13,4 +13,4 @@ cloudfront_distribution_config:
     items:
       CNAME: someguyontheinter.net
 exclude_from_upload:
-  - .git
+  - \.git
