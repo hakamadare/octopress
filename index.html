@@ -9,7 +9,7 @@
   <meta name="author" content="Steve Huff">
 
   
-  <meta name="description" content="First off, hooray for the MBTA&rsquo;s commuter rail WiFi, which enabled me to both catch my train home and also pay attention to an issue at work &hellip;">
+  <meta name="description" content="OK, one more quick thing: I knew from the get-go that I wanted to host this blog on S3, and that I wanted to build it with Octopress. One relatively &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -82,6 +82,62 @@
     <div id="content">
       <div class="blog-index">
   
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/octopress/">Octopress, S3, and File Exclusion</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2014-04-03T21:49:10-04:00" pubdate data-updated="true">Apr 3<span>rd</span>, 2014</time>
+        
+         | <a href="/blog/octopress/#disqus_thread">Comments</a>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>OK, one more quick thing:</p>
+
+<p>I knew from the get-go that I wanted to host this blog on <a href="https://aws.amazon.com/s3/">S3</a>, and that I wanted to build it with <a href="http://octopress.org/">Octopress</a>.  One relatively minor conflict between these two tools, though, is that S3 buckets work well for hosting static sites, but Octopress is built on top of Git, and I was sure I didn&rsquo;t want to be uploading my Git metadata to S3.</p>
+
+<p><a href="https://github.com/laurilehmijoki/s3_website">s3_website</a> is the tool I&rsquo;m using to push my generated site to S3.  It has a config option, <code>exclude_from_upload</code>, which enables you to specify one or more regexes to match files to be excluded from S3 uploads.</p>
+
+<blockquote><p>Some people, when confronted with a problem, think &#8220;I know, I&#8217;ll use regular expressions.&#8221; Now they have two problems.</p><footer><strong>Jamie Zawinski</strong> <cite><a href='http://www.jwz.org/hacks'>www.jwz.org/hacks/&hellip;</a></cite></footer></blockquote>
+
+
+<p>Yeah, it turns out that putting the string <code>.git</code> in my excludes list (instead of <code>\.git</code>) broke a variety of things on the site, including but not limited to the following:</p>
+
+<ul>
+<li>my GitHub status in the sidebar</li>
+<li>a post with &ldquo;GitHub&rdquo; in the title</li>
+<li>Disqus comment counts</li>
+</ul>
+
+
+<p>So yeah, don&rsquo;t do that.</p>
+</div>
+  
+  
+
+
+    </article>
   
   
     <article>
@@ -363,6 +419,10 @@
   <ul id="recent_posts">
     
       <li class="post">
+        <a href="/blog/octopress/">Octopress, S3, and file exclusion</a>
+      </li>
+    
+      <li class="post">
         <a href="/blog/sic-transit-gloria-mundi/">Sic Transit Gloria Mundi</a>
       </li>
     
@@ -376,10 +436,6 @@
     
       <li class="post">
         <a href="/blog/github-commit-messages/">GitHub Commit Messages</a>
-      </li>
-    
-      <li class="post">
-        <a href="/blog/hello-world/">Hello World</a>
       </li>
     
   </ul>

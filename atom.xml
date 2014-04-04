@@ -4,7 +4,7 @@
   <title><![CDATA[some guy on the Internet]]></title>
   <link href="http://someguyontheinter.net/atom.xml" rel="self"/>
   <link href="http://someguyontheinter.net/"/>
-  <updated>2014-04-03T21:43:25-04:00</updated>
+  <updated>2014-04-03T22:09:02-04:00</updated>
   <id>http://someguyontheinter.net/</id>
   <author>
     <name><![CDATA[Steve Huff]]></name>
@@ -12,6 +12,33 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Octopress, S3, and file exclusion]]></title>
+    <link href="http://someguyontheinter.net/blog/octopress/"/>
+    <updated>2014-04-03T21:49:10-04:00</updated>
+    <id>http://someguyontheinter.net/blog/octopress</id>
+    <content type="html"><![CDATA[<p>OK, one more quick thing:</p>
+
+<p>I knew from the get-go that I wanted to host this blog on <a href="https://aws.amazon.com/s3/">S3</a>, and that I wanted to build it with <a href="http://octopress.org/">Octopress</a>.  One relatively minor conflict between these two tools, though, is that S3 buckets work well for hosting static sites, but Octopress is built on top of Git, and I was sure I didn&rsquo;t want to be uploading my Git metadata to S3.</p>
+
+<p><a href="https://github.com/laurilehmijoki/s3_website">s3_website</a> is the tool I&rsquo;m using to push my generated site to S3.  It has a config option, <code>exclude_from_upload</code>, which enables you to specify one or more regexes to match files to be excluded from S3 uploads.</p>
+
+<blockquote><p>Some people, when confronted with a problem, think &#8220;I know, I&#8217;ll use regular expressions.&#8221; Now they have two problems.</p><footer><strong>Jamie Zawinski</strong> <cite><a href='http://www.jwz.org/hacks'>www.jwz.org/hacks/&hellip;</a></cite></footer></blockquote>
+
+
+<p>Yeah, it turns out that putting the string <code>.git</code> in my excludes list (instead of <code>\.git</code>) broke a variety of things on the site, including but not limited to the following:</p>
+
+<ul>
+<li>my GitHub status in the sidebar</li>
+<li>a post with &ldquo;GitHub&rdquo; in the title</li>
+<li>Disqus comment counts</li>
+</ul>
+
+
+<p>So yeah, don&rsquo;t do that.</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Sic Transit Gloria Mundi]]></title>

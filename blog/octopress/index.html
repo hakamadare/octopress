@@ -5,11 +5,11 @@
 <!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
 <head>
   <meta charset="utf-8">
-  <title>About Me - some guy on the Internet</title>
+  <title>Octopress, S3, and file exclusion - some guy on the Internet</title>
   <meta name="author" content="Steve Huff">
 
   
-  <meta name="description" content="About Me Mar 30th, 2014 Hi folks! I&rsquo;m Steve Huff; I work for RunKeeper as a DevOps Engineer. Let&rsquo;s see how many links I can come up with &hellip;">
+  <meta name="description" content="OK, one more quick thing: I knew from the get-go that I wanted to host this blog on S3, and that I wanted to build it with Octopress. One relatively &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -18,7 +18,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   
-  <link rel="canonical" href="http://someguyontheinter.net/about/">
+  <link rel="canonical" href="http://someguyontheinter.net/blog/octopress/">
   <link href="/favicon.png" rel="icon">
   <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
   <script src="/javascripts/modernizr-2.0.js"></script>
@@ -81,11 +81,15 @@
   <div id="main">
     <div id="content">
       <div>
-<article role="article">
+<article class="hentry" role="article">
   
   <header>
-    <h1 class="entry-title">About Me</h1>
-    <p class="meta">
+    
+      <h1 class="entry-title">Octopress, S3, and File Exclusion</h1>
+    
+    
+      <p class="meta">
+        
 
 
 
@@ -97,46 +101,71 @@
   
 
 
-<time datetime="2014-03-30T17:02:00-04:00" pubdate data-updated="true">Mar 30<span>th</span>, 2014</time></p>
+<time datetime="2014-04-03T21:49:10-04:00" pubdate data-updated="true">Apr 3<span>rd</span>, 2014</time>
+        
+         | <a href="#disqus_thread">Comments</a>
+        
+      </p>
+    
   </header>
-  
-  <p>Hi folks!  I&rsquo;m Steve Huff; I work for <a href="http://runkeeper.com">RunKeeper</a> as a DevOps Engineer.</p>
 
-<p>Let&rsquo;s see how many links I can come up with:</p>
+
+<div class="entry-content"><p>OK, one more quick thing:</p>
+
+<p>I knew from the get-go that I wanted to host this blog on <a href="https://aws.amazon.com/s3/">S3</a>, and that I wanted to build it with <a href="http://octopress.org/">Octopress</a>.  One relatively minor conflict between these two tools, though, is that S3 buckets work well for hosting static sites, but Octopress is built on top of Git, and I was sure I didn&rsquo;t want to be uploading my Git metadata to S3.</p>
+
+<p><a href="https://github.com/laurilehmijoki/s3_website">s3_website</a> is the tool I&rsquo;m using to push my generated site to S3.  It has a config option, <code>exclude_from_upload</code>, which enables you to specify one or more regexes to match files to be excluded from S3 uploads.</p>
+
+<blockquote><p>Some people, when confronted with a problem, think &#8220;I know, I&#8217;ll use regular expressions.&#8221; Now they have two problems.</p><footer><strong>Jamie Zawinski</strong> <cite><a href='http://www.jwz.org/hacks'>www.jwz.org/hacks/&hellip;</a></cite></footer></blockquote>
+
+
+<p>Yeah, it turns out that putting the string <code>.git</code> in my excludes list (instead of <code>\.git</code>) broke a variety of things on the site, including but not limited to the following:</p>
 
 <ul>
-<li><a href="https://github.com/hakamadare">GitHub</a></li>
-<li><a href="https://metacpan.org/author/SHUFF">CPAN</a></li>
-<li><a href="https://twitter.com/hakamadare">Twitter</a></li>
-<li><a href="http://osrc.dfm.io/hakamadare">Open Source Report Card</a></li>
-<li><a href="https://coderwall.com/hakamadare">Coderwall</a></li>
-<li><a href="https://www.ohloh.net/accounts/hakamadare">Ohloh</a></li>
+<li>my GitHub status in the sidebar</li>
+<li>a post with &ldquo;GitHub&rdquo; in the title</li>
+<li>Disqus comment counts</li>
 </ul>
 
 
-  
-    <footer>
-      <p class="meta">
-        
-        
+<p>So yeah, don&rsquo;t do that.</p>
+</div>
 
 
-
-
-
-
-
-
-  
-
-
-<time datetime="2014-03-30T17:02:00-04:00" pubdate data-updated="true">Mar 30<span>th</span>, 2014</time>
-        
-      </p>
+  <footer>
+    <p class="meta">
       
-        <div class="sharing">
   
-  <a href="http://twitter.com/share" class="twitter-share-button" data-url="http://someguyontheinter.net/about/index.html" data-via="hakamadare" data-counturl="http://someguyontheinter.net/about/index.html" >Tweet</a>
+
+<span class="byline author vcard">Posted by <span class="fn">Steve Huff</span></span>
+
+      
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2014-04-03T21:49:10-04:00" pubdate data-updated="true">Apr 3<span>rd</span>, 2014</time>
+      
+
+<span class="categories">
+  
+    <a class='category' href='/blog/categories/tools/'>tools</a>
+  
+</span>
+
+
+    </p>
+    
+      <div class="sharing">
+  
+  <a href="http://twitter.com/share" class="twitter-share-button" data-url="http://someguyontheinter.net/blog/octopress/" data-via="hakamadare" data-counturl="http://someguyontheinter.net/blog/octopress/" >Tweet</a>
   
   
   <div class="g-plusone" data-size="medium"></div>
@@ -144,10 +173,21 @@
   
 </div>
 
+    
+    <p class="meta">
       
-    </footer>
-  
+        <a class="basic-alignment left" href="/blog/sic-transit-gloria-mundi/" title="Previous Post: Sic Transit Gloria Mundi">&laquo; Sic Transit Gloria Mundi</a>
+      
+      
+    </p>
+  </footer>
 </article>
+
+  <section>
+    <h1>Comments</h1>
+    <div id="disqus_thread" aria-live="polite"><noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</div>
+  </section>
 
 </div>
 
@@ -235,6 +275,22 @@
 
 </footer>
   
+
+<script type="text/javascript">
+      var disqus_shortname = 'someguyontheinternet';
+      
+        
+        // var disqus_developer = 1;
+        var disqus_identifier = 'http://someguyontheinter.net/blog/octopress/';
+        var disqus_url = 'http://someguyontheinter.net/blog/octopress/';
+        var disqus_script = 'embed.js';
+      
+    (function () {
+      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+      dsq.src = 'http://' + disqus_shortname + '.disqus.com/' + disqus_script;
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    }());
+</script>
 
 
 
