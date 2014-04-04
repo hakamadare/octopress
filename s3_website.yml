@@ -14,5 +14,3 @@ cloudfront_distribution_config:
       CNAME: someguyontheinter.net
 exclude_from_upload:
   - .git
-max_age:
-  "asides/github.html": 60
