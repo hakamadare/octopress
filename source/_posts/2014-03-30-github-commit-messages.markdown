@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Exploring Expressions of Emotion in GitHub Commit Messages"
+title: "GitHub Commit Messages"
 date: 2014-03-30 18:30:53 -0400
 comments: true
 categories: noise programming
