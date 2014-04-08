@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: drinks | some guy on the Internet]]></title>
+  <link href="http://someguyontheinter.net/blog/categories/drinks/atom.xml" rel="self"/>
+  <link href="http://someguyontheinter.net/"/>
+  <updated>2014-04-07T21:11:29-04:00</updated>
+  <id>http://someguyontheinter.net/</id>
+  <author>
+    <name><![CDATA[Steve Huff]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[PEM Files, for the Last Damn Time]]></title>
+    <link href="http://someguyontheinter.net/blog/pem-files/"/>
+    <updated>2014-04-07T20:49:22-04:00</updated>
+    <id>http://someguyontheinter.net/blog/pem-files</id>
+    <content type="html"><![CDATA[<p>OK, I am tired of forgetting this information and having to re-research it.</p>
+
+<p>A <a href="https://en.wikipedia.org/wiki/.pem#Certificate_filename_extensions">PEM file</a> is an X.509 digital certificate, specifically a &ldquo;Base64 encoded DER certificate&rdquo; (thank you Wikipedia).  The components are concatenated in the following format:</p>
+
+<ol>
+<li>Private key (optional)</li>
+<li>Server certificate</li>
+<li>Intermediate certificate (optional)</li>
+<li>Root certificate (optional)</li>
+</ol>
+
+
+<p>or, in other words, <code>cat server.key server.crt ca-bundle.crt &gt;&gt; server.pem</code>.</p>
+
+<p>That is my final word on the subject.</p>
+
+<!-- more -->
+
+
+<p>This evening did not involve attending our intended <a href="http://petermulvey.com/">Peter Mulvey</a> concert, but did involve hanging out at home with various friends and drinking a <a href="http://wiki.webtender.com/wiki/Bourbon_Triple_Sec_Lemon_Juice">Bourble</a>; I hadn&rsquo;t previously encountered this cocktail, but rather mixed it in an attempt to finish off a bottle of triple sec.  It wasn&rsquo;t bad; I found the lemon juice a bit too strong and will use less next time, or maybe lime juice, or maybe a <a href="https://en.wikipedia.org/wiki/Meyer_lemon">Meyer lemon</a> if I have one handy.</p>
+]]></content>
+  </entry>
+  
+</feed>

@@ -9,7 +9,7 @@
   <meta name="author" content="Steve Huff">
 
   
-  <meta name="description" content="OK, one more quick thing: I knew from the get-go that I wanted to host this blog on S3, and that I wanted to build it with Octopress. One relatively &hellip;">
+  <meta name="description" content="OK, I am tired of forgetting this information and having to re-research it. A PEM file is an X.509 digital certificate, specifically a &ldquo;Base64 &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -82,6 +82,105 @@
     <div id="content">
       <div class="blog-index">
   
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/pem-files/">PEM Files, for the Last Damn Time</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2014-04-07T20:49:22-04:00" pubdate data-updated="true">Apr 7<span>th</span>, 2014</time>
+        
+         | <a href="/blog/pem-files/#disqus_thread">Comments</a>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>OK, I am tired of forgetting this information and having to re-research it.</p>
+
+<p>A <a href="https://en.wikipedia.org/wiki/.pem#Certificate_filename_extensions">PEM file</a> is an X.509 digital certificate, specifically a &ldquo;Base64 encoded DER certificate&rdquo; (thank you Wikipedia).  The components are concatenated in the following format:</p>
+
+<ol>
+<li>Private key (optional)</li>
+<li>Server certificate</li>
+<li>Intermediate certificate (optional)</li>
+<li>Root certificate (optional)</li>
+</ol>
+
+
+<p>or, in other words, <code>cat server.key server.crt ca-bundle.crt &gt;&gt; server.pem</code>.</p>
+
+<p>That is my final word on the subject.</p>
+
+</div>
+  
+  
+    <footer>
+      <a rel="full-article" href="/blog/pem-files/">Read on &rarr;</a>
+    </footer>
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/the-wolf-of-wall-street/">The Wolf of Wall Street</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2014-04-04T15:40:48-04:00" pubdate data-updated="true">Apr 4<span>th</span>, 2014</time>
+        
+         | <a href="/blog/the-wolf-of-wall-street/#disqus_thread">Comments</a>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>As I was buying a cup of coffee this morning, the barista told me that I was wearing the same shirt as a character from <a href="https://en.wikipedia.org/wiki/The_Wolf_of_Wall_Street_(2013_film">The Wolf of Wall Street</a>).  It&rsquo;s one of my favorite shirts, and quite distinctive, so I believe her; now I want to see the movie in order to determine how I feel about this.</p>
+
+<p>I&rsquo;m currently reading <a href="https://en.wikipedia.org/wiki/A_Colossal_Failure_of_Common_Sense">A Colossal Failure of Common Sense</a>, to put this in some more context :)</p>
+
+<p>-steve</p>
+</div>
+  
+  
+
+
+    </article>
   
   
     <article>
@@ -419,6 +518,14 @@
   <ul id="recent_posts">
     
       <li class="post">
+        <a href="/blog/pem-files/">PEM Files, for the Last Damn Time</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/the-wolf-of-wall-street/">The Wolf of Wall Street</a>
+      </li>
+    
+      <li class="post">
         <a href="/blog/octopress/">Octopress, S3, and file exclusion</a>
       </li>
     
@@ -428,14 +535,6 @@
     
       <li class="post">
         <a href="/blog/you-had-one-job/">You Had One Job</a>
-      </li>
-    
-      <li class="post">
-        <a href="/blog/first-day-at-runkeeper/">First day at RunKeeper</a>
-      </li>
-    
-      <li class="post">
-        <a href="/blog/github-commit-messages/">GitHub Commit Messages</a>
       </li>
     
   </ul>

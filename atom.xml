@@ -4,7 +4,7 @@
   <title><![CDATA[some guy on the Internet]]></title>
   <link href="http://someguyontheinter.net/atom.xml" rel="self"/>
   <link href="http://someguyontheinter.net/"/>
-  <updated>2014-04-03T22:09:02-04:00</updated>
+  <updated>2014-04-07T21:11:29-04:00</updated>
   <id>http://someguyontheinter.net/</id>
   <author>
     <name><![CDATA[Steve Huff]]></name>
@@ -12,6 +12,47 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[PEM Files, for the Last Damn Time]]></title>
+    <link href="http://someguyontheinter.net/blog/pem-files/"/>
+    <updated>2014-04-07T20:49:22-04:00</updated>
+    <id>http://someguyontheinter.net/blog/pem-files</id>
+    <content type="html"><![CDATA[<p>OK, I am tired of forgetting this information and having to re-research it.</p>
+
+<p>A <a href="https://en.wikipedia.org/wiki/.pem#Certificate_filename_extensions">PEM file</a> is an X.509 digital certificate, specifically a &ldquo;Base64 encoded DER certificate&rdquo; (thank you Wikipedia).  The components are concatenated in the following format:</p>
+
+<ol>
+<li>Private key (optional)</li>
+<li>Server certificate</li>
+<li>Intermediate certificate (optional)</li>
+<li>Root certificate (optional)</li>
+</ol>
+
+
+<p>or, in other words, <code>cat server.key server.crt ca-bundle.crt &gt;&gt; server.pem</code>.</p>
+
+<p>That is my final word on the subject.</p>
+
+<!-- more -->
+
+
+<p>This evening did not involve attending our intended <a href="http://petermulvey.com/">Peter Mulvey</a> concert, but did involve hanging out at home with various friends and drinking a <a href="http://wiki.webtender.com/wiki/Bourbon_Triple_Sec_Lemon_Juice">Bourble</a>; I hadn&rsquo;t previously encountered this cocktail, but rather mixed it in an attempt to finish off a bottle of triple sec.  It wasn&rsquo;t bad; I found the lemon juice a bit too strong and will use less next time, or maybe lime juice, or maybe a <a href="https://en.wikipedia.org/wiki/Meyer_lemon">Meyer lemon</a> if I have one handy.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[The Wolf of Wall Street]]></title>
+    <link href="http://someguyontheinter.net/blog/the-wolf-of-wall-street/"/>
+    <updated>2014-04-04T15:40:48-04:00</updated>
+    <id>http://someguyontheinter.net/blog/the-wolf-of-wall-street</id>
+    <content type="html"><![CDATA[<p>As I was buying a cup of coffee this morning, the barista told me that I was wearing the same shirt as a character from <a href="https://en.wikipedia.org/wiki/The_Wolf_of_Wall_Street_(2013_film">The Wolf of Wall Street</a>).  It&rsquo;s one of my favorite shirts, and quite distinctive, so I believe her; now I want to see the movie in order to determine how I feel about this.</p>
+
+<p>I&rsquo;m currently reading <a href="https://en.wikipedia.org/wiki/A_Colossal_Failure_of_Common_Sense">A Colossal Failure of Common Sense</a>, to put this in some more context :)</p>
+
+<p>-steve</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Octopress, S3, and file exclusion]]></title>
