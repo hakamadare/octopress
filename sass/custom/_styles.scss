@@ -3,6 +3,13 @@
 html {
     background: $page-bg;
 }
+body {
+    header {
+        h1 {
+            font-family : $serif;
+        }
+    }
+}
 article {
     h1, h2, h3, h4, h5, h6
     {
