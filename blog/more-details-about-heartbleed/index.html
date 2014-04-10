@@ -5,11 +5,11 @@
 <!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
 <head>
   <meta charset="utf-8">
-  <title>The Wolf of Wall Street - some guy on the Internet</title>
+  <title>More Details About Heartbleed - some guy on the Internet</title>
   <meta name="author" content="Steve Huff">
 
   
-  <meta name="description" content="As I was buying a cup of coffee this morning, the barista told me that I was wearing the same shirt as a character from The Wolf of Wall Street). It& &hellip;">
+  <meta name="description" content="If you haven&rsquo;t yet patched your OpenSSL and regenerated your certs, stop reading and go fix it; it&rsquo;s OK, I&rsquo;ll still be here when &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -18,7 +18,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   
-  <link rel="canonical" href="http://someguyontheinter.net/blog/the-wolf-of-wall-street/">
+  <link rel="canonical" href="http://someguyontheinter.net/blog/more-details-about-heartbleed/">
   <link href="/favicon.png" rel="icon">
   <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
   <script src="/javascripts/modernizr-2.0.js"></script>
@@ -86,7 +86,7 @@
   
   <header>
     
-      <h1 class="entry-title">The Wolf of Wall Street</h1>
+      <h1 class="entry-title">More Details About Heartbleed</h1>
     
     
       <p class="meta">
@@ -102,7 +102,7 @@
   
 
 
-<time datetime="2014-04-04T15:40:48-04:00" pubdate data-updated="true">Apr 4<span>th</span>, 2014</time>
+<time datetime="2014-04-09T22:39:30-04:00" pubdate data-updated="true">Apr 9<span>th</span>, 2014</time>
         
          | <a href="#disqus_thread">Comments</a>
         
@@ -111,11 +111,14 @@
   </header>
 
 
-<div class="entry-content"><p>As I was buying a cup of coffee this morning, the barista told me that I was wearing the same shirt as a character from <a href="https://en.wikipedia.org/wiki/The_Wolf_of_Wall_Street_(2013_film">The Wolf of Wall Street</a>).  It&rsquo;s one of my favorite shirts, and quite distinctive, so I believe her; now I want to see the movie in order to determine how I feel about this.</p>
+<div class="entry-content"><p>If you haven&rsquo;t yet <a href="http://heartbleed.com">patched your OpenSSL and regenerated your certs</a>, stop reading and go fix it; it&rsquo;s OK, I&rsquo;ll still be here when you get back.</p>
 
-<p>I&rsquo;m currently reading <a href="https://en.wikipedia.org/wiki/A_Colossal_Failure_of_Common_Sense">A Colossal Failure of Common Sense</a>, to put this in some more context :)</p>
+<p>All set?  OK.  I found an interesting analysis of the bug over at <a href="http://blog.existentialize.com/diagnosis-of-the-openssl-heartbleed-bug.html">this guy Sean Cassidy&rsquo;s blog</a>.  In brief: I have been happy for many years that other people like to write C, because it means both that I get to benefit from their work (basically my entire livelihood is based on the C ecosystem) and also that I generally don&rsquo;t have to write it myself. :)</p>
 
-<p>-steve</p>
+<!-- more -->
+
+
+<p>In other news, I think I accumulated my first piece of <a href="http://martinfowler.com/bliki/TechnicalDebt.html">technical debt</a> at the new job today.  I spent a while fighting with <a href="http://blog.jonliv.es/2011/04/26/creating-your-own-signed-apt-repository-and-debian-packages/">signed apt packages</a>; by the time I headed home I had managed to unbreak the repository, but I still have one Java package with an invalid signature, so tomorrow I&rsquo;ll go another few rounds.</p>
 </div>
 
 
@@ -138,12 +141,12 @@
   
 
 
-<time datetime="2014-04-04T15:40:48-04:00" pubdate data-updated="true">Apr 4<span>th</span>, 2014</time>
+<time datetime="2014-04-09T22:39:30-04:00" pubdate data-updated="true">Apr 9<span>th</span>, 2014</time>
       
 
 <span class="categories">
   
-    <a class='category' href='/blog/categories/noise/'>noise</a>
+    <a class='category' href='/blog/categories/signal/'>signal</a>, <a class='category' href='/blog/categories/sysadmin/'>sysadmin</a>
   
 </span>
 
@@ -159,10 +162,8 @@
     
     <p class="meta">
       
-        <a class="basic-alignment left" href="/blog/octopress/" title="Previous Post: Octopress, S3, and file exclusion">&laquo; Octopress, S3, and file exclusion</a>
+        <a class="basic-alignment left" href="/blog/psa-heartbleed-openssl-vulnerability/" title="Previous Post: PSA: Heartbleed OpenSSL Vulnerability">&laquo; PSA: Heartbleed OpenSSL Vulnerability</a>
       
-      
-        <a class="basic-alignment right" href="/blog/pem-files/" title="Next Post: PEM Files, for the Last Damn Time">PEM Files, for the Last Damn Time &raquo;</a>
       
     </p>
   </footer>
@@ -261,8 +262,8 @@
       
         
         // var disqus_developer = 1;
-        var disqus_identifier = 'http://someguyontheinter.net/blog/the-wolf-of-wall-street/';
-        var disqus_url = 'http://someguyontheinter.net/blog/the-wolf-of-wall-street/';
+        var disqus_identifier = 'http://someguyontheinter.net/blog/more-details-about-heartbleed/';
+        var disqus_url = 'http://someguyontheinter.net/blog/more-details-about-heartbleed/';
         var disqus_script = 'embed.js';
       
     (function () {

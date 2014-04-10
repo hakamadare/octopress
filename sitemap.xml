@@ -2,54 +2,66 @@
 <urlset xmlns='http://www.sitemaps.org/schemas/sitemap/0.9'>
     <url>
         <loc>http://someguyontheinter.net/blog/hello-world/</loc>
-        <lastmod>2014-03-30T14:13:11-04:00</lastmod>
+        <lastmod>2014-04-07T21:35:22-04:00</lastmod>
     </url>
     <url>
         <loc>http://someguyontheinter.net/blog/github-commit-messages/</loc>
-        <lastmod>2014-04-03T21:42:48-04:00</lastmod>
+        <lastmod>2014-04-07T21:35:40-04:00</lastmod>
     </url>
     <url>
         <loc>http://someguyontheinter.net/blog/first-day-at-runkeeper/</loc>
-        <lastmod>2014-04-01T23:50:16-04:00</lastmod>
+        <lastmod>2014-04-07T21:35:22-04:00</lastmod>
     </url>
     <url>
         <loc>http://someguyontheinter.net/blog/you-had-one-job/</loc>
-        <lastmod>2014-04-02T21:34:44-04:00</lastmod>
+        <lastmod>2014-04-07T21:35:40-04:00</lastmod>
     </url>
     <url>
         <loc>http://someguyontheinter.net/blog/sic-transit-gloria-mundi/</loc>
-        <lastmod>2014-04-03T21:19:27-04:00</lastmod>
+        <lastmod>2014-04-07T21:35:40-04:00</lastmod>
     </url>
     <url>
         <loc>http://someguyontheinter.net/blog/octopress/</loc>
-        <lastmod>2014-04-03T22:08:25-04:00</lastmod>
+        <lastmod>2014-04-07T21:35:40-04:00</lastmod>
     </url>
     <url>
         <loc>http://someguyontheinter.net/blog/the-wolf-of-wall-street/</loc>
-        <lastmod>2014-04-07T20:48:21-04:00</lastmod>
+        <lastmod>2014-04-07T21:35:40-04:00</lastmod>
     </url>
     <url>
         <loc>http://someguyontheinter.net/blog/pem-files/</loc>
-        <lastmod>2014-04-07T21:11:28-04:00</lastmod>
+        <lastmod>2014-04-07T21:35:41-04:00</lastmod>
+    </url>
+    <url>
+        <loc>http://someguyontheinter.net/blog/psa-heartbleed-openssl-vulnerability/</loc>
+        <lastmod>2014-04-09T22:19:24-04:00</lastmod>
+    </url>
+    <url>
+        <loc>http://someguyontheinter.net/blog/more-details-about-heartbleed/</loc>
+        <lastmod>2014-04-09T23:07:29-04:00</lastmod>
     </url>
     <url>
         <loc>http://someguyontheinter.net/404.html</loc>
-        <lastmod>2014-04-02T19:29:12-04:00</lastmod>
+        <lastmod>2014-04-07T21:35:40-04:00</lastmod>
     </url>
     <url>
         <loc>http://someguyontheinter.net/about/</loc>
-        <lastmod>2014-03-30T18:09:51-04:00</lastmod>
+        <lastmod>2014-04-07T21:35:22-04:00</lastmod>
     </url>
     <url>
         <loc>http://someguyontheinter.net/blog/archives/</loc>
-        <lastmod>2014-04-07T21:11:28-04:00</lastmod>
+        <lastmod>2014-04-09T23:07:29-04:00</lastmod>
     </url>
     <url>
         <loc>http://someguyontheinter.net/</loc>
-        <lastmod>2014-04-07T21:11:28-04:00</lastmod>
+        <lastmod>2014-04-09T23:07:29-04:00</lastmod>
+    </url>
+    <url>
+        <loc>http://someguyontheinter.net/links/</loc>
+        <lastmod>2014-04-09T22:35:35-04:00</lastmod>
     </url>
     <url>
         <loc>http://someguyontheinter.net/robots.txt</loc>
-        <lastmod>2014-03-30T12:25:13-04:00</lastmod>
+        <lastmod>2014-04-07T21:35:22-04:00</lastmod>
     </url>
 </urlset>

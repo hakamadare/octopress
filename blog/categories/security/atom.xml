@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: security | some guy on the Internet]]></title>
+  <link href="http://someguyontheinter.net/blog/categories/security/atom.xml" rel="self"/>
+  <link href="http://someguyontheinter.net/"/>
+  <updated>2014-04-09T23:07:30-04:00</updated>
+  <id>http://someguyontheinter.net/</id>
+  <author>
+    <name><![CDATA[Steve Huff]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[PSA: Heartbleed OpenSSL Vulnerability]]></title>
+    <link href="http://someguyontheinter.net/blog/psa-heartbleed-openssl-vulnerability/"/>
+    <updated>2014-04-08T16:36:53-04:00</updated>
+    <id>http://someguyontheinter.net/blog/psa-heartbleed-openssl-vulnerability</id>
+    <content type="html"><![CDATA[<p>Over dinner last night one of my friends was talking about an OpenSSL vulnerability that had just been disclosed; this morning I took a closer look and decided that I want to boost the signal a bit</p>
+
+<p>The <a href="http://heartbleed.com/">Heartbleed</a> OpenSSL vulnerability affects recent releases of <a href="http://www.openssl.org/">OpenSSL</a>.  Affected systems can be made to reveal secret keys; this is arguably one of the worst ways in which an encryption library can fail, and if you are publishing anything that is secured with SSL (<em>e.g.</em> HTTPS, SMTP/IMAP with TLS, LDAPS, to name a few common uses) and using a vulnerable version, then you should treat your keys as compromised, generate a new private key, and generate new certificates.</p>
+
+<p>If you are not your own sysadmin, then you should find out whether your service providers (including your employer) are reacting appropriately to this issue.  Responsible service providers may proactively publish statements about the issue; if you don&rsquo;t find anything on your provider&rsquo;s website, contact technical support.</p>
+
+<p>More information about this vulnerability can be found by consulting <a href="http://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2014-0160">the CERT advisory</a>; there are also some nice StackExchange questions:</p>
+
+<ul>
+<li><a href="http://security.stackexchange.com/questions/55076/what-should-a-website-operator-do-about-the-heartbleed-openssl-exploit?">http://security.stackexchange.com/questions/55076/what-should-a-website-operator-do-about-the-heartbleed-openssl-exploit?</a></li>
+<li><a href="https://serverfault.com/questions/587329/heartbleed-what-is-it-and-what-are-options-to-mitigate-it">https://serverfault.com/questions/587329/heartbleed-what-is-it-and-what-are-options-to-mitigate-it</a></li>
+</ul>
+
+
+<p>Responding to security vulnerabilities is always a tradeoff between effort and threat, but this one seems worth paying attention to.</p>
+
+<p>-steve</p>
+]]></content>
+  </entry>
+  
+</feed>

@@ -9,7 +9,7 @@
   <meta name="author" content="Steve Huff">
 
   
-  <meta name="description" content="OK, I am tired of forgetting this information and having to re-research it. A PEM file is an X.509 digital certificate, specifically a &ldquo;Base64 &hellip;">
+  <meta name="description" content="If you haven&rsquo;t yet patched your OpenSSL and regenerated your certs, stop reading and go fix it; it&rsquo;s OK, I&rsquo;ll still be here when &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -74,6 +74,7 @@
 <ul class="main-navigation">
   <li><a href="/">Blog</a></li>
   <li><a href="/blog/archives">Archives</a></li>
+  <li><a href="/links">Links</a></li>
   <li><a href="/about">About Me</a></li>
 </ul>
 
@@ -82,6 +83,105 @@
     <div id="content">
       <div class="blog-index">
   
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/more-details-about-heartbleed/">More Details About Heartbleed</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2014-04-09T22:39:30-04:00" pubdate data-updated="true">Apr 9<span>th</span>, 2014</time>
+        
+         | <a href="/blog/more-details-about-heartbleed/#disqus_thread">Comments</a>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>If you haven&rsquo;t yet <a href="http://heartbleed.com">patched your OpenSSL and regenerated your certs</a>, stop reading and go fix it; it&rsquo;s OK, I&rsquo;ll still be here when you get back.</p>
+
+<p>All set?  OK.  I found an interesting analysis of the bug over at <a href="http://blog.existentialize.com/diagnosis-of-the-openssl-heartbleed-bug.html">this guy Sean Cassidy&rsquo;s blog</a>.  In brief: I have been happy for many years that other people like to write C, because it means both that I get to benefit from their work (basically my entire livelihood is based on the C ecosystem) and also that I generally don&rsquo;t have to write it myself. :)</p>
+
+</div>
+  
+  
+    <footer>
+      <a rel="full-article" href="/blog/more-details-about-heartbleed/">Read on &rarr;</a>
+    </footer>
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/psa-heartbleed-openssl-vulnerability/">PSA: Heartbleed OpenSSL Vulnerability</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2014-04-08T16:36:53-04:00" pubdate data-updated="true">Apr 8<span>th</span>, 2014</time>
+        
+         | <a href="/blog/psa-heartbleed-openssl-vulnerability/#disqus_thread">Comments</a>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>Over dinner last night one of my friends was talking about an OpenSSL vulnerability that had just been disclosed; this morning I took a closer look and decided that I want to boost the signal a bit</p>
+
+<p>The <a href="http://heartbleed.com/">Heartbleed</a> OpenSSL vulnerability affects recent releases of <a href="http://www.openssl.org/">OpenSSL</a>.  Affected systems can be made to reveal secret keys; this is arguably one of the worst ways in which an encryption library can fail, and if you are publishing anything that is secured with SSL (<em>e.g.</em> HTTPS, SMTP/IMAP with TLS, LDAPS, to name a few common uses) and using a vulnerable version, then you should treat your keys as compromised, generate a new private key, and generate new certificates.</p>
+
+<p>If you are not your own sysadmin, then you should find out whether your service providers (including your employer) are reacting appropriately to this issue.  Responsible service providers may proactively publish statements about the issue; if you don&rsquo;t find anything on your provider&rsquo;s website, contact technical support.</p>
+
+<p>More information about this vulnerability can be found by consulting <a href="http://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2014-0160">the CERT advisory</a>; there are also some nice StackExchange questions:</p>
+
+<ul>
+<li><a href="http://security.stackexchange.com/questions/55076/what-should-a-website-operator-do-about-the-heartbleed-openssl-exploit?">http://security.stackexchange.com/questions/55076/what-should-a-website-operator-do-about-the-heartbleed-openssl-exploit?</a></li>
+<li><a href="https://serverfault.com/questions/587329/heartbleed-what-is-it-and-what-are-options-to-mitigate-it">https://serverfault.com/questions/587329/heartbleed-what-is-it-and-what-are-options-to-mitigate-it</a></li>
+</ul>
+
+
+<p>Responding to security vulnerabilities is always a tradeoff between effort and threat, but this one seems worth paying attention to.</p>
+
+<p>-steve</p>
+</div>
+  
+  
+
+
+    </article>
   
   
     <article>
@@ -513,9 +613,23 @@
 </div>
 <aside class="sidebar">
   
-    <section>
+    
+<section>
+	<span>
+		<img src="http://www.gravatar.com/avatar/5d44551ca86b68f3df646f4ff51c6eca" alt="Gravatar of Steve Huff " title="Gravatar of Steve Huff" />
+	</span>
+</section>
+<section>
   <h1>Recent Posts</h1>
   <ul id="recent_posts">
+    
+      <li class="post">
+        <a href="/blog/more-details-about-heartbleed/">More Details About Heartbleed</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/psa-heartbleed-openssl-vulnerability/">PSA: Heartbleed OpenSSL Vulnerability</a>
+      </li>
     
       <li class="post">
         <a href="/blog/pem-files/">PEM Files, for the Last Damn Time</a>
@@ -527,14 +641,6 @@
     
       <li class="post">
         <a href="/blog/octopress/">Octopress, S3, and file exclusion</a>
-      </li>
-    
-      <li class="post">
-        <a href="/blog/sic-transit-gloria-mundi/">Sic Transit Gloria Mundi</a>
-      </li>
-    
-      <li class="post">
-        <a href="/blog/you-had-one-job/">You Had One Job</a>
       </li>
     
   </ul>
@@ -571,17 +677,6 @@
 </section>
 
 
-<section class="googleplus">
-  <h1>
-    <a href="https://plus.google.com/hakamadare@gmail.com?rel=author">
-      <img src="http://www.google.com/images/icons/ui/gprofile_button-32.png" width="32" height="32">
-      Google+
-    </a>
-  </h1>
-</section>
-
-
-
   
 </aside>
 
@@ -612,25 +707,7 @@
 
 
 
-  <script type="text/javascript">
-    (function() {
-      var script = document.createElement('script'); script.type = 'text/javascript'; script.async = true;
-      script.src = 'https://apis.google.com/js/plusone.js';
-      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(script, s);
-    })();
-  </script>
 
-
-
-  <script type="text/javascript">
-    (function(){
-      var twitterWidgets = document.createElement('script');
-      twitterWidgets.type = 'text/javascript';
-      twitterWidgets.async = true;
-      twitterWidgets.src = 'http://platform.twitter.com/widgets.js';
-      document.getElementsByTagName('head')[0].appendChild(twitterWidgets);
-    })();
-  </script>
 
 
 
