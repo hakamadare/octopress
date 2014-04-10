@@ -3,11 +3,13 @@ layout: post
 title: "More Details About Heartbleed"
 date: 2014-04-09 22:39:30 -0400
 comments: true
-categories: signal sysadmin
+categories: signal sysadmin xkcd
 ---
 If you haven't yet [patched your OpenSSL and regenerated your certs](http://heartbleed.com), stop reading and go fix it; it's OK, I'll still be here when you get back.
 
 All set?  OK.  I found an interesting analysis of the bug over at [this guy Sean Cassidy's blog](http://blog.existentialize.com/diagnosis-of-the-openssl-heartbleed-bug.html).  In brief: I have been happy for many years that other people like to write C, because it means both that I get to benefit from their work (basically my entire livelihood is based on the C ecosystem) and also that I generally don't have to write it myself. :)
+
+{% img center /images/xkcd_1353_heartbleed.png 740 307 "XKCD 1353 - Heartbleed" %}
 
 <!-- more -->
 
