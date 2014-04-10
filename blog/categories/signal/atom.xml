@@ -4,7 +4,7 @@
   <title><![CDATA[Category: signal | some guy on the Internet]]></title>
   <link href="http://someguyontheinter.net/blog/categories/signal/atom.xml" rel="self"/>
   <link href="http://someguyontheinter.net/"/>
-  <updated>2014-04-09T23:07:30-04:00</updated>
+  <updated>2014-04-09T23:32:33-04:00</updated>
   <id>http://someguyontheinter.net/</id>
   <author>
     <name><![CDATA[Steve Huff]]></name>
@@ -21,6 +21,8 @@
     <content type="html"><![CDATA[<p>If you haven&rsquo;t yet <a href="http://heartbleed.com">patched your OpenSSL and regenerated your certs</a>, stop reading and go fix it; it&rsquo;s OK, I&rsquo;ll still be here when you get back.</p>
 
 <p>All set?  OK.  I found an interesting analysis of the bug over at <a href="http://blog.existentialize.com/diagnosis-of-the-openssl-heartbleed-bug.html">this guy Sean Cassidy&rsquo;s blog</a>.  In brief: I have been happy for many years that other people like to write C, because it means both that I get to benefit from their work (basically my entire livelihood is based on the C ecosystem) and also that I generally don&rsquo;t have to write it myself. :)</p>
+
+<p><img class="center" src="/images/xkcd_1353_heartbleed.png" width="740" height="307" title="&ldquo;XKCD 1353 &ndash; Heartbleed&rdquo;" ></p>
 
 <!-- more -->
 

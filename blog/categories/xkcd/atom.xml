@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: xkcd | some guy on the Internet]]></title>
+  <link href="http://someguyontheinter.net/blog/categories/xkcd/atom.xml" rel="self"/>
+  <link href="http://someguyontheinter.net/"/>
+  <updated>2014-04-09T23:32:33-04:00</updated>
+  <id>http://someguyontheinter.net/</id>
+  <author>
+    <name><![CDATA[Steve Huff]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[More Details About Heartbleed]]></title>
+    <link href="http://someguyontheinter.net/blog/more-details-about-heartbleed/"/>
+    <updated>2014-04-09T22:39:30-04:00</updated>
+    <id>http://someguyontheinter.net/blog/more-details-about-heartbleed</id>
+    <content type="html"><![CDATA[<p>If you haven&rsquo;t yet <a href="http://heartbleed.com">patched your OpenSSL and regenerated your certs</a>, stop reading and go fix it; it&rsquo;s OK, I&rsquo;ll still be here when you get back.</p>
+
+<p>All set?  OK.  I found an interesting analysis of the bug over at <a href="http://blog.existentialize.com/diagnosis-of-the-openssl-heartbleed-bug.html">this guy Sean Cassidy&rsquo;s blog</a>.  In brief: I have been happy for many years that other people like to write C, because it means both that I get to benefit from their work (basically my entire livelihood is based on the C ecosystem) and also that I generally don&rsquo;t have to write it myself. :)</p>
+
+<p><img class="center" src="/images/xkcd_1353_heartbleed.png" width="740" height="307" title="&ldquo;XKCD 1353 &ndash; Heartbleed&rdquo;" ></p>
+
+<!-- more -->
+
+
+<p>In other news, I think I accumulated my first piece of <a href="http://martinfowler.com/bliki/TechnicalDebt.html">technical debt</a> at the new job today.  I spent a while fighting with <a href="http://blog.jonliv.es/2011/04/26/creating-your-own-signed-apt-repository-and-debian-packages/">signed apt packages</a>; by the time I headed home I had managed to unbreak the repository, but I still have one Java package with an invalid signature, so tomorrow I&rsquo;ll go another few rounds.</p>
+]]></content>
+  </entry>
+  
+</feed>
