@@ -5,11 +5,11 @@
 <!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
 <head>
   <meta charset="utf-8">
-  <title>Octopress, S3, and file exclusion - some guy on the Internet</title>
+  <title>some guy on the Internet</title>
   <meta name="author" content="Steve Huff">
 
   
-  <meta name="description" content="OK, one more quick thing: I knew from the get-go that I wanted to host this blog on S3, and that I wanted to build it with Octopress. One relatively &hellip;">
+  <meta name="description" content="Apparently it is high time I had an actual blog. ">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -18,7 +18,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   
-  <link rel="canonical" href="http://someguyontheinter.net/blog/octopress/">
+  <link rel="canonical" href="http://someguyontheinter.net/blog/page/2/">
   <link href="/favicon.png" rel="icon">
   <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
   <script src="/javascripts/modernizr-2.0.js"></script>
@@ -81,12 +81,15 @@
 </nav>
   <div id="main">
     <div id="content">
-      <div>
-<article class="hentry" role="article">
+      <div class="blog-index">
   
+  
+  
+    <article>
+      
   <header>
     
-      <h1 class="entry-title">Octopress, S3, and File Exclusion</h1>
+      <h1 class="entry-title"><a href="/blog/hello-world/">Hello World</a></h1>
     
     
       <p class="meta">
@@ -102,94 +105,36 @@
   
 
 
-<time datetime="2014-04-03T21:49:10-04:00" pubdate data-updated="true">Apr 3<span>rd</span>, 2014</time>
+<time datetime="2014-03-30T12:43:50-04:00" pubdate data-updated="true">Mar 30<span>th</span>, 2014</time>
         
-         | <a href="#disqus_thread">Comments</a>
+         | <a href="/blog/hello-world/#disqus_thread">Comments</a>
         
       </p>
     
   </header>
 
 
-<div class="entry-content"><p>OK, one more quick thing:</p>
+  <div class="entry-content"><p>Apparently it is high time I had an actual blog.</p>
 
-<p>I knew from the get-go that I wanted to host this blog on <a href="https://aws.amazon.com/s3/">S3</a>, and that I wanted to build it with <a href="http://octopress.org/">Octopress</a>.  One relatively minor conflict between these two tools, though, is that S3 buckets work well for hosting static sites, but Octopress is built on top of Git, and I was sure I didn&rsquo;t want to be uploading my Git metadata to S3.</p>
-
-<p><a href="https://github.com/laurilehmijoki/s3_website">s3_website</a> is the tool I&rsquo;m using to push my generated site to S3.  It has a config option, <code>exclude_from_upload</code>, which enables you to specify one or more regexes to match files to be excluded from S3 uploads.</p>
-
-<blockquote><p>Some people, when confronted with a problem, think &#8220;I know, I&#8217;ll use regular expressions.&#8221; Now they have two problems.</p><footer><strong>Jamie Zawinski</strong> <cite><a href='http://www.jwz.org/hacks'>www.jwz.org/hacks/&hellip;</a></cite></footer></blockquote>
-
-
-<p>Yeah, it turns out that putting the string <code>.git</code> in my excludes list (instead of <code>\.git</code>) broke a variety of things on the site, including but not limited to the following:</p>
-
-<ul>
-<li>my GitHub status in the sidebar</li>
-<li>a post with &ldquo;GitHub&rdquo; in the title</li>
-<li>Disqus comment counts</li>
-</ul>
-
-
-<p>So yeah, don&rsquo;t do that.</p>
 </div>
-
-
-  <footer>
-    <p class="meta">
-      
   
-
-<span class="byline author vcard">Posted by <span class="fn">Steve Huff</span></span>
-
-      
-
-
-
-
-
-
-
-
+  
+    <footer>
+      <a rel="full-article" href="/blog/hello-world/">Read on &rarr;</a>
+    </footer>
   
 
 
-<time datetime="2014-04-03T21:49:10-04:00" pubdate data-updated="true">Apr 3<span>rd</span>, 2014</time>
-      
-
-<span class="categories">
+    </article>
   
-    <a class='category' href='/blog/categories/tools/'>tools</a>
-  
-</span>
-
-
-    </p>
+  <div class="pagination">
     
-      <div class="sharing">
-  
-  
-  
-</div>
-
+    <a href="/blog/archives">Blog Archives</a>
     
-    <p class="meta">
-      
-        <a class="basic-alignment left" href="/blog/sic-transit-gloria-mundi/" title="Previous Post: Sic Transit Gloria Mundi">&laquo; Sic Transit Gloria Mundi</a>
-      
-      
-        <a class="basic-alignment right" href="/blog/the-wolf-of-wall-street/" title="Next Post: The Wolf of Wall Street">The Wolf of Wall Street &raquo;</a>
-      
-    </p>
-  </footer>
-</article>
-
-  <section>
-    <h1>Comments</h1>
-    <div id="disqus_thread" aria-live="polite"><noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+    <a class="next" href="/">Newer &rarr;</a>
+    
+  </div>
 </div>
-  </section>
-
-</div>
-
 <aside class="sidebar">
   
     
@@ -228,7 +173,7 @@
 <section>
   <h1>GitHub Repos</h1>
   <ul id="gh_repos">
-    <li class="loading">Status updating...</li>
+    <li class="loading">Status updating&#8230;</li>
   </ul>
   
   <a href="https://github.com/hakamadare">@hakamadare</a> on GitHub
@@ -259,7 +204,6 @@
   
 </aside>
 
-
     </div>
   </div>
   <footer role="contentinfo"><p>
@@ -274,10 +218,7 @@
       var disqus_shortname = 'someguyontheinternet';
       
         
-        // var disqus_developer = 1;
-        var disqus_identifier = 'http://someguyontheinter.net/blog/octopress/';
-        var disqus_url = 'http://someguyontheinter.net/blog/octopress/';
-        var disqus_script = 'embed.js';
+        var disqus_script = 'count.js';
       
     (function () {
       var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;

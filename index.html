@@ -9,7 +9,7 @@
   <meta name="author" content="Steve Huff">
 
   
-  <meta name="description" content="If you haven&rsquo;t yet patched your OpenSSL and regenerated your certs, stop reading and go fix it; it&rsquo;s OK, I&rsquo;ll still be here when &hellip;">
+  <meta name="description" content="I promise that this is not going to become the All Heartbleed All The Time blog, but in my defence, this is kind of a big deal. A vendor called &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -83,6 +83,66 @@
     <div id="content">
       <div class="blog-index">
   
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/for-the-heartbleed-doubters/">For the Heartbleed Doubters</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2014-04-13T11:33:08-04:00" pubdate data-updated="true">Apr 13<span>th</span>, 2014</time>
+        
+         | <a href="/blog/for-the-heartbleed-doubters/#disqus_thread">Comments</a>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>I promise that this is not going to become the All Heartbleed All The Time blog, but in my defence, this is <a href="http://blog.jcuff.net/2011/12/cautionary-tale-about-storage-and.html">kind of a big deal</a>.</p>
+
+<p>A vendor called <a href="https://www.cloudflare.com/overview">CloudFlare</a> decided to perform a practical test of the exploitability of Heartbleed by setting up a vulnerable site and <a href="http://blog.cloudflare.com/answering-the-critical-question-can-you-get-private-ssl-keys-using-heartbleed">challenging people to steal the private key</a>.  I think these two quotes encapsulate the story perfectly:</p>
+
+<blockquote><p>Here’s the good news: after extensive testing on our software stack, we have been unable to successfully use Heartbleed on a vulnerable server to retrieve any private key data.</p></blockquote>
+
+
+<p>followed by:</p>
+
+<blockquote><p>It turns out we were wrong. While it takes effort, it is possible to extract private SSL keys. The challenge was solved by Software Engineer Fedor Indutny and Ilkka Mattila at NCSC-FL roughly 9 hours after the challenge was first published.</p></blockquote>
+
+
+<p>Now consider a tool that <a href="http://blog.vpetkov.net/2014/04/11/ridiculously-fast-heartbleed-subnet-scanner-nmap-heartbleed-howto-and-tutorial/">my buddy Ventz put together</a> for bulk scanning of network segments to detect Heartbleed-vulnerable webservers.  There&rsquo;s no reason to believe that he was the first person to think of building something like this.</p>
+
+<p>The two lessons I see here are the following:</p>
+
+<ol>
+<li><p>Remember that there&rsquo;s a difference between &ldquo;I can&rsquo;t do it&rdquo; and &ldquo;It&rsquo;s impossible&rdquo; :)  Smart people tend to forget this, to their and others&#8217; detriment.</p></li>
+<li><p>There is no more <a href="https://en.wikipedia.org/wiki/Security_through_obscurity">security through obscurity</a>.  If your service is accessible from the public Internet, you should assume that you are being scanned on a regular basis.</p></li>
+</ol>
+
+
+<p>-steve</p>
+</div>
+  
+  
+
+
+    </article>
   
   
     <article>
@@ -564,50 +624,9 @@
 
     </article>
   
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/hello-world/">Hello World</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2014-03-30T12:43:50-04:00" pubdate data-updated="true">Mar 30<span>th</span>, 2014</time>
-        
-         | <a href="/blog/hello-world/#disqus_thread">Comments</a>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>Apparently it is high time I had an actual blog.</p>
-
-</div>
-  
-  
-    <footer>
-      <a rel="full-article" href="/blog/hello-world/">Read on &rarr;</a>
-    </footer>
-  
-
-
-    </article>
-  
   <div class="pagination">
+    
+      <a class="prev" href="/blog/page/2/">&larr; Older</a>
     
     <a href="/blog/archives">Blog Archives</a>
     
@@ -626,6 +645,10 @@
   <ul id="recent_posts">
     
       <li class="post">
+        <a href="/blog/for-the-heartbleed-doubters/">For the Heartbleed Doubters</a>
+      </li>
+    
+      <li class="post">
         <a href="/blog/more-details-about-heartbleed/">More Details About Heartbleed</a>
       </li>
     
@@ -639,10 +662,6 @@
     
       <li class="post">
         <a href="/blog/the-wolf-of-wall-street/">The Wolf of Wall Street</a>
-      </li>
-    
-      <li class="post">
-        <a href="/blog/octopress/">Octopress, S3, and file exclusion</a>
       </li>
     
   </ul>

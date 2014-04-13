@@ -4,7 +4,7 @@
   <title><![CDATA[Category: signal | some guy on the Internet]]></title>
   <link href="http://someguyontheinter.net/blog/categories/signal/atom.xml" rel="self"/>
   <link href="http://someguyontheinter.net/"/>
-  <updated>2014-04-09T23:32:33-04:00</updated>
+  <updated>2014-04-13T11:52:09-04:00</updated>
   <id>http://someguyontheinter.net/</id>
   <author>
     <name><![CDATA[Steve Huff]]></name>
@@ -12,6 +12,35 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[For the Heartbleed Doubters]]></title>
+    <link href="http://someguyontheinter.net/blog/for-the-heartbleed-doubters/"/>
+    <updated>2014-04-13T11:33:08-04:00</updated>
+    <id>http://someguyontheinter.net/blog/for-the-heartbleed-doubters</id>
+    <content type="html"><![CDATA[<p>I promise that this is not going to become the All Heartbleed All The Time blog, but in my defence, this is <a href="http://blog.jcuff.net/2011/12/cautionary-tale-about-storage-and.html">kind of a big deal</a>.</p>
+
+<p>A vendor called <a href="https://www.cloudflare.com/overview">CloudFlare</a> decided to perform a practical test of the exploitability of Heartbleed by setting up a vulnerable site and <a href="http://blog.cloudflare.com/answering-the-critical-question-can-you-get-private-ssl-keys-using-heartbleed">challenging people to steal the private key</a>.  I think these two quotes encapsulate the story perfectly:</p>
+
+<p><blockquote><p>Here’s the good <a href="news:">news:</a> after extensive testing on our software stack, we have been unable to successfully use Heartbleed on a vulnerable server to retrieve any private key data.</p></blockquote></p>
+
+<p>followed by:</p>
+
+<p><blockquote><p>It turns out we were wrong. While it takes effort, it is possible to extract private SSL keys. The challenge was solved by Software Engineer Fedor Indutny and Ilkka Mattila at NCSC-FL roughly 9 hours after the challenge was first published.</p></blockquote></p>
+
+<p>Now consider a tool that <a href="http://blog.vpetkov.net/2014/04/11/ridiculously-fast-heartbleed-subnet-scanner-nmap-heartbleed-howto-and-tutorial/">my buddy Ventz put together</a> for bulk scanning of network segments to detect Heartbleed-vulnerable webservers.  There&rsquo;s no reason to believe that he was the first person to think of building something like this.</p>
+
+<p>The two lessons I see here are the following:</p>
+
+<ol>
+<li><p>Remember that there&rsquo;s a difference between &ldquo;I can&rsquo;t do it&rdquo; and &ldquo;It&rsquo;s impossible&rdquo; :)  Smart people tend to forget this, to their and others' detriment.</p></li>
+<li><p>There is no more <a href="https://en.wikipedia.org/wiki/Security_through_obscurity">security through obscurity</a>.  If your service is accessible from the public Internet, you should assume that you are being scanned on a regular basis.</p></li>
+</ol>
+
+
+<p>-steve</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[More Details About Heartbleed]]></title>
