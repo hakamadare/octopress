@@ -11,7 +11,7 @@ At this point my heart leaps up with a sudden, fierce joy.  Could it be?  Really
 
 "But look, when I try to touch a file..."
 
-{% codeblock lang:console "" "" "" "" linenos:false %}
+``` console
 # df -h
 Filesystem            Size  Used Avail Use% Mounted on
 /dev/xvde             7.9G  5.3G  2.3G  71% /
@@ -19,16 +19,16 @@ tmpfs                 828M     0  828M   0% /dev/shm
 # cd /
 # touch foo
 touch: cannot touch 'foo': No space left on device
-{% endcodeblock %}
+```
 
 At this point I cannot keep the grin off my face.  "Try `df -ih`", I say.
 
-{% codeblock lang:console linenos:false %}
+``` console
 # df -ih
 Filesystem           Inodes IUsed IFree IUse% Mounted on
 /dev/xvde              512K  512K     0  100% /
 tmpfs                  207K     1  207K    1% /dev/shm
-{% endcodeblock %}
+```
 
 Dun-dun-DUNNNNNNNNNNNNNN!
 
