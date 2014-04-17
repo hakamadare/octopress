@@ -11,4 +11,4 @@ RunKeeper just launched [a new app called Breeze](http://breezeapp.com)!  It's a
 
 {% vimeo 91934781 %}
 
-TechCrunch has [something to say about this](http://techcrunch.com/2014/04/17/watch-out-moves-and-human-now-runkeeper-releases-a-movement-app/).
+[TUAW](http://www.tuaw.com/2014/04/17/breeze-by-runkeeper-steps-up-your-activity-level/) and [TechCrunch](http://techcrunch.com/2014/04/17/watch-out-moves-and-human-now-runkeeper-releases-a-movement-app/) have something to say about this.
