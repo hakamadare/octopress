@@ -9,7 +9,7 @@
   <meta name="author" content="Steve Huff">
 
   
-  <meta name="description" content="Apparently it is high time I had an actual blog. ">
+  <meta name="description" content="On the way home today I encountered one of our housemates, also homeward bound, and as we came in the front door I was chattering happily about my &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -89,6 +89,185 @@
       
   <header>
     
+      <h1 class="entry-title"><a href="/blog/you-had-one-job/">You Had One Job</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2014-04-02T20:06:13-04:00" pubdate data-updated="true">Apr 2<span>nd</span>, 2014</time>
+        
+         | <a href="/blog/you-had-one-job/#disqus_thread">Comments</a>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>On the way home today I encountered one of our housemates, also homeward bound, and as we came in the front door I was chattering happily about my second day at work.  I have tasks!  Tasks that I can perform!  This is really exciting.</p>
+
+<p>I was, however, interrupted mid-sentence by a crash from the hallway, where Elijah (one of our cats) had knocked a box of tissues from the shelf to the floor.  He was standing by it staring at me, and I got the distinct sense that this was a warning shot across my bows, indicating that I should shut up about trivialities and focus on the much more important topic of his dinner.</p>
+
+<p><img class="center" src="/images/one_job.jpg" width="746" height="550" title="&#34;you had one job&#34;" alt="&#34;you had one job&#34;"></p>
+
+<h3>Vim, Pathogen, and dirty submodules</h3>
+
+<p>Earlier today I had been adding Vim plugins to my dotfiles repository, pulling them in as <a href="http://git-scm.com/docs/git-submodule">Git submodules</a> for use with <a href="https://github.com/tpope/vim-pathogen">Pathogen</a>.  I installed a couple of plugins and then generated the Vim help tags for them, which led to a minor unsightliness when the generated tags file showed up as untracked changes in my dotfiles directory.</p>
+
+<p><a href="https://github.com/tpope">Tim Pope</a> suggests working around this problem by setting a <a href="http://git-scm.com/docs/gitignore">global excludes file</a>, but I am vaguely concerned that this will just create a landmine that I will step on at some future time when I want to be capturing some entirely unrelated file called <code>tags</code>.  Instead I discovered that <a href="http://www.nils-haldenwang.de/frameworks-and-tools/git/how-to-ignore-changes-in-git-submodules">this fellow has the exact same problem</a>, and his solution works great for me.  Thanks, Nils!</p>
+
+<p>-steve</p>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/first-day-at-runkeeper/">First Day at RunKeeper</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2014-04-01T22:57:14-04:00" pubdate data-updated="true">Apr 1<span>st</span>, 2014</time>
+        
+         | <a href="/blog/first-day-at-runkeeper/#disqus_thread">Comments</a>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>I&rsquo;m winding down at the end of my first day at <a href="http://runkeeper.com">RunKeeper</a>, and I&rsquo;m still walking on air :)  Today started with me apparently being a bit jittery while shaving this morning:</p>
+
+<p><img class="center" src="/images/shaving_cuts.jpg" width="240" height="320" title="&#34;ouch&#34;" alt="&#34;ouch&#34;"></p>
+
+<p>and ended with me running (while wearing <a href="http://www.amazon.com/Sanita-457806M-20-Professional-Cabrio-Clog/dp/B001CWYZME">clogs</a>, ow) to North Station to catch the commuter rail, and today was STILL awesome.</p>
+
+<p>It&rsquo;s really good to work with my old boss Matt again, and I&rsquo;m really liking the generally happy atmosphere, and the tiny dog wandering around the office, and I&rsquo;ve already come up with some tasks I want to try to get my arms around in the near future.  Plus I didn&rsquo;t break anything on the first day!</p>
+
+<p>I spent a chunk of the past week building my new laptop by means of <a href="https://boxen.github.com">Boxen</a>, and I really like this approach to workstation management.  A lot of the work I&rsquo;ve been doing during the past few years focuses on server and application automation, and as a result my servers tend to be (relatively) neat and well-ordered while my laptop is a wretched hive of scum and villainy; if I recall correctly, the laptop that I handed in last week contained the fifth generation of a lovingly hand-crafted workstation configuration, which started out as a Mac OS X 10.2 installation on a PowerPC Mac laptop and underwent multiple ordeals of Migration Assistant/Carbon Copy Cloner/etc. to attain its final Mac OS X 10.7 on Intel status, accumulating tons of cruft as it went.</p>
+
+<p>So now my workstation config lives in a GitHub repository, and deploying it onto a new machine is remarkably straightforward.  I have about 70% of what I need captured in code; now I just need to be reasonably diligent about keeping up with changes I make post-installation, and next time around I will be much happier.</p>
+
+<p>Current ruling on Boxen:</p>
+
+<p>Pro:</p>
+
+<ul>
+<li>configuration captured in code</li>
+<li>safe to re-apply config repeatedly</li>
+<li>upstream maintainers quite responsive to pull requests</li>
+</ul>
+
+
+<p>Con:</p>
+
+<ul>
+<li>no simple way to handle apps that require post-installation configuration (maybe capture <code>.plist</code> files in the repo as templates? yuck)</li>
+<li><em>really</em> does not play nicely with multiple local users on the same host (I may have to end up abandoning my habit of maintaining one user account for work and one for personal use, and leveraging <a href="http://www.controlplaneapp.com">ControlPlane</a> to compensate)</li>
+</ul>
+
+
+<p>-steve</p>
+
+<p>P.S. Oh right, I had also stumbled belatedly onto this Garamond silliness via <a href="http://www.thomasphinney.com/2014/03/saving-400m-font/">this excellent refutation</a>.  My only contribution to the debate, such as it is, is to suggest that Garamond is weaksauce and that real toner-savers use <a href="http://ecofont.com/">Ecofont</a>.</p>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/github-commit-messages/">GitHub Commit Messages</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2014-03-30T18:30:53-04:00" pubdate data-updated="true">Mar 30<span>th</span>, 2014</time>
+        
+         | <a href="/blog/github-commit-messages/#disqus_thread">Comments</a>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>I&rsquo;m mad with power!  I have <a href="http://docs.aws.amazon.com/AmazonCloudFront/latest/APIReference/">CloudFront API access</a> and I&rsquo;m not afraid to use it!  I sound my <a href="https://en.wikipedia.org/wiki/Song_of_Myself">barbaric yawp</a> over the roofs of the world!</p>
+
+<p>Reading the documentation for the <a href="http://osrc.dfm.io/">Open Source Report Card</a> led me to the following gem:</p>
+
+<h3><a href="http://geeksta.net/geeklog/exploring-expressions-emotions-github-commit-messages/">Exploring Expressions of Emotion in GitHub Commit Messages</a></h3>
+
+<p>It is exactly what it sounds like; NLP plus stats plus the GitHub datastream.  Some of my favorite bits:</p>
+
+<ul>
+<li>&ldquo;What stands out in the anger chart compared to the rest is the prominent gap between the &#8220;most angry language&rdquo; VimL and the other languages.&#8221;</li>
+<li>&ldquo;regexes are fun and pleasant to work with, in the same way that oranges are purple&rdquo;</li>
+<li>&ldquo;lol, I dunno what I&rsquo;m doing (JavaScript)&rdquo;</li>
+<li>&ldquo;Still, I&rsquo;m a bit surprised of the result, not because Perl is the winner, but because PHP does not seem to surprise people that often, which does not reflect my experience with this language at all.&rdquo;</li>
+</ul>
+
+
+<p>Seriously, just go read it.  It&rsquo;s awesome.</p>
+
+<p>-steve</p>
+
+<p>P.S. And of course, the section on swearing made me think of <a href="https://web.archive.org/web/20060529181955/http://blog.airdrop.org/archives/000014.html">The Terrible Mr. Grimshaw</a> (audio, NSFW).  Hooray once again for <a href="https://archive.org">archive.org</a>!</p>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
       <h1 class="entry-title"><a href="/blog/hello-world/">Hello World</a></h1>
     
     
@@ -148,23 +327,23 @@
   <ul id="recent_posts">
     
       <li class="post">
+        <a href="/blog/legs-of-clay/">Legs of Clay</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/breeze-by-runkeeper/">Breeze by Runkeeper</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/a-real-life-sysadmin-job-interview-question/">A Real-Life Sysadmin Job Interview Question</a>
+      </li>
+    
+      <li class="post">
         <a href="/blog/for-the-heartbleed-doubters/">For the Heartbleed Doubters</a>
       </li>
     
       <li class="post">
         <a href="/blog/more-details-about-heartbleed/">More Details About Heartbleed</a>
-      </li>
-    
-      <li class="post">
-        <a href="/blog/psa-heartbleed-openssl-vulnerability/">PSA: Heartbleed OpenSSL Vulnerability</a>
-      </li>
-    
-      <li class="post">
-        <a href="/blog/pem-files/">PEM Files, for the Last Damn Time</a>
-      </li>
-    
-      <li class="post">
-        <a href="/blog/the-wolf-of-wall-street/">The Wolf of Wall Street</a>
       </li>
     
   </ul>

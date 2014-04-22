@@ -4,7 +4,7 @@
   <title><![CDATA[Category: work | some guy on the Internet]]></title>
   <link href="http://someguyontheinter.net/blog/categories/work/atom.xml" rel="self"/>
   <link href="http://someguyontheinter.net/"/>
-  <updated>2014-04-13T11:52:09-04:00</updated>
+  <updated>2014-04-21T23:10:20-04:00</updated>
   <id>http://someguyontheinter.net/</id>
   <author>
     <name><![CDATA[Steve Huff]]></name>
@@ -12,6 +12,21 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Breeze by Runkeeper]]></title>
+    <link href="http://someguyontheinter.net/blog/breeze-by-runkeeper/"/>
+    <updated>2014-04-17T11:29:22-04:00</updated>
+    <id>http://someguyontheinter.net/blog/breeze-by-runkeeper</id>
+    <content type="html"><![CDATA[<p>OH HEY YOU GUYS WE MADE AN APP</p>
+
+<p>RunKeeper just launched <a href="http://breezeapp.com">a new app called Breeze</a>!  It&rsquo;s a daily activity tracker for the iPhone 5S, and I am tremendously excited about it.  If you&rsquo;re at all interested in <a href="https://en.wikipedia.org/wiki/Quantified_Self">Quantified Self</a>-style life tracking, please take a look!</p>
+
+<p><div class="embed-video-container"><iframe src="http://player.vimeo.com/video/91934781 "></iframe></div></p>
+
+<p><a href="http://www.tuaw.com/2014/04/17/breeze-by-runkeeper-steps-up-your-activity-level/">TUAW</a> and <a href="http://techcrunch.com/2014/04/17/watch-out-moves-and-human-now-runkeeper-releases-a-movement-app/">TechCrunch</a> have something to say about this.</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[First day at RunKeeper]]></title>
