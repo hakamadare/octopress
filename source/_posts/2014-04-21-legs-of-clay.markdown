@@ -7,7 +7,7 @@ categories: signal sysadmin technology activism fandom
 ---
 I came home a couple of hours ago, returning from a full day: the first two-thirds of my workday involved troubleshooting an application performance issue with my teammates, and the last third involved handing out [RunKeeper swag](https://twitter.com/hakamadare/status/458335460851712000) at the Boston Marathon.  I had been thinking I would write something all #BostonStrong-flavored about the experience of seeing all these people come out to spectate in defiance of [last year's madness](https://en.wikipedia.org/wiki/Boston_Marathon_Bombing).
 
-But instead I made myself some dinner, and while I was cooking I read Tom Preston-Werner's [blog post about leaving GitHub](http://tom.preston-werner.com/2014/04/21/farewell-github-hello-immersive-computing.html) (for context, a good place to start is [this TechCrunch story](http://techcrunch.com/2014/03/15/julie-ann-horvath-describes-sexism-and-intimidation-behind-her-github-exit/)).
+But instead I made myself some dinner, and while I was cooking I read Tom Preston-Werner's [blog post about leaving GitHub](http://tom.preston-werner.com/2014/04/21/farewell-github-hello-immersive-computing.html) (for context, a good place to start is [this TechCrunch story](http://techcrunch.com/2014/03/15/julie-ann-horvath-describes-sexism-and-intimidation-behind-her-github-exit/) (trigger warning: hostile work environment)).
 
 <!-- more -->
 
