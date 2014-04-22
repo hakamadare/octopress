@@ -6,7 +6,7 @@ comments: false
 sharing: true
 footer: true
 ---
-Hi folks!  I'm Steve Huff; I work for [RunKeeper](http://runkeeper.com) as a DevOps Engineer.
+Hi folks!  I'm Steve Huff; I work for [RunKeeper](http://runkeeper.com) as a DevOps Engineer.  I'm also an EMT, and one of the founders of [Operation Hammond](http://operationhammond.com).
 
 Let's see how many links I can come up with:
 
