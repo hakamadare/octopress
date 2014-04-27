@@ -4,7 +4,7 @@
   <title><![CDATA[Category: noise | some guy on the Internet]]></title>
   <link href="http://someguyontheinter.net/blog/categories/noise/atom.xml" rel="self"/>
   <link href="http://someguyontheinter.net/"/>
-  <updated>2014-04-22T00:36:54-04:00</updated>
+  <updated>2014-04-27T11:51:09-04:00</updated>
   <id>http://someguyontheinter.net/</id>
   <author>
     <name><![CDATA[Steve Huff]]></name>
@@ -12,6 +12,28 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[More Clay]]></title>
+    <link href="http://someguyontheinter.net/blog/more-clay/"/>
+    <updated>2014-04-27T11:20:43-04:00</updated>
+    <id>http://someguyontheinter.net/blog/more-clay</id>
+    <content type="html"><![CDATA[<p>And the hits keep on coming.  ┬ノ─┬ノ︵( ⸰ ˘ ⸰ )</p>
+
+<ul>
+<li>Michael Schwern <a href="https://www.gittip.com/noirin/">sues</a> Nóirín Plunkett :(</li>
+<li>Jeff Atwood makes <a href="http://blog.codinghorror.com/what-can-men-do/">a well-intentioned first effort</a> containing a whole bunch of, for want of a better word, rookie mistakes.  :(  Go read <a href="https://medium.com/tech-culture-briefs/a1e93d985af0">Shanley&rsquo;s original post</a> instead.</li>
+<li>Actually, Annalee at GeekFeminism has written <a href="http://geekfeminism.org/2014/04/25/a-week-in-the-life/">a roundup of the whole crapfest of this past week</a>, just go read that instead.</li>
+</ul>
+
+
+<p>Dear people and organizations in technology who I like and respect: please behave better wrt diversity and inclusion.</p>
+
+<p>-steve</p>
+
+<p>P.S. On the other hand, a tip of the hat to <a href="https://twitter.com/puppetmasterd">Luke Kanies</a> and <a href="https://twitter.com/kartar">James Turnbull</a> for reaffirming my faith in the DevOps community.  Keep it up, gents.</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[The Wolf of Wall Street]]></title>
