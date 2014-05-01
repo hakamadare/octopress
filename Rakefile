@@ -1,6 +1,7 @@
 require "rubygems"
 require "bundler/setup"
 require "stringex"
+require "s3_website"
 
 ## -- Rsync Deploy config -- ##
 # Be sure your public key is listed in your server's ~/.ssh/authorized_keys file
@@ -401,4 +402,12 @@ desc "list tasks"
 task :list do
   puts "Tasks: #{(Rake::Task.tasks - [Rake::Task[:list]]).join(', ')}"
   puts "(type rake -T for more detail)\n\n"
+end
+
+desc "Deploy website to S3"
+task :s3_push do
+  webroot = Dir.pwd
+  website = File.join(webroot, '_site')
+  is_headless = true
+  S3Website::Tasks.push(webroot, website, is_headless)
 end
