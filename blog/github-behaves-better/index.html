@@ -5,11 +5,11 @@
 <!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
 <head>
   <meta charset="utf-8">
-  <title>PEM Files, for the Last Damn Time - some guy on the Internet</title>
+  <title>GitHub Behaves Better - some guy on the Internet</title>
   <meta name="author" content="Steve Huff">
 
   
-  <meta name="description" content="OK, I am tired of forgetting this information and having to re-research it. A PEM file is an X.509 digital certificate, specifically a &ldquo;Base64 &hellip;">
+  <meta name="description" content="I am pleased to report that after a lot of people yelled at them over the course of this past week, GitHub tried again to present the findings of &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -18,7 +18,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   
-  <link rel="canonical" href="http://someguyontheinter.net/blog/pem-files/">
+  <link rel="canonical" href="http://someguyontheinter.net/blog/github-behaves-better/">
   <link href="/favicon.png" rel="icon">
   <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
   <script src="/javascripts/modernizr-2.0.js"></script>
@@ -86,7 +86,7 @@
   
   <header>
     
-      <h1 class="entry-title">PEM Files, for the Last Damn Time</h1>
+      <h1 class="entry-title">GitHub Behaves Better</h1>
     
     
       <p class="meta">
@@ -102,7 +102,7 @@
   
 
 
-<time datetime="2014-04-07T20:49:22-04:00" pubdate data-updated="true">Apr 7<span>th</span>, 2014</time>
+<time datetime="2014-04-30T20:03:05-04:00" pubdate data-updated="true">Apr 30<span>th</span>, 2014</time>
         
          | <a href="#disqus_thread">Comments</a>
         
@@ -111,26 +111,20 @@
   </header>
 
 
-<div class="entry-content"><p>OK, I am tired of forgetting this information and having to re-research it.</p>
+<div class="entry-content"><p>I am pleased to report that after a lot of people yelled at them over the course of this past week, GitHub <a href="https://github.com/blog/1826-follow-up-to-the-investigation-results">tried again</a> to present the findings of their internal investigation (<a href="http://someguyontheinter.net/blog/legs-of-clay/">context</a>), and did a much better job of it.</p>
 
-<p>A <a href="https://en.wikipedia.org/wiki/.pem#Certificate_filename_extensions">PEM file</a> is an X.509 digital certificate, specifically a &ldquo;Base64 encoded DER certificate&rdquo; (thank you Wikipedia).  The components are concatenated in the following format:</p>
+<p>I particularly appreciate their willingness to look at themselves with a critical, rather than a defensive, eye.  I am <a href="http://readercon.org/publicstatement.htm">not unfamiliar</a> with how it feels to have the massively distributed ire of the Internet focused on you and your organization, and I salute GitHub&rsquo;s leadership for resisting the urge to tack on a parting &ldquo;and that&rsquo;s why you were wrong to be so mean to us&rdquo; or some such.</p>
 
-<ol>
-<li>Private key (optional)</li>
-<li>Server certificate</li>
-<li>Intermediate certificate (optional)</li>
-<li>Root certificate (optional)</li>
-</ol>
-
-
-<p>or, in other words, <code>cat server.key server.crt ca-bundle.crt &gt;&gt; server.pem</code>.</p>
-
-<p>That is my final word on the subject.</p>
+<p>This doesn&rsquo;t mean that everything&rsquo;s OK.  I&rsquo;m still sad about this sequence of events, both about the original incident and then the first blog post (to say nothing of Preston-Werner&rsquo;s personal blog post, yikes), and I suspect it will take more time and more scrutiny before I feel comfortable being the GitHub fanboy I used to be, if ever again.</p>
 
 <!-- more -->
 
 
-<p>This evening did not involve attending our intended <a href="http://petermulvey.com/">Peter Mulvey</a> concert, but did involve hanging out at home with various friends and drinking a <a href="http://wiki.webtender.com/wiki/Bourbon_Triple_Sec_Lemon_Juice">Bourble</a>; I hadn&rsquo;t previously encountered this cocktail, but rather mixed it in an attempt to finish off a bottle of triple sec.  It wasn&rsquo;t bad; I found the lemon juice a bit too strong and will use less next time, or maybe lime juice, or maybe a <a href="https://en.wikipedia.org/wiki/Meyer_lemon">Meyer lemon</a> if I have one handy.</p>
+<p>I saw <a href="https://twitter.com/rosefox/status/461578257499185152">a tweet today</a> that really resonated with me.  I understand the gunshy feeling of not wanting to get excited about people (events, organizations, communities, ideas), but on the other hand, I think that in my natural state I&rsquo;m constitutionally incapable of <em>not</em> getting fired up about someone who&rsquo;s making some AWESOME THING, or who had some GREAT IDEA.</p>
+
+<p>I remember what it was like to not be excited about anything, to find no joy in the world around me or the people I met; that was in 1998, and it turned out that that was a clinical symptom called <a href="https://en.wikipedia.org/wiki/Anhedonia">anhedonia</a>, associated with the depression that afflicted me at that time.  That was one of the most terrifying periods of my life.  I suppose that&rsquo;s one reason why this business with GitHub rattled me so much: if my heroes are fallible, then they might break my heart, but the alternative is to not have heroes, and that feels enough like that experience of depression that I want no part of it.</p>
+
+<p>So thank you, <a href="http://defunkt.io/">defunkt</a> and whoever else worked on the update.  I appreciate your efforts.</p>
 </div>
 
 
@@ -153,12 +147,12 @@
   
 
 
-<time datetime="2014-04-07T20:49:22-04:00" pubdate data-updated="true">Apr 7<span>th</span>, 2014</time>
+<time datetime="2014-04-30T20:03:05-04:00" pubdate data-updated="true">Apr 30<span>th</span>, 2014</time>
       
 
 <span class="categories">
   
-    <a class='category' href='/blog/categories/drinks/'>drinks</a>, <a class='category' href='/blog/categories/signal/'>signal</a>, <a class='category' href='/blog/categories/ssl/'>ssl</a>
+    <a class='category' href='/blog/categories/activism/'>activism</a>, <a class='category' href='/blog/categories/mind/'>mind</a>, <a class='category' href='/blog/categories/signal/'>signal</a>, <a class='category' href='/blog/categories/technology/'>technology</a>
   
 </span>
 
@@ -174,10 +168,8 @@
     
     <p class="meta">
       
-        <a class="basic-alignment left" href="/blog/the-wolf-of-wall-street/" title="Previous Post: The Wolf of Wall Street">&laquo; The Wolf of Wall Street</a>
+        <a class="basic-alignment left" href="/blog/more-clay/" title="Previous Post: More Clay">&laquo; More Clay</a>
       
-      
-        <a class="basic-alignment right" href="/blog/psa-heartbleed-openssl-vulnerability/" title="Next Post: PSA: Heartbleed OpenSSL Vulnerability">PSA: Heartbleed OpenSSL Vulnerability &raquo;</a>
       
     </p>
   </footer>
@@ -276,8 +268,8 @@
       
         
         // var disqus_developer = 1;
-        var disqus_identifier = 'http://someguyontheinter.net/blog/pem-files/';
-        var disqus_url = 'http://someguyontheinter.net/blog/pem-files/';
+        var disqus_identifier = 'http://someguyontheinter.net/blog/github-behaves-better/';
+        var disqus_url = 'http://someguyontheinter.net/blog/github-behaves-better/';
         var disqus_script = 'embed.js';
       
     (function () {

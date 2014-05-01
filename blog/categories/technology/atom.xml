@@ -4,7 +4,7 @@
   <title><![CDATA[Category: technology | some guy on the Internet]]></title>
   <link href="http://someguyontheinter.net/blog/categories/technology/atom.xml" rel="self"/>
   <link href="http://someguyontheinter.net/"/>
-  <updated>2014-04-27T11:51:09-04:00</updated>
+  <updated>2014-04-30T20:58:23-04:00</updated>
   <id>http://someguyontheinter.net/</id>
   <author>
     <name><![CDATA[Steve Huff]]></name>
@@ -12,6 +12,28 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[GitHub Behaves Better]]></title>
+    <link href="http://someguyontheinter.net/blog/github-behaves-better/"/>
+    <updated>2014-04-30T20:03:05-04:00</updated>
+    <id>http://someguyontheinter.net/blog/github-behaves-better</id>
+    <content type="html"><![CDATA[<p>I am pleased to report that after a lot of people yelled at them over the course of this past week, GitHub <a href="https://github.com/blog/1826-follow-up-to-the-investigation-results">tried again</a> to present the findings of their internal investigation (<a href="http://someguyontheinter.net/blog/legs-of-clay/">context</a>), and did a much better job of it.</p>
+
+<p>I particularly appreciate their willingness to look at themselves with a critical, rather than a defensive, eye.  I am <a href="http://readercon.org/publicstatement.htm">not unfamiliar</a> with how it feels to have the massively distributed ire of the Internet focused on you and your organization, and I salute GitHub&rsquo;s leadership for resisting the urge to tack on a parting &ldquo;and that&rsquo;s why you were wrong to be so mean to us&rdquo; or some such.</p>
+
+<p>This doesn&rsquo;t mean that everything&rsquo;s OK.  I&rsquo;m still sad about this sequence of events, both about the original incident and then the first blog post (to say nothing of Preston-Werner&rsquo;s personal blog post, yikes), and I suspect it will take more time and more scrutiny before I feel comfortable being the GitHub fanboy I used to be, if ever again.</p>
+
+<!-- more -->
+
+
+<p>I saw <a href="https://twitter.com/rosefox/status/461578257499185152">a tweet today</a> that really resonated with me.  I understand the gunshy feeling of not wanting to get excited about people (events, organizations, communities, ideas), but on the other hand, I think that in my natural state I&rsquo;m constitutionally incapable of <em>not</em> getting fired up about someone who&rsquo;s making some AWESOME THING, or who had some GREAT IDEA.</p>
+
+<p>I remember what it was like to not be excited about anything, to find no joy in the world around me or the people I met; that was in 1998, and it turned out that that was a clinical symptom called <a href="https://en.wikipedia.org/wiki/Anhedonia">anhedonia</a>, associated with the depression that afflicted me at that time.  That was one of the most terrifying periods of my life.  I suppose that&rsquo;s one reason why this business with GitHub rattled me so much: if my heroes are fallible, then they might break my heart, but the alternative is to not have heroes, and that feels enough like that experience of depression that I want no part of it.</p>
+
+<p>So thank you, <a href="http://defunkt.io/">defunkt</a> and whoever else worked on the update.  I appreciate your efforts.</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[More Clay]]></title>

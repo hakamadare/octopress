@@ -9,8 +9,7 @@
   <meta name="author" content="Steve Huff">
 
   
-  <meta name="description" content="And the hits keep on coming. ┬ノ─┬ノ︵( ⸰ ˘ ⸰ ) Michael Schwern sues Nóirín Plunkett :(
-Jeff Atwood makes a well-intentioned first effort containing a &hellip;">
+  <meta name="description" content="I am pleased to report that after a lot of people yelled at them over the course of this past week, GitHub tried again to present the findings of &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -84,6 +83,53 @@ Jeff Atwood makes a well-intentioned first effort containing a &hellip;">
     <div id="content">
       <div class="blog-index">
   
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/github-behaves-better/">GitHub Behaves Better</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2014-04-30T20:03:05-04:00" pubdate data-updated="true">Apr 30<span>th</span>, 2014</time>
+        
+         | <a href="/blog/github-behaves-better/#disqus_thread">Comments</a>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>I am pleased to report that after a lot of people yelled at them over the course of this past week, GitHub <a href="https://github.com/blog/1826-follow-up-to-the-investigation-results">tried again</a> to present the findings of their internal investigation (<a href="http://someguyontheinter.net/blog/legs-of-clay/">context</a>), and did a much better job of it.</p>
+
+<p>I particularly appreciate their willingness to look at themselves with a critical, rather than a defensive, eye.  I am <a href="http://readercon.org/publicstatement.htm">not unfamiliar</a> with how it feels to have the massively distributed ire of the Internet focused on you and your organization, and I salute GitHub&rsquo;s leadership for resisting the urge to tack on a parting &ldquo;and that&rsquo;s why you were wrong to be so mean to us&rdquo; or some such.</p>
+
+<p>This doesn&rsquo;t mean that everything&rsquo;s OK.  I&rsquo;m still sad about this sequence of events, both about the original incident and then the first blog post (to say nothing of Preston-Werner&rsquo;s personal blog post, yikes), and I suspect it will take more time and more scrutiny before I feel comfortable being the GitHub fanboy I used to be, if ever again.</p>
+
+</div>
+  
+  
+    <footer>
+      <a rel="full-article" href="/blog/github-behaves-better/">Read on &rarr;</a>
+    </footer>
+  
+
+
+    </article>
   
   
     <article>
@@ -565,62 +611,6 @@ Jeff Atwood makes a well-intentioned first effort containing a &hellip;">
 
     </article>
   
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/octopress/">Octopress, S3, and File Exclusion</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2014-04-03T21:49:10-04:00" pubdate data-updated="true">Apr 3<span>rd</span>, 2014</time>
-        
-         | <a href="/blog/octopress/#disqus_thread">Comments</a>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>OK, one more quick thing:</p>
-
-<p>I knew from the get-go that I wanted to host this blog on <a href="https://aws.amazon.com/s3/">S3</a>, and that I wanted to build it with <a href="http://octopress.org/">Octopress</a>.  One relatively minor conflict between these two tools, though, is that S3 buckets work well for hosting static sites, but Octopress is built on top of Git, and I was sure I didn&rsquo;t want to be uploading my Git metadata to S3.</p>
-
-<p><a href="https://github.com/laurilehmijoki/s3_website">s3_website</a> is the tool I&rsquo;m using to push my generated site to S3.  It has a config option, <code>exclude_from_upload</code>, which enables you to specify one or more regexes to match files to be excluded from S3 uploads.</p>
-
-<blockquote><p>Some people, when confronted with a problem, think &#8220;I know, I&#8217;ll use regular expressions.&#8221; Now they have two problems.</p><footer><strong>Jamie Zawinski</strong> <cite><a href='http://www.jwz.org/hacks'>www.jwz.org/hacks/&hellip;</a></cite></footer></blockquote>
-
-
-<p>Yeah, it turns out that putting the string <code>.git</code> in my excludes list (instead of <code>\.git</code>) broke a variety of things on the site, including but not limited to the following:</p>
-
-<ul>
-<li>my GitHub status in the sidebar</li>
-<li>a post with &ldquo;GitHub&rdquo; in the title</li>
-<li>Disqus comment counts</li>
-</ul>
-
-
-<p>So yeah, don&rsquo;t do that.</p>
-</div>
-  
-  
-
-
-    </article>
-  
   <div class="pagination">
     
       <a class="prev" href="/blog/page/2/">&larr; Older</a>
@@ -642,6 +632,10 @@ Jeff Atwood makes a well-intentioned first effort containing a &hellip;">
   <ul id="recent_posts">
     
       <li class="post">
+        <a href="/blog/github-behaves-better/">GitHub Behaves Better</a>
+      </li>
+    
+      <li class="post">
         <a href="/blog/more-clay/">More Clay</a>
       </li>
     
@@ -655,10 +649,6 @@ Jeff Atwood makes a well-intentioned first effort containing a &hellip;">
     
       <li class="post">
         <a href="/blog/a-real-life-sysadmin-job-interview-question/">A Real-Life Sysadmin Job Interview Question</a>
-      </li>
-    
-      <li class="post">
-        <a href="/blog/for-the-heartbleed-doubters/">For the Heartbleed Doubters</a>
       </li>
     
   </ul>
