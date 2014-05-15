@@ -16,3 +16,4 @@ Take a look at these sites when you have a moment.
 * [Lowering the Bar](http://www.loweringthebar.net/)
 * [Smitten Kitchen](http://smittenkitchen.com/)
 * [Model View Culture](http://modelviewculture.com/)
+* [Short Story Thursdays](http://jacobtomsky.com/sst/)
