@@ -11,9 +11,9 @@ At this point my heart leaps up with a sudden, fierce joy.  Could it be?  Really
 
 "But look, when I try to touch a file..."
 
-``` console
+```console
 # df -h
-Filesystem            Size  Used Avail Use% Mounted on
+OK, see this?  This is why people say uncharitable things about Perl:Filesystem            Size  Used Avail Use% Mounted on
 /dev/xvde             7.9G  5.3G  2.3G  71% /
 tmpfs                 828M     0  828M   0% /dev/shm
 # cd /
@@ -23,7 +23,7 @@ touch: cannot touch 'foo': No space left on device
 
 At this point I cannot keep the grin off my face.  "Try `df -ih`", I say.
 
-``` console
+```console
 # df -ih
 Filesystem           Inodes IUsed IFree IUse% Mounted on
 /dev/xvde              512K  512K     0  100% /
