@@ -4,7 +4,7 @@
   <title><![CDATA[Category: programming | some guy on the Internet]]></title>
   <link href="http://someguyontheinter.net/blog/categories/programming/atom.xml" rel="self"/>
   <link href="http://someguyontheinter.net/"/>
-  <updated>2014-05-14T21:22:32-04:00</updated>
+  <updated>2014-05-21T22:15:03-04:00</updated>
   <id>http://someguyontheinter.net/</id>
   <author>
     <name><![CDATA[Steve Huff]]></name>
@@ -12,6 +12,57 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[An Entirely Needless Obstruction]]></title>
+    <link href="http://someguyontheinter.net/blog/an-entirely-needless-obstruction/"/>
+    <updated>2014-05-20T14:19:41-04:00</updated>
+    <id>http://someguyontheinter.net/blog/an-entirely-needless-obstruction</id>
+    <content type="html"><![CDATA[<p>OK, see this?  This is why people say uncharitable things about Perl:</p>
+
+<p>```perl
+for (@cmd)
+{</p>
+
+<pre><code>next unless grep /^\Q$cmd\E$/, split(" ", $_-&gt;[1]);
+$cmd_data = $_;
+push @{$cmd_data-&gt;[3]}, ["filter", undef, undef, \&amp;parse_filter] if $_-&gt;[1] =~ /\bdescribe/;
+for (@{$cmd_data-&gt;[3]})
+{
+</code></pre>
+
+<p>  for (split(&ldquo; &rdquo;, $_&ndash;>[0]))
+  {</p>
+
+<pre><code>  (my $key = $_) =~ s/-/_/g;
+  $keyword{$key} = undef;
+</code></pre>
+
+<p>  }</p>
+
+<pre><code>}
+last;
+</code></pre>
+
+<p>}
+```</p>
+
+<p>It doesn&rsquo;t matter whose code this is.  Suffice it to say that it</p>
+
+<ul>
+<li>is a crucial part of a publically-available, fairly popular program,</li>
+<li>was last edited in 2011,</li>
+<li>is standing in the way of my getting something accomplished today.</li>
+</ul>
+
+
+<p>Where to even start?  What&rsquo;s with the magical anonymous array-indexed data structures?  The positional parameters (gotta pass those <code>undef</code>s or everything is busted)?  The assignment of named variables to <code>$_</code> (yay!) and then going on to dereference <code>$_</code> instead of the named variables?</p>
+
+<p>I&rsquo;m not sure I&rsquo;m willing to give this a pass as being <a href="http://www.modernperlbooks.com/mt/2009/03/turning-baby-perl-into-grownup-perl.html">baby Perl</a>; this is just a design that has been stretched comically (tragically?) far beyond its original limits.  This makes me cranky and sad.</p>
+
+<p>Time to figure out what the hell is going on here so that I can patch this code.  <a href="http://www.modernperlbooks.com/mt/2011/01/cgi-is-okay-but-bad-code-is-irresponsible.html">Fantastic</a>.</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[You Had One Job]]></title>

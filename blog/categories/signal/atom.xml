@@ -4,7 +4,7 @@
   <title><![CDATA[Category: signal | some guy on the Internet]]></title>
   <link href="http://someguyontheinter.net/blog/categories/signal/atom.xml" rel="self"/>
   <link href="http://someguyontheinter.net/"/>
-  <updated>2014-05-14T21:22:32-04:00</updated>
+  <updated>2014-05-21T22:15:03-04:00</updated>
   <id>http://someguyontheinter.net/</id>
   <author>
     <name><![CDATA[Steve Huff]]></name>
@@ -12,6 +12,57 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[An Entirely Needless Obstruction]]></title>
+    <link href="http://someguyontheinter.net/blog/an-entirely-needless-obstruction/"/>
+    <updated>2014-05-20T14:19:41-04:00</updated>
+    <id>http://someguyontheinter.net/blog/an-entirely-needless-obstruction</id>
+    <content type="html"><![CDATA[<p>OK, see this?  This is why people say uncharitable things about Perl:</p>
+
+<p>```perl
+for (@cmd)
+{</p>
+
+<pre><code>next unless grep /^\Q$cmd\E$/, split(" ", $_-&gt;[1]);
+$cmd_data = $_;
+push @{$cmd_data-&gt;[3]}, ["filter", undef, undef, \&amp;parse_filter] if $_-&gt;[1] =~ /\bdescribe/;
+for (@{$cmd_data-&gt;[3]})
+{
+</code></pre>
+
+<p>  for (split(&ldquo; &rdquo;, $_&ndash;>[0]))
+  {</p>
+
+<pre><code>  (my $key = $_) =~ s/-/_/g;
+  $keyword{$key} = undef;
+</code></pre>
+
+<p>  }</p>
+
+<pre><code>}
+last;
+</code></pre>
+
+<p>}
+```</p>
+
+<p>It doesn&rsquo;t matter whose code this is.  Suffice it to say that it</p>
+
+<ul>
+<li>is a crucial part of a publically-available, fairly popular program,</li>
+<li>was last edited in 2011,</li>
+<li>is standing in the way of my getting something accomplished today.</li>
+</ul>
+
+
+<p>Where to even start?  What&rsquo;s with the magical anonymous array-indexed data structures?  The positional parameters (gotta pass those <code>undef</code>s or everything is busted)?  The assignment of named variables to <code>$_</code> (yay!) and then going on to dereference <code>$_</code> instead of the named variables?</p>
+
+<p>I&rsquo;m not sure I&rsquo;m willing to give this a pass as being <a href="http://www.modernperlbooks.com/mt/2009/03/turning-baby-perl-into-grownup-perl.html">baby Perl</a>; this is just a design that has been stretched comically (tragically?) far beyond its original limits.  This makes me cranky and sad.</p>
+
+<p>Time to figure out what the hell is going on here so that I can patch this code.  <a href="http://www.modernperlbooks.com/mt/2011/01/cgi-is-okay-but-bad-code-is-irresponsible.html">Fantastic</a>.</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[SETEC ASTRONOMY]]></title>
@@ -115,62 +166,6 @@
 <p><div class="embed-video-container"><iframe src="http://player.vimeo.com/video/91934781 "></iframe></div></p>
 
 <p><a href="http://www.tuaw.com/2014/04/17/breeze-by-runkeeper-steps-up-your-activity-level/">TUAW</a> and <a href="http://techcrunch.com/2014/04/17/watch-out-moves-and-human-now-runkeeper-releases-a-movement-app/">TechCrunch</a> have something to say about this.</p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[A Real-Life Sysadmin Job Interview Question]]></title>
-    <link href="http://someguyontheinter.net/blog/a-real-life-sysadmin-job-interview-question/"/>
-    <updated>2014-04-16T07:59:44-04:00</updated>
-    <id>http://someguyontheinter.net/blog/a-real-life-sysadmin-job-interview-question</id>
-    <content type="html"><![CDATA[<p>Yesterday one of my colleagues flags me down and points to his terminal.  &ldquo;Hang on a second,&rdquo; he says as I walk over, &ldquo;let me become root. <type type type> OK, watch this: see, there&rsquo;s plenty of free space on the root partition&hellip;&rdquo;</p>
-
-<p>At this point my heart leaps up with a sudden, fierce joy.  Could it be?  Really?</p>
-
-<p>&ldquo;But look, when I try to touch a file&hellip;&rdquo;</p>
-
-<p>``` console</p>
-
-<h1>df -h</h1>
-
-<p>Filesystem            Size  Used Avail Use% Mounted on
-/dev/xvde             7.9G  5.3G  2.3G  71% /
-tmpfs                 828M     0  828M   0% /dev/shm</p>
-
-<h1>cd /</h1>
-
-<h1>touch foo</h1>
-
-<p>touch: cannot touch &lsquo;foo&rsquo;: No space left on device
-```</p>
-
-<p>At this point I cannot keep the grin off my face.  &ldquo;Try <code>df -ih</code>&rdquo;, I say.</p>
-
-<p>``` console</p>
-
-<h1>df -ih</h1>
-
-<p>Filesystem           Inodes IUsed IFree IUse% Mounted on
-/dev/xvde              512K  512K     0  100% /
-tmpfs                  207K     1  207K    1% /dev/shm
-```</p>
-
-<p>Dun-dun-DUNNNNNNNNNNNNNN!</p>
-
-<!-- more -->
-
-
-<p>So, what&rsquo;s all this then?  My colleague had inadvertently presented me with a scenario that I have encountered in job interviews (on both sides of the table) throughout my career; I believe I was asked it when I first interviewed at <a href="https://en.wikipedia.org/wiki/Net_Daemons_Associates">NDA</a>, and I&rsquo;ve been using it as a &ldquo;weeder&rdquo; question for years when screening junior admins.</p>
-
-<p>To elaborate: my colleague was working on a system which appeared to have unused space on the root (&ldquo;/&rdquo;) filesystem.  However, when he tried to create a new file in that filesystem, he received an unexpected and nonsensical error message; how could there be no space left on the device, when a moment ago he had seen that there were 2.3G available?</p>
-
-<p>The answer has to do with <a href="https://en.wikipedia.org/wiki/Inode">inodes</a>.  An inode is, essentially, the address of a file in a Unix filesystem.  When a filesystem is created, a certain amount of space (the bulk of it) is allocated for storage of data, and a smaller amount is allocated for the storage of inodes.  Each file corresponds to one inode, and every file must have an associated inode.  (Yes, this is a <a href="http://www.catb.org/jargon/html/H/handwave.html">hand-wavy</a> explanation; if you want more detail, go read the linked article :) )</p>
-
-<p>The command my colleague initially ran, <code>df -h</code>, reports disk usage across all mounted filesystems (the <code>-h</code> makes the command output convenient, human-readable numbers like &ldquo;5.3G&rdquo; instead of &ldquo;5525556&rdquo;).  However, when I asked him to add the <code>-i</code> argument, I was asking the command to report on inode usage rather than data usage; this quickly revealed that the root filesystem was out of inodes, and that was why my colleague couldn&rsquo;t create a new file.</p>
-
-<p>Further investigation revealed that a misbehaving log aggregation utility was creating hundreds of thousands of files and failing to clean them up; time to go complain to the vendor.</p>
-
-<p>-steve</p>
 ]]></content>
   </entry>
   

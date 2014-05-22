@@ -4,7 +4,7 @@
   <title><![CDATA[Category: sysadmin | some guy on the Internet]]></title>
   <link href="http://someguyontheinter.net/blog/categories/sysadmin/atom.xml" rel="self"/>
   <link href="http://someguyontheinter.net/"/>
-  <updated>2014-05-14T21:22:32-04:00</updated>
+  <updated>2014-05-21T22:15:03-04:00</updated>
   <id>http://someguyontheinter.net/</id>
   <author>
     <name><![CDATA[Steve Huff]]></name>
@@ -66,11 +66,11 @@
 
 <p>&ldquo;But look, when I try to touch a file&hellip;&rdquo;</p>
 
-<p>``` console</p>
+<p>```console</p>
 
 <h1>df -h</h1>
 
-<p>Filesystem            Size  Used Avail Use% Mounted on
+<p>OK, see this?  This is why people say uncharitable things about Perl:Filesystem            Size  Used Avail Use% Mounted on
 /dev/xvde             7.9G  5.3G  2.3G  71% /
 tmpfs                 828M     0  828M   0% /dev/shm</p>
 
@@ -83,7 +83,7 @@ tmpfs                 828M     0  828M   0% /dev/shm</p>
 
 <p>At this point I cannot keep the grin off my face.  &ldquo;Try <code>df -ih</code>&rdquo;, I say.</p>
 
-<p>``` console</p>
+<p>```console</p>
 
 <h1>df -ih</h1>
 

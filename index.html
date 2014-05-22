@@ -9,7 +9,23 @@
   <meta name="author" content="Steve Huff">
 
   
-  <meta name="description" content="This morning I learned about Secret via Tom Limoncelli&rsquo;s Twitter. I&rsquo;m not at all sure how I feel about this service. As I understand it, &hellip;">
+  <meta name="description" content="OK, see this? This is why people say uncharitable things about Perl: 1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+for (@cmd)
+{ next unless grep /^\Q$cmd\E$/, &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -54,7 +70,7 @@
   <header role="banner"><hgroup>
   <h1><a href="/">some guy on the Internet</a></h1>
   
-    <h2>it must be true!</h2>
+    <h2>the network engineer fears the backhoe, and the systems engineer fears the network engineer</h2>
   
 </hgroup>
 
@@ -64,10 +80,10 @@
   
 </ul>
   
-<form action="https://www.google.com/search" method="get">
+<form action="http://www.duckduckgo.com/" method="get">
   <fieldset role="search">
-    <input type="hidden" name="q" value="site:someguyontheinter.net" />
-    <input class="search" type="text" name="q" results="0" placeholder="Search"/>
+    <input type="hidden" name="sites" value="duckduckgo.com" />
+    <input class="search" type="text" name="q" results="0" placeholder="Search&hellip;"/>
   </fieldset>
 </form>
   
@@ -83,6 +99,92 @@
     <div id="content">
       <div class="blog-index">
   
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/an-entirely-needless-obstruction/">An Entirely Needless Obstruction</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2014-05-20T14:19:41-04:00" pubdate data-updated="true">May 20<span>th</span>, 2014</time>
+        
+         | <a href="/blog/an-entirely-needless-obstruction/#disqus_thread">Comments</a>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>OK, see this?  This is why people say uncharitable things about Perl:</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+</pre></td><td class='code'><pre><code class='perl'><span class='line'><span class="k">for</span> <span class="p">(</span><span class="nv">@cmd</span><span class="p">)</span>
+</span><span class='line'><span class="p">{</span>
+</span><span class='line'>    <span class="k">next</span> <span class="k">unless</span> <span class="nb">grep</span> <span class="sr">/^\Q$cmd\E$/</span><span class="p">,</span> <span class="nb">split</span><span class="p">(</span><span class="s">&quot; &quot;</span><span class="p">,</span> <span class="nv">$_</span><span class="o">-&gt;</span><span class="p">[</span><span class="mi">1</span><span class="p">]);</span>
+</span><span class='line'>    <span class="nv">$cmd_data</span> <span class="o">=</span> <span class="nv">$_</span><span class="p">;</span>
+</span><span class='line'>    <span class="nb">push</span> <span class="nv">@</span><span class="p">{</span><span class="nv">$cmd_data</span><span class="o">-&gt;</span><span class="p">[</span><span class="mi">3</span><span class="p">]},</span> <span class="p">[</span><span class="s">&quot;filter&quot;</span><span class="p">,</span> <span class="nb">undef</span><span class="p">,</span> <span class="nb">undef</span><span class="p">,</span> <span class="o">\&amp;</span><span class="n">parse_filter</span><span class="p">]</span> <span class="k">if</span> <span class="nv">$_</span><span class="o">-&gt;</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">=~</span><span class="sr"> /\bdescribe/</span><span class="p">;</span>
+</span><span class='line'>    <span class="k">for</span> <span class="p">(</span><span class="nv">@</span><span class="p">{</span><span class="nv">$cmd_data</span><span class="o">-&gt;</span><span class="p">[</span><span class="mi">3</span><span class="p">]})</span>
+</span><span class='line'>    <span class="p">{</span>
+</span><span class='line'>  <span class="k">for</span> <span class="p">(</span><span class="nb">split</span><span class="p">(</span><span class="s">&quot; &quot;</span><span class="p">,</span> <span class="nv">$_</span><span class="o">-&gt;</span><span class="p">[</span><span class="mi">0</span><span class="p">]))</span>
+</span><span class='line'>  <span class="p">{</span>
+</span><span class='line'>      <span class="p">(</span><span class="k">my</span> <span class="nv">$key</span> <span class="o">=</span> <span class="nv">$_</span><span class="p">)</span> <span class="o">=~</span> <span class="sr">s/-/_/g</span><span class="p">;</span>
+</span><span class='line'>      <span class="nv">$keyword</span><span class="p">{</span><span class="nv">$key</span><span class="p">}</span> <span class="o">=</span> <span class="nb">undef</span><span class="p">;</span>
+</span><span class='line'>  <span class="p">}</span>
+</span><span class='line'>    <span class="p">}</span>
+</span><span class='line'>    <span class="k">last</span><span class="p">;</span>
+</span><span class='line'><span class="p">}</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>It doesn&rsquo;t matter whose code this is.  Suffice it to say that it</p>
+
+<ul>
+<li>is a crucial part of a publically-available, fairly popular program,</li>
+<li>was last edited in 2011,</li>
+<li>is standing in the way of my getting something accomplished today.</li>
+</ul>
+
+
+<p>Where to even start?  What&rsquo;s with the magical anonymous array-indexed data structures?  The positional parameters (gotta pass those <code>undef</code>s or everything is busted)?  The assignment of named variables to <code>$_</code> (yay!) and then going on to dereference <code>$_</code> instead of the named variables?</p>
+
+<p>I&rsquo;m not sure I&rsquo;m willing to give this a pass as being <a href="http://www.modernperlbooks.com/mt/2009/03/turning-baby-perl-into-grownup-perl.html">baby Perl</a>; this is just a design that has been stretched comically (tragically?) far beyond its original limits.  This makes me cranky and sad.</p>
+
+<p>Time to figure out what the hell is going on here so that I can patch this code.  <a href="http://www.modernperlbooks.com/mt/2011/01/cgi-is-okay-but-bad-code-is-irresponsible.html">Fantastic</a>.</p>
+</div>
+  
+  
+
+
+    </article>
   
   
     <article>
@@ -361,7 +463,7 @@
 <span class='line-number'>6</span>
 <span class='line-number'>7</span>
 </pre></td><td class='code'><pre><code class='console'><span class='line'><span class="gp">#</span> df -h
-</span><span class='line'><span class="go">Filesystem            Size  Used Avail Use% Mounted on</span>
+</span><span class='line'><span class="go">OK, see this?  This is why people say uncharitable things about Perl:Filesystem            Size  Used Avail Use% Mounted on</span>
 </span><span class='line'><span class="go">/dev/xvde             7.9G  5.3G  2.3G  71% /</span>
 </span><span class='line'><span class="go">tmpfs                 828M     0  828M   0% /dev/shm</span>
 </span><span class='line'><span class="gp">#</span> <span class="nb">cd</span> /
@@ -557,63 +659,6 @@
 
     </article>
   
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/pem-files/">PEM Files, for the Last Damn Time</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2014-04-07T20:49:22-04:00" pubdate data-updated="true">Apr 7<span>th</span>, 2014</time>
-        
-         | <a href="/blog/pem-files/#disqus_thread">Comments</a>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>OK, I am tired of forgetting this information and having to re-research it.</p>
-
-<p>A <a href="https://en.wikipedia.org/wiki/.pem#Certificate_filename_extensions">PEM file</a> is an X.509 digital certificate, specifically a &ldquo;Base64 encoded DER certificate&rdquo; (thank you Wikipedia).  The components are concatenated in the following format:</p>
-
-<ol>
-<li>Private key (optional)</li>
-<li>Server certificate</li>
-<li>Intermediate certificate (optional)</li>
-<li>Root certificate (optional)</li>
-</ol>
-
-
-<p>or, in other words, <code>cat server.key server.crt ca-bundle.crt &gt;&gt; server.pem</code>.</p>
-
-<p>That is my final word on the subject.</p>
-
-</div>
-  
-  
-    <footer>
-      <a rel="full-article" href="/blog/pem-files/">Read on &rarr;</a>
-    </footer>
-  
-
-
-    </article>
-  
   <div class="pagination">
     
       <a class="prev" href="/blog/page/2/">&larr; Older</a>
@@ -635,6 +680,10 @@
   <ul id="recent_posts">
     
       <li class="post">
+        <a href="/blog/an-entirely-needless-obstruction/">An Entirely Needless Obstruction</a>
+      </li>
+    
+      <li class="post">
         <a href="/blog/setec-astronomy/">SETEC ASTRONOMY</a>
       </li>
     
@@ -648,10 +697,6 @@
     
       <li class="post">
         <a href="/blog/legs-of-clay/">Legs of Clay</a>
-      </li>
-    
-      <li class="post">
-        <a href="/blog/breeze-by-runkeeper/">Breeze by Runkeeper</a>
       </li>
     
   </ul>

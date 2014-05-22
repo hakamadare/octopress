@@ -9,7 +9,7 @@
   <meta name="author" content="Steve Huff">
 
   
-  <meta name="description" content="As I was buying a cup of coffee this morning, the barista told me that I was wearing the same shirt as a character from The Wolf of Wall Street). It& &hellip;">
+  <meta name="description" content="OK, I am tired of forgetting this information and having to re-research it. A PEM file is an X.509 digital certificate, specifically a &ldquo;Base64 &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -54,7 +54,7 @@
   <header role="banner"><hgroup>
   <h1><a href="/">some guy on the Internet</a></h1>
   
-    <h2>it must be true!</h2>
+    <h2>the network engineer fears the backhoe, and the systems engineer fears the network engineer</h2>
   
 </hgroup>
 
@@ -64,10 +64,10 @@
   
 </ul>
   
-<form action="https://www.google.com/search" method="get">
+<form action="http://www.duckduckgo.com/" method="get">
   <fieldset role="search">
-    <input type="hidden" name="q" value="site:someguyontheinter.net" />
-    <input class="search" type="text" name="q" results="0" placeholder="Search"/>
+    <input type="hidden" name="sites" value="duckduckgo.com" />
+    <input class="search" type="text" name="q" results="0" placeholder="Search&hellip;"/>
   </fieldset>
 </form>
   
@@ -83,6 +83,63 @@
     <div id="content">
       <div class="blog-index">
   
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/pem-files/">PEM Files, for the Last Damn Time</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2014-04-07T20:49:22-04:00" pubdate data-updated="true">Apr 7<span>th</span>, 2014</time>
+        
+         | <a href="/blog/pem-files/#disqus_thread">Comments</a>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>OK, I am tired of forgetting this information and having to re-research it.</p>
+
+<p>A <a href="https://en.wikipedia.org/wiki/.pem#Certificate_filename_extensions">PEM file</a> is an X.509 digital certificate, specifically a &ldquo;Base64 encoded DER certificate&rdquo; (thank you Wikipedia).  The components are concatenated in the following format:</p>
+
+<ol>
+<li>Private key (optional)</li>
+<li>Server certificate</li>
+<li>Intermediate certificate (optional)</li>
+<li>Root certificate (optional)</li>
+</ol>
+
+
+<p>or, in other words, <code>cat server.key server.crt ca-bundle.crt &gt;&gt; server.pem</code>.</p>
+
+<p>That is my final word on the subject.</p>
+
+</div>
+  
+  
+    <footer>
+      <a rel="full-article" href="/blog/pem-files/">Read on &rarr;</a>
+    </footer>
+  
+
+
+    </article>
   
   
     <article>
@@ -470,6 +527,10 @@
   <ul id="recent_posts">
     
       <li class="post">
+        <a href="/blog/an-entirely-needless-obstruction/">An Entirely Needless Obstruction</a>
+      </li>
+    
+      <li class="post">
         <a href="/blog/setec-astronomy/">SETEC ASTRONOMY</a>
       </li>
     
@@ -483,10 +544,6 @@
     
       <li class="post">
         <a href="/blog/legs-of-clay/">Legs of Clay</a>
-      </li>
-    
-      <li class="post">
-        <a href="/blog/breeze-by-runkeeper/">Breeze by Runkeeper</a>
       </li>
     
   </ul>

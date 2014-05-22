@@ -4,7 +4,7 @@
   <title><![CDATA[some guy on the Internet]]></title>
   <link href="http://someguyontheinter.net/atom.xml" rel="self"/>
   <link href="http://someguyontheinter.net/"/>
-  <updated>2014-05-14T21:22:32-04:00</updated>
+  <updated>2014-05-21T22:15:03-04:00</updated>
   <id>http://someguyontheinter.net/</id>
   <author>
     <name><![CDATA[Steve Huff]]></name>
@@ -12,6 +12,63 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[An Entirely Needless Obstruction]]></title>
+    <link href="http://someguyontheinter.net/blog/an-entirely-needless-obstruction/"/>
+    <updated>2014-05-20T14:19:41-04:00</updated>
+    <id>http://someguyontheinter.net/blog/an-entirely-needless-obstruction</id>
+    <content type="html"><![CDATA[<p>OK, see this?  This is why people say uncharitable things about Perl:</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+</pre></td><td class='code'><pre><code class='perl'><span class='line'><span class="k">for</span> <span class="p">(</span><span class="nv">@cmd</span><span class="p">)</span>
+</span><span class='line'><span class="p">{</span>
+</span><span class='line'>    <span class="k">next</span> <span class="k">unless</span> <span class="nb">grep</span> <span class="sr">/^\Q$cmd\E$/</span><span class="p">,</span> <span class="nb">split</span><span class="p">(</span><span class="s">&quot; &quot;</span><span class="p">,</span> <span class="nv">$_</span><span class="o">-&gt;</span><span class="p">[</span><span class="mi">1</span><span class="p">]);</span>
+</span><span class='line'>    <span class="nv">$cmd_data</span> <span class="o">=</span> <span class="nv">$_</span><span class="p">;</span>
+</span><span class='line'>    <span class="nb">push</span> <span class="nv">@</span><span class="p">{</span><span class="nv">$cmd_data</span><span class="o">-&gt;</span><span class="p">[</span><span class="mi">3</span><span class="p">]},</span> <span class="p">[</span><span class="s">&quot;filter&quot;</span><span class="p">,</span> <span class="nb">undef</span><span class="p">,</span> <span class="nb">undef</span><span class="p">,</span> <span class="o">\&amp;</span><span class="n">parse_filter</span><span class="p">]</span> <span class="k">if</span> <span class="nv">$_</span><span class="o">-&gt;</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">=~</span><span class="sr"> /\bdescribe/</span><span class="p">;</span>
+</span><span class='line'>    <span class="k">for</span> <span class="p">(</span><span class="nv">@</span><span class="p">{</span><span class="nv">$cmd_data</span><span class="o">-&gt;</span><span class="p">[</span><span class="mi">3</span><span class="p">]})</span>
+</span><span class='line'>    <span class="p">{</span>
+</span><span class='line'>  <span class="k">for</span> <span class="p">(</span><span class="nb">split</span><span class="p">(</span><span class="s">&quot; &quot;</span><span class="p">,</span> <span class="nv">$_</span><span class="o">-&gt;</span><span class="p">[</span><span class="mi">0</span><span class="p">]))</span>
+</span><span class='line'>  <span class="p">{</span>
+</span><span class='line'>      <span class="p">(</span><span class="k">my</span> <span class="nv">$key</span> <span class="o">=</span> <span class="nv">$_</span><span class="p">)</span> <span class="o">=~</span> <span class="sr">s/-/_/g</span><span class="p">;</span>
+</span><span class='line'>      <span class="nv">$keyword</span><span class="p">{</span><span class="nv">$key</span><span class="p">}</span> <span class="o">=</span> <span class="nb">undef</span><span class="p">;</span>
+</span><span class='line'>  <span class="p">}</span>
+</span><span class='line'>    <span class="p">}</span>
+</span><span class='line'>    <span class="k">last</span><span class="p">;</span>
+</span><span class='line'><span class="p">}</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>It doesn&rsquo;t matter whose code this is.  Suffice it to say that it</p>
+
+<ul>
+<li>is a crucial part of a publically-available, fairly popular program,</li>
+<li>was last edited in 2011,</li>
+<li>is standing in the way of my getting something accomplished today.</li>
+</ul>
+
+
+<p>Where to even start?  What&rsquo;s with the magical anonymous array-indexed data structures?  The positional parameters (gotta pass those <code>undef</code>s or everything is busted)?  The assignment of named variables to <code>$_</code> (yay!) and then going on to dereference <code>$_</code> instead of the named variables?</p>
+
+<p>I&rsquo;m not sure I&rsquo;m willing to give this a pass as being <a href="http://www.modernperlbooks.com/mt/2009/03/turning-baby-perl-into-grownup-perl.html">baby Perl</a>; this is just a design that has been stretched comically (tragically?) far beyond its original limits.  This makes me cranky and sad.</p>
+
+<p>Time to figure out what the hell is going on here so that I can patch this code.  <a href="http://www.modernperlbooks.com/mt/2011/01/cgi-is-okay-but-bad-code-is-irresponsible.html">Fantastic</a>.</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[SETEC ASTRONOMY]]></title>
@@ -160,7 +217,7 @@
 <span class='line-number'>6</span>
 <span class='line-number'>7</span>
 </pre></td><td class='code'><pre><code class='console'><span class='line'><span class="gp">#</span> df -h
-</span><span class='line'><span class="go">Filesystem            Size  Used Avail Use% Mounted on</span>
+</span><span class='line'><span class="go">OK, see this?  This is why people say uncharitable things about Perl:Filesystem            Size  Used Avail Use% Mounted on</span>
 </span><span class='line'><span class="go">/dev/xvde             7.9G  5.3G  2.3G  71% /</span>
 </span><span class='line'><span class="go">tmpfs                 828M     0  828M   0% /dev/shm</span>
 </span><span class='line'><span class="gp">#</span> <span class="nb">cd</span> /
