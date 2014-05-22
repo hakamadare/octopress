@@ -4,9 +4,9 @@
 
 url: http://someguyontheinter.net
 title: some guy on the Internet
-subtitle: it must be true!
+subtitle: the network engineer fears the backhoe, and the systems engineer fears the network engineer
 author: Steve Huff
-simple_search: https://www.google.com/search
+simple_search: http://www.duckduckgo.com/
 description: if it's on the Internet, it must be true!
 
 # Default date format is "ordinal" (resulting in "July 22nd 2007")
