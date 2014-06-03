@@ -1,0 +1,336 @@
+
+<!DOCTYPE html>
+<!--[if IEMobile 7 ]><html class="no-js iem7"><![endif]-->
+<!--[if lt IE 9]><html class="no-js lte-ie8"><![endif]-->
+<!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <title>When Mathematicians Write Perl - some guy on the Internet</title>
+  <meta name="author" content="Steve Huff">
+
+  
+  <meta name="description" content="As a followup (of sorts) to my last post, I give you the following: 1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+sub Derivative1 { my ($x,$y)=@_; my @y2; my $n=$#{$x &hellip;">
+  
+
+  <!-- http://t.co/dKP3o1e -->
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  
+  <link rel="canonical" href="http://someguyontheinter.net/blog/when-mathematicians-write-perl/">
+  <link href="/favicon.png" rel="icon">
+  <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+  <script src="/javascripts/modernizr-2.0.js"></script>
+  <script src="/javascripts/ender.js"></script>
+  <script src="/javascripts/octopress.js" type="text/javascript"></script>
+  <link href="/atom.xml" rel="alternate" title="some guy on the Internet" type="application/atom+xml">
+  <!--Fonts from Google"s Web font directory at http://google.com/webfonts -->
+<link href="http://fonts.googleapis.com/css?family=Goudy+Bookletter+1911:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+<link href="http://fonts.googleapis.com/css?family=Source+Sans+Pro:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+<link href="http://fonts.googleapis.com/css?family=Inconsolata:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+
+  
+
+
+  <script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-49491854-1']);
+    _gaq.push(['_trackPageview']);
+
+    (function() {
+      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+  </script>
+
+
+
+
+</head>
+
+<body   >
+  <header role="banner"><hgroup>
+  <h1><a href="/">some guy on the Internet</a></h1>
+  
+    <h2>the network engineer fears the backhoe, and the systems engineer fears the network engineer</h2>
+  
+</hgroup>
+
+</header>
+  <nav role="navigation"><ul class="subscription" data-subscription="rss">
+  <li><a href="/atom.xml" rel="subscribe-rss" title="subscribe via RSS">RSS</a></li>
+  
+</ul>
+  
+<form action="http://www.duckduckgo.com/" method="get">
+  <fieldset role="search">
+    <input type="hidden" name="sites" value="duckduckgo.com" />
+    <input class="search" type="text" name="q" results="0" placeholder="Search&hellip;"/>
+  </fieldset>
+</form>
+  
+<ul class="main-navigation">
+  <li><a href="/">Blog</a></li>
+  <li><a href="/blog/archives">Archives</a></li>
+  <li><a href="/links">Links</a></li>
+  <li><a href="/about">About Me</a></li>
+</ul>
+
+</nav>
+  <div id="main">
+    <div id="content">
+      <div>
+<article class="hentry" role="article">
+  
+  <header>
+    
+      <h1 class="entry-title">When Mathematicians Write Perl</h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2014-06-02T20:30:57-04:00" pubdate data-updated="true">Jun 2<span>nd</span>, 2014</time>
+        
+         | <a href="#disqus_thread">Comments</a>
+        
+      </p>
+    
+  </header>
+
+
+<div class="entry-content"><p>As a followup (of sorts) to <a href="http://someguyontheinter.net/blog/an-entirely-needless-obstruction/">my last post</a>, I give you the following:</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+</pre></td><td class='code'><pre><code class='perl'><span class='line'><span class="k">sub </span><span class="nf">Derivative1</span> <span class="p">{</span>
+</span><span class='line'>    <span class="k">my</span> <span class="p">(</span><span class="nv">$x</span><span class="p">,</span><span class="nv">$y</span><span class="p">)</span><span class="o">=</span><span class="nv">@_</span><span class="p">;</span>
+</span><span class='line'>    <span class="k">my</span> <span class="nv">@y2</span><span class="p">;</span>
+</span><span class='line'>    <span class="k">my</span> <span class="nv">$n</span><span class="o">=</span><span class="nv">$#</span><span class="p">{</span><span class="nv">$x</span><span class="p">};</span>
+</span><span class='line'>    <span class="nv">$y2</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">=</span><span class="p">(</span><span class="nv">$y</span><span class="o">-&gt;</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">-</span><span class="nv">$y</span><span class="o">-&gt;</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span><span class="o">/</span><span class="p">(</span><span class="nv">$x</span><span class="o">-&gt;</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">-</span><span class="nv">$x</span><span class="o">-&gt;</span><span class="p">[</span><span class="mi">0</span><span class="p">]);</span>
+</span><span class='line'>    <span class="nv">$y2</span><span class="p">[</span><span class="nv">$n</span><span class="p">]</span><span class="o">=</span><span class="p">(</span><span class="nv">$y</span><span class="o">-&gt;</span><span class="p">[</span><span class="nv">$n</span><span class="p">]</span><span class="o">-</span><span class="nv">$y</span><span class="o">-&gt;</span><span class="p">[</span><span class="nv">$n</span><span class="o">-</span><span class="mi">1</span><span class="p">])</span><span class="o">/</span><span class="p">(</span><span class="nv">$x</span><span class="o">-&gt;</span><span class="p">[</span><span class="nv">$n</span><span class="p">]</span><span class="o">-</span><span class="nv">$x</span><span class="o">-&gt;</span><span class="p">[</span><span class="nv">$n</span><span class="o">-</span><span class="mi">1</span><span class="p">]);</span>
+</span><span class='line'>    <span class="k">my</span> <span class="nv">$i</span><span class="p">;</span>
+</span><span class='line'>    <span class="k">for</span><span class="p">(</span><span class="nv">$i</span><span class="o">=</span><span class="mi">1</span><span class="p">;</span> <span class="nv">$i</span><span class="o">&lt;</span><span class="nv">$n</span><span class="p">;</span> <span class="nv">$i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+</span><span class='line'>  <span class="nv">$y2</span><span class="p">[</span><span class="nv">$i</span><span class="p">]</span><span class="o">=</span><span class="p">(</span><span class="nv">$y</span><span class="o">-&gt;</span><span class="p">[</span><span class="nv">$i</span><span class="o">+</span><span class="mi">1</span><span class="p">]</span><span class="o">-</span><span class="nv">$y</span><span class="o">-&gt;</span><span class="p">[</span><span class="nv">$i</span><span class="o">-</span><span class="mi">1</span><span class="p">])</span><span class="o">/</span><span class="p">(</span><span class="nv">$x</span><span class="o">-&gt;</span><span class="p">[</span><span class="nv">$i</span><span class="o">+</span><span class="mi">1</span><span class="p">]</span><span class="o">-</span><span class="nv">$x</span><span class="o">-&gt;</span><span class="p">[</span><span class="nv">$i</span><span class="o">-</span><span class="mi">1</span><span class="p">]);</span>
+</span><span class='line'>    <span class="p">}</span>
+</span><span class='line'>    <span class="k">return</span> <span class="nv">@y2</span><span class="p">;</span>
+</span><span class='line'><span class="p">}</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>That code is correct, right?  I sure hope so, because man do I not want to grovel over that and figure out what the hell it is doing.</p>
+
+<p>This glorious manifestation of the human intellect comes from <a href="http://search.cpan.org/dist/Math-Derivative">Math::Derivative</a>, a Perl module which, well, does what it says on the tin: it provides functions that compute first and second derivatives of matrices of points.  The excerpt above is the first derivative function; the second derivative function is just like that, except more so.</p>
+
+<p>To start out I should mention that it consistently provides plausible results (I&rsquo;m using it in code that tries to detect sudden changes in rate of change of numeric metrics over time, <em>i.e.</em> &ldquo;call for help if the database starts bloating up&rdquo;), but the style, oh, where to start?</p>
+
+<ul>
+<li>Um, whitespace?  Ever?  Between lines?  Between characters?  It&rsquo;s like reading someone&rsquo;s JavaScript after it&rsquo;s been through <a href="http://www.crockford.com/javascript/jsmin.html">JSMin</a> or some such.  Especially since Perl is tolerant of inserting newlines for clarity, there&rsquo;s no excuse.</li>
+<li>The variable names.  Yes, I know, it&rsquo;s basically translating from the formula, but the combination of the one-character names with the one-character (or multi-character) sigils &ndash; seriously, <code>$n=$#{$x}</code>, I never want to see you again &ndash; is a recipe for headache.  Oh, and also you have to play detective to figure out what kind of data each variable represents?  Was it immediately obvious to you that the <code>$x</code> and <code>$y</code> that get passed into the subroutine are references to arrays of scalar values?  Yeah, it&rsquo;s clear in retrospect, but the <a href="https://en.wikipedia.org/wiki/Principle_of_least_astonishment">principle of least astonishment</a> is not just for user interfaces.</li>
+<li>The mishmash of operators.  Considering the previous two points, the similarity between the <code>-</code> operator (in this case numerical subtraction) and the <code>-&gt;</code> operator (dereference) and the <code>&gt;</code> operator (numerical greater-than) makes the code look eerily like a <a href="https://en.wikipedia.org/wiki/Qr_code">QR code</a> or a <a href="https://en.wikipedia.org/wiki/Random-dot_stereogram">random-dot stereogram</a>.</li>
+</ul>
+
+
+<p>And so forth.  There&rsquo;s no good reason why this code has to be so obscure; sure, it&rsquo;s written in an older idiom, but even then it was terrible.  One thing at least the author can be proud of: the version of this module on CPAN is 0.01, written in 1995.</p>
+
+<p>Apparently mathematicians get it right the first time. :)</p>
+</div>
+
+
+  <footer>
+    <p class="meta">
+      
+  
+
+<span class="byline author vcard">Posted by <span class="fn">Steve Huff</span></span>
+
+      
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2014-06-02T20:30:57-04:00" pubdate data-updated="true">Jun 2<span>nd</span>, 2014</time>
+      
+
+<span class="categories">
+  
+    <a class='category' href='/blog/categories/programming/'>programming</a>, <a class='category' href='/blog/categories/signal/'>signal</a>, <a class='category' href='/blog/categories/work/'>work</a>
+  
+</span>
+
+
+    </p>
+    
+      <div class="sharing">
+  
+  
+  
+</div>
+
+    
+    <p class="meta">
+      
+        <a class="basic-alignment left" href="/blog/an-entirely-needless-obstruction/" title="Previous Post: An Entirely Needless Obstruction">&laquo; An Entirely Needless Obstruction</a>
+      
+      
+    </p>
+  </footer>
+</article>
+
+  <section>
+    <h1>Comments</h1>
+    <div id="disqus_thread" aria-live="polite"><noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</div>
+  </section>
+
+</div>
+
+<aside class="sidebar">
+  
+    
+<section>
+	<span>
+		<img src="http://www.gravatar.com/avatar/5d44551ca86b68f3df646f4ff51c6eca" alt="Gravatar of Steve Huff " title="Gravatar of Steve Huff" />
+	</span>
+</section>
+<section>
+  <h1>Recent Posts</h1>
+  <ul id="recent_posts">
+    
+      <li class="post">
+        <a href="/blog/when-mathematicians-write-perl/">When Mathematicians Write Perl</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/an-entirely-needless-obstruction/">An Entirely Needless Obstruction</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/setec-astronomy/">SETEC ASTRONOMY</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/github-behaves-better/">GitHub Behaves Better</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/more-clay/">More Clay</a>
+      </li>
+    
+  </ul>
+</section>
+
+<section>
+  <h1>GitHub Repos</h1>
+  <ul id="gh_repos">
+    <li class="loading">Status updating...</li>
+  </ul>
+  
+  <a href="https://github.com/hakamadare">@hakamadare</a> on GitHub
+  
+  <script type="text/javascript">
+    $.domReady(function(){
+        if (!window.jXHR){
+            var jxhr = document.createElement('script');
+            jxhr.type = 'text/javascript';
+            jxhr.src = '/javascripts/libs/jXHR.js';
+            var s = document.getElementsByTagName('script')[0];
+            s.parentNode.insertBefore(jxhr, s);
+        }
+
+        github.showRepos({
+            user: 'hakamadare',
+            count: 5,
+            skip_forks: true,
+            target: '#gh_repos',
+            blacklist: 'someguyontheinter.net'
+        });
+    });
+  </script>
+  <script src="/javascripts/github.js" type="text/javascript"> </script>
+</section>
+
+
+  
+</aside>
+
+
+    </div>
+  </div>
+  <footer role="contentinfo"><p>
+  Copyright &copy; 2014 - Steve Huff -
+  <span class="credit">Powered by <a href="http://octopress.org">Octopress</a></span>
+</p>
+
+</footer>
+  
+
+<script type="text/javascript">
+      var disqus_shortname = 'someguyontheinternet';
+      
+        
+        // var disqus_developer = 1;
+        var disqus_identifier = 'http://someguyontheinter.net/blog/when-mathematicians-write-perl/';
+        var disqus_url = 'http://someguyontheinter.net/blog/when-mathematicians-write-perl/';
+        var disqus_script = 'embed.js';
+      
+    (function () {
+      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+      dsq.src = 'http://' + disqus_shortname + '.disqus.com/' + disqus_script;
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    }());
+</script>
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>

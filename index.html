@@ -9,7 +9,7 @@
   <meta name="author" content="Steve Huff">
 
   
-  <meta name="description" content="OK, see this? This is why people say uncharitable things about Perl: 1
+  <meta name="description" content="As a followup (of sorts) to my last post, I give you the following: 1
 2
 3
 4
@@ -21,11 +21,7 @@
 10
 11
 12
-13
-14
-15
-for (@cmd)
-{ next unless grep /^\Q$cmd\E$/, &hellip;">
+sub Derivative1 { my ($x,$y)=@_; my @y2; my $n=$#{$x &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -99,6 +95,88 @@ for (@cmd)
     <div id="content">
       <div class="blog-index">
   
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/when-mathematicians-write-perl/">When Mathematicians Write Perl</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2014-06-02T20:30:57-04:00" pubdate data-updated="true">Jun 2<span>nd</span>, 2014</time>
+        
+         | <a href="/blog/when-mathematicians-write-perl/#disqus_thread">Comments</a>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>As a followup (of sorts) to <a href="http://someguyontheinter.net/blog/an-entirely-needless-obstruction/">my last post</a>, I give you the following:</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+</pre></td><td class='code'><pre><code class='perl'><span class='line'><span class="k">sub </span><span class="nf">Derivative1</span> <span class="p">{</span>
+</span><span class='line'>    <span class="k">my</span> <span class="p">(</span><span class="nv">$x</span><span class="p">,</span><span class="nv">$y</span><span class="p">)</span><span class="o">=</span><span class="nv">@_</span><span class="p">;</span>
+</span><span class='line'>    <span class="k">my</span> <span class="nv">@y2</span><span class="p">;</span>
+</span><span class='line'>    <span class="k">my</span> <span class="nv">$n</span><span class="o">=</span><span class="nv">$#</span><span class="p">{</span><span class="nv">$x</span><span class="p">};</span>
+</span><span class='line'>    <span class="nv">$y2</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">=</span><span class="p">(</span><span class="nv">$y</span><span class="o">-&gt;</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">-</span><span class="nv">$y</span><span class="o">-&gt;</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span><span class="o">/</span><span class="p">(</span><span class="nv">$x</span><span class="o">-&gt;</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">-</span><span class="nv">$x</span><span class="o">-&gt;</span><span class="p">[</span><span class="mi">0</span><span class="p">]);</span>
+</span><span class='line'>    <span class="nv">$y2</span><span class="p">[</span><span class="nv">$n</span><span class="p">]</span><span class="o">=</span><span class="p">(</span><span class="nv">$y</span><span class="o">-&gt;</span><span class="p">[</span><span class="nv">$n</span><span class="p">]</span><span class="o">-</span><span class="nv">$y</span><span class="o">-&gt;</span><span class="p">[</span><span class="nv">$n</span><span class="o">-</span><span class="mi">1</span><span class="p">])</span><span class="o">/</span><span class="p">(</span><span class="nv">$x</span><span class="o">-&gt;</span><span class="p">[</span><span class="nv">$n</span><span class="p">]</span><span class="o">-</span><span class="nv">$x</span><span class="o">-&gt;</span><span class="p">[</span><span class="nv">$n</span><span class="o">-</span><span class="mi">1</span><span class="p">]);</span>
+</span><span class='line'>    <span class="k">my</span> <span class="nv">$i</span><span class="p">;</span>
+</span><span class='line'>    <span class="k">for</span><span class="p">(</span><span class="nv">$i</span><span class="o">=</span><span class="mi">1</span><span class="p">;</span> <span class="nv">$i</span><span class="o">&lt;</span><span class="nv">$n</span><span class="p">;</span> <span class="nv">$i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+</span><span class='line'>  <span class="nv">$y2</span><span class="p">[</span><span class="nv">$i</span><span class="p">]</span><span class="o">=</span><span class="p">(</span><span class="nv">$y</span><span class="o">-&gt;</span><span class="p">[</span><span class="nv">$i</span><span class="o">+</span><span class="mi">1</span><span class="p">]</span><span class="o">-</span><span class="nv">$y</span><span class="o">-&gt;</span><span class="p">[</span><span class="nv">$i</span><span class="o">-</span><span class="mi">1</span><span class="p">])</span><span class="o">/</span><span class="p">(</span><span class="nv">$x</span><span class="o">-&gt;</span><span class="p">[</span><span class="nv">$i</span><span class="o">+</span><span class="mi">1</span><span class="p">]</span><span class="o">-</span><span class="nv">$x</span><span class="o">-&gt;</span><span class="p">[</span><span class="nv">$i</span><span class="o">-</span><span class="mi">1</span><span class="p">]);</span>
+</span><span class='line'>    <span class="p">}</span>
+</span><span class='line'>    <span class="k">return</span> <span class="nv">@y2</span><span class="p">;</span>
+</span><span class='line'><span class="p">}</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>That code is correct, right?  I sure hope so, because man do I not want to grovel over that and figure out what the hell it is doing.</p>
+
+<p>This glorious manifestation of the human intellect comes from <a href="http://search.cpan.org/dist/Math-Derivative">Math::Derivative</a>, a Perl module which, well, does what it says on the tin: it provides functions that compute first and second derivatives of matrices of points.  The excerpt above is the first derivative function; the second derivative function is just like that, except more so.</p>
+
+<p>To start out I should mention that it consistently provides plausible results (I&rsquo;m using it in code that tries to detect sudden changes in rate of change of numeric metrics over time, <em>i.e.</em> &ldquo;call for help if the database starts bloating up&rdquo;), but the style, oh, where to start?</p>
+
+<ul>
+<li>Um, whitespace?  Ever?  Between lines?  Between characters?  It&rsquo;s like reading someone&rsquo;s JavaScript after it&rsquo;s been through <a href="http://www.crockford.com/javascript/jsmin.html">JSMin</a> or some such.  Especially since Perl is tolerant of inserting newlines for clarity, there&rsquo;s no excuse.</li>
+<li>The variable names.  Yes, I know, it&rsquo;s basically translating from the formula, but the combination of the one-character names with the one-character (or multi-character) sigils &ndash; seriously, <code>$n=$#{$x}</code>, I never want to see you again &ndash; is a recipe for headache.  Oh, and also you have to play detective to figure out what kind of data each variable represents?  Was it immediately obvious to you that the <code>$x</code> and <code>$y</code> that get passed into the subroutine are references to arrays of scalar values?  Yeah, it&rsquo;s clear in retrospect, but the <a href="https://en.wikipedia.org/wiki/Principle_of_least_astonishment">principle of least astonishment</a> is not just for user interfaces.</li>
+<li>The mishmash of operators.  Considering the previous two points, the similarity between the <code>-</code> operator (in this case numerical subtraction) and the <code>-&gt;</code> operator (dereference) and the <code>&gt;</code> operator (numerical greater-than) makes the code look eerily like a <a href="https://en.wikipedia.org/wiki/Qr_code">QR code</a> or a <a href="https://en.wikipedia.org/wiki/Random-dot_stereogram">random-dot stereogram</a>.</li>
+</ul>
+
+
+<p>And so forth.  There&rsquo;s no good reason why this code has to be so obscure; sure, it&rsquo;s written in an older idiom, but even then it was terrible.  One thing at least the author can be proud of: the version of this module on CPAN is 0.01, written in 1995.</p>
+
+<p>Apparently mathematicians get it right the first time. :)</p>
+</div>
+  
+  
+
+
+    </article>
   
   
     <article>
@@ -605,60 +683,6 @@ for (@cmd)
 
     </article>
   
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/psa-heartbleed-openssl-vulnerability/">PSA: Heartbleed OpenSSL Vulnerability</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2014-04-08T16:36:53-04:00" pubdate data-updated="true">Apr 8<span>th</span>, 2014</time>
-        
-         | <a href="/blog/psa-heartbleed-openssl-vulnerability/#disqus_thread">Comments</a>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>Over dinner last night one of my friends was talking about an OpenSSL vulnerability that had just been disclosed; this morning I took a closer look and decided that I want to boost the signal a bit</p>
-
-<p>The <a href="http://heartbleed.com/">Heartbleed</a> OpenSSL vulnerability affects recent releases of <a href="http://www.openssl.org/">OpenSSL</a>.  Affected systems can be made to reveal secret keys; this is arguably one of the worst ways in which an encryption library can fail, and if you are publishing anything that is secured with SSL (<em>e.g.</em> HTTPS, SMTP/IMAP with TLS, LDAPS, to name a few common uses) and using a vulnerable version, then you should treat your keys as compromised, generate a new private key, and generate new certificates.</p>
-
-<p>If you are not your own sysadmin, then you should find out whether your service providers (including your employer) are reacting appropriately to this issue.  Responsible service providers may proactively publish statements about the issue; if you don&rsquo;t find anything on your provider&rsquo;s website, contact technical support.</p>
-
-<p>More information about this vulnerability can be found by consulting <a href="http://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2014-0160">the CERT advisory</a>; there are also some nice StackExchange questions:</p>
-
-<ul>
-<li><a href="http://security.stackexchange.com/questions/55076/what-should-a-website-operator-do-about-the-heartbleed-openssl-exploit?">http://security.stackexchange.com/questions/55076/what-should-a-website-operator-do-about-the-heartbleed-openssl-exploit?</a></li>
-<li><a href="https://serverfault.com/questions/587329/heartbleed-what-is-it-and-what-are-options-to-mitigate-it">https://serverfault.com/questions/587329/heartbleed-what-is-it-and-what-are-options-to-mitigate-it</a></li>
-</ul>
-
-
-<p>Responding to security vulnerabilities is always a tradeoff between effort and threat, but this one seems worth paying attention to.</p>
-
-<p>-steve</p>
-</div>
-  
-  
-
-
-    </article>
-  
   <div class="pagination">
     
       <a class="prev" href="/blog/page/2/">&larr; Older</a>
@@ -680,6 +704,10 @@ for (@cmd)
   <ul id="recent_posts">
     
       <li class="post">
+        <a href="/blog/when-mathematicians-write-perl/">When Mathematicians Write Perl</a>
+      </li>
+    
+      <li class="post">
         <a href="/blog/an-entirely-needless-obstruction/">An Entirely Needless Obstruction</a>
       </li>
     
@@ -693,10 +721,6 @@ for (@cmd)
     
       <li class="post">
         <a href="/blog/more-clay/">More Clay</a>
-      </li>
-    
-      <li class="post">
-        <a href="/blog/legs-of-clay/">Legs of Clay</a>
       </li>
     
   </ul>

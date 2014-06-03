@@ -4,7 +4,7 @@
   <title><![CDATA[Category: work | some guy on the Internet]]></title>
   <link href="http://someguyontheinter.net/blog/categories/work/atom.xml" rel="self"/>
   <link href="http://someguyontheinter.net/"/>
-  <updated>2014-05-21T22:15:03-04:00</updated>
+  <updated>2014-06-02T22:24:35-04:00</updated>
   <id>http://someguyontheinter.net/</id>
   <author>
     <name><![CDATA[Steve Huff]]></name>
@@ -12,6 +12,50 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[When Mathematicians Write Perl]]></title>
+    <link href="http://someguyontheinter.net/blog/when-mathematicians-write-perl/"/>
+    <updated>2014-06-02T20:30:57-04:00</updated>
+    <id>http://someguyontheinter.net/blog/when-mathematicians-write-perl</id>
+    <content type="html"><![CDATA[<p>As a followup (of sorts) to <a href="http://someguyontheinter.net/blog/an-entirely-needless-obstruction/">my last post</a>, I give you the following:</p>
+
+<p>```perl
+sub Derivative1 {</p>
+
+<pre><code>my ($x,$y)=@_;
+my @y2;
+my $n=$#{$x};
+$y2[0]=($y-&gt;[1]-$y-&gt;[0])/($x-&gt;[1]-$x-&gt;[0]);
+$y2[$n]=($y-&gt;[$n]-$y-&gt;[$n-1])/($x-&gt;[$n]-$x-&gt;[$n-1]);
+my $i;
+for($i=1; $i&lt;$n; $i++) {
+$y2[$i]=($y-&gt;[$i+1]-$y-&gt;[$i-1])/($x-&gt;[$i+1]-$x-&gt;[$i-1]);
+}
+return @y2;
+</code></pre>
+
+<p>}
+```</p>
+
+<p>That code is correct, right?  I sure hope so, because man do I not want to grovel over that and figure out what the hell it is doing.</p>
+
+<p>This glorious manifestation of the human intellect comes from <a href="http://search.cpan.org/dist/Math-Derivative">Math::Derivative</a>, a Perl module which, well, does what it says on the tin: it provides functions that compute first and second derivatives of matrices of points.  The excerpt above is the first derivative function; the second derivative function is just like that, except more so.</p>
+
+<p>To start out I should mention that it consistently provides plausible results (I&rsquo;m using it in code that tries to detect sudden changes in rate of change of numeric metrics over time, <em>i.e.</em> &ldquo;call for help if the database starts bloating up&rdquo;), but the style, oh, where to start?</p>
+
+<ul>
+<li>Um, whitespace?  Ever?  Between lines?  Between characters?  It&rsquo;s like reading someone&rsquo;s JavaScript after it&rsquo;s been through <a href="http://www.crockford.com/javascript/jsmin.html">JSMin</a> or some such.  Especially since Perl is tolerant of inserting newlines for clarity, there&rsquo;s no excuse.</li>
+<li>The variable names.  Yes, I know, it&rsquo;s basically translating from the formula, but the combination of the one-character names with the one-character (or multi-character) sigils &ndash; seriously, <code>$n=$#{$x}</code>, I never want to see you again &ndash; is a recipe for headache.  Oh, and also you have to play detective to figure out what kind of data each variable represents?  Was it immediately obvious to you that the <code>$x</code> and <code>$y</code> that get passed into the subroutine are references to arrays of scalar values?  Yeah, it&rsquo;s clear in retrospect, but the <a href="https://en.wikipedia.org/wiki/Principle_of_least_astonishment">principle of least astonishment</a> is not just for user interfaces.</li>
+<li>The mishmash of operators.  Considering the previous two points, the similarity between the <code>-</code> operator (in this case numerical subtraction) and the <code>-&gt;</code> operator (dereference) and the <code>&gt;</code> operator (numerical greater-than) makes the code look eerily like a <a href="https://en.wikipedia.org/wiki/Qr_code">QR code</a> or a <a href="https://en.wikipedia.org/wiki/Random-dot_stereogram">random-dot stereogram</a>.</li>
+</ul>
+
+
+<p>And so forth.  There&rsquo;s no good reason why this code has to be so obscure; sure, it&rsquo;s written in an older idiom, but even then it was terrible.  One thing at least the author can be proud of: the version of this module on CPAN is 0.01, written in 1995.</p>
+
+<p>Apparently mathematicians get it right the first time. :)</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[An Entirely Needless Obstruction]]></title>
