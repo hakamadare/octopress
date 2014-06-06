@@ -2,7 +2,11 @@
 s3_id: <%= ENV['SOMEGUYONTHEINTERNET_S3_ID'] %>
 s3_secret: <%= ENV['SOMEGUYONTHEINTERNET_S3_SECRET'] %>
 s3_bucket: someguyontheinter.net
-gzip: true
+gzip:
+  - .html
+  - .css
+  - .js
+  - .md
 gzip_zopfli: true
 s3_reduced_redundancy: true
 cloudfront_invalidate_root: true
