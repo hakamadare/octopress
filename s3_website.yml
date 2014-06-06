@@ -18,3 +18,5 @@ cloudfront_distribution_config:
       CNAME: someguyontheinter.net
 exclude_from_upload:
   - \.git
+redirects:
+  .well-known/keybase.txt: keybase.txt
