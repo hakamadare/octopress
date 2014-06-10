@@ -10,6 +10,7 @@ Hi folks!  I'm Steve Huff; I work for [RunKeeper](http://runkeeper.com) as a Dev
 
 Let's see how many links I can come up with:
 
+* [Keybase](https://keybase.io/hakamadare)
 * [GitHub](https://github.com/hakamadare)
 * [CPAN](https://metacpan.org/author/SHUFF)
 * [Twitter](https://twitter.com/hakamadare)
