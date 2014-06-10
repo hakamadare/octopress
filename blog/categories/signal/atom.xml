@@ -4,7 +4,7 @@
   <title><![CDATA[Category: signal | some guy on the Internet]]></title>
   <link href="http://someguyontheinter.net/blog/categories/signal/atom.xml" rel="self"/>
   <link href="http://someguyontheinter.net/"/>
-  <updated>2014-06-02T22:28:08-04:00</updated>
+  <updated>2014-06-09T23:35:13-04:00</updated>
   <id>http://someguyontheinter.net/</id>
   <author>
     <name><![CDATA[Steve Huff]]></name>
@@ -12,6 +12,104 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[When Philosophy Majors Write Perl]]></title>
+    <link href="http://someguyontheinter.net/blog/when-philosophy-majors-write-perl/"/>
+    <updated>2014-06-09T22:24:35-04:00</updated>
+    <id>http://someguyontheinter.net/blog/when-philosophy-majors-write-perl</id>
+    <content type="html"><![CDATA[<p>In the interest of doing something other than <a href="http://www.fanpop.com/clubs/the-simpsons/images/7414384/title/old-man-yells-cloud-photo">yelling at clouds</a>, it occurred to me that rather than just <a href="http://someguyontheinter.net/blog/when-mathematicians-write-perl/">sniping</a> at other people&rsquo;s Perl, I might step up and demonstrate an alternate path.  So, here goes; reference code is at <a href="https://github.com/hakamadare/Math-Derivative/tree/legible">my convenience fork of Math::Derivative</a>.</p>
+
+<p>The original:</p>
+
+<p>```perl
+sub Derivative1 {</p>
+
+<pre><code>my ($x,$y)=@_;
+my @y2;
+my $n=$#{$x};
+$y2[0]=($y-&gt;[1]-$y-&gt;[0])/($x-&gt;[1]-$x-&gt;[0]);
+$y2[$n]=($y-&gt;[$n]-$y-&gt;[$n-1])/($x-&gt;[$n]-$x-&gt;[$n-1]);
+my $i;
+for($i=1; $i&lt;$n; $i++) {
+    $y2[$i]=($y-&gt;[$i+1]-$y-&gt;[$i-1])/($x-&gt;[$i+1]-$x-&gt;[$i-1]);
+}
+return @y2;
+</code></pre>
+
+<p>}
+```</p>
+
+<p>My substitute:</p>
+
+<p>```perl
+sub Derivative1 {</p>
+
+<pre><code>my( $x_vector, $y_vector ) = @_;
+my( @derivatives );
+
+my $p1 = _getNextPoint( $x_vector, $y_vector );
+my $p2 = _getNextPoint( $x_vector, $y_vector );
+
+push( @derivatives, _slope( $p1, $p2 ) );
+
+while ( my $p3 = _getNextPoint( $x_vector, $y_vector ) ) {
+    push( @derivatives, _slope( $p1, $p3 ) );
+
+    $p1 = $p2;
+    $p2 = $p3;
+}
+
+push( @derivatives, _slope( $p1, $p2 ) );
+
+return @derivatives;
+</code></pre>
+
+<p>}</p>
+
+<p>sub _getNextPoint {</p>
+
+<pre><code>my( $x_vector, $y_vector ) = @_;
+my $point;
+
+my $x = shift( @{$x_vector} );
+my $y = shift( @{$y_vector} );
+
+if ( defined( $x ) &amp;&amp; defined( $y ) ) {
+    $point-&gt;{x} = $x;
+    $point-&gt;{y} = $y;
+}
+
+return $point;
+</code></pre>
+
+<p>}</p>
+
+<p>sub _slope {</p>
+
+<pre><code>my( $first, $second ) = @_;
+
+my $dx = ( $second-&gt;{x} - $first-&gt;{x} );
+my $dy = ( $second-&gt;{y} - $first-&gt;{y} );
+
+my $slope = 0;
+if ( defined( $dx ) &amp;&amp; defined( $dy ) &amp;&amp; ( $dx &gt; 0 ) ) {
+    $slope = ( $dy / $dx );
+}
+
+return $slope;
+</code></pre>
+
+<p>}
+```</p>
+
+<p>Yikes.  I can&rsquo;t help but notice that my version ended up being on the order of four times as long; however, about one-third of that increase is whitespace.  To my eyes, the use of whitespace, indentation, and grouping characters helps break down the program into manageable, coherent chunks.  And to the best of my knowledge, I didn&rsquo;t cheat and use any syntax that wasn&rsquo;t available at the time the original was written.</p>
+
+<p>It didn&rsquo;t help that there were no tests included with the individual module; I made one simple test, which the original code and my code both pass (<code>prove -l t</code> from the top-level directory to run the test).  There&rsquo;s still plenty of room for additional testing, never mind the fact that neither version has any reasonable amount of input validation, error handling etc.</p>
+
+<p>So, there&rsquo;s my assertion that Perl doesn&rsquo;t have to look like gobbledegook.</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[When Mathematicians Write Perl]]></title>
@@ -153,48 +251,6 @@ last;
 <p>I remember what it was like to not be excited about anything, to find no joy in the world around me or the people I met; that was in 1998, and it turned out that that was a clinical symptom called <a href="https://en.wikipedia.org/wiki/Anhedonia">anhedonia</a>, associated with the depression that afflicted me at that time.  That was one of the most terrifying periods of my life.  I suppose that&rsquo;s one reason why this business with GitHub rattled me so much: if my heroes are fallible, then they might break my heart, but the alternative is to not have heroes, and that feels enough like that experience of depression that I want no part of it.</p>
 
 <p>So thank you, <a href="http://defunkt.io/">defunkt</a> and whoever else worked on the update.  I appreciate your efforts.</p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Legs of Clay]]></title>
-    <link href="http://someguyontheinter.net/blog/legs-of-clay/"/>
-    <updated>2014-04-21T20:02:43-04:00</updated>
-    <id>http://someguyontheinter.net/blog/legs-of-clay</id>
-    <content type="html"><![CDATA[<p>I came home a couple of hours ago, returning from a full day: the first two-thirds of my workday involved troubleshooting an application performance issue with my teammates, and the last third involved handing out <a href="https://twitter.com/hakamadare/status/458335460851712000">RunKeeper swag</a> at the Boston Marathon.  I had been thinking I would write something all #BostonStrong-flavored about the experience of seeing all these people come out to spectate in defiance of <a href="https://en.wikipedia.org/wiki/Boston_Marathon_Bombing">last year&rsquo;s madness</a>.</p>
-
-<p>But instead I made myself some dinner, and while I was cooking I read Tom Preston-Werner&rsquo;s <a href="http://tom.preston-werner.com/2014/04/21/farewell-github-hello-immersive-computing.html">blog post about leaving GitHub</a> (for context, a good place to start is <a href="http://techcrunch.com/2014/03/15/julie-ann-horvath-describes-sexism-and-intimidation-behind-her-github-exit/">this TechCrunch story</a> (trigger warning: hostile work environment)).</p>
-
-<!-- more -->
-
-
-<p>I had already read GitHub&rsquo;s <a href="https://github.com/blog/1823-results-of-the-github-investigation">statement about the investigation</a> while riding home on the train, and seen some criticism of it on Twitter.  I remember my immediate reaction: dismay at the unworldliness of my fellow posters, who didn&rsquo;t seem to realize that of course the company couldn&rsquo;t formally admit to any wrongdoing due to the threat of legal action, and that &ldquo;mistakes and errors of judgment&rdquo; was of course not meant to be some sort of tepid, weaksauce <a href="https://en.wikipedia.org/wiki/Damn_with_faint_praise">praising with faint damns</a>.</p>
-
-<p>And so when reading Tom Preston-Werner&rsquo;s &ldquo;we are prepared to fight any further false claims on this matter to the full extent of the law&rdquo; (talk about a <a href="https://en.wikipedia.org/wiki/Chilling_effect">chilling effect</a>!), I also immediately thought soothing thoughts of &ldquo;of course he has to say that, liability something something something&rdquo;.  And then I stopped and thought again, and realized that <em>this is exactly what an apologist does</em>.  And I do not want to be an apologist, not even for a person, and by proxy a company, for whom I have even now a tremendous amount of admiration and esteem.</p>
-
-<p>I think I understand a bit better the feelings and reactions of some of my opposite numbers in the struggle over diversity and acceptance and treating other people like human beings that has been raging in fandom for some time now (for context, yikes, I don&rsquo;t know what a good point of entry is, maybe read <a href="http://nkjemisin.com/">N K Jemisin</a> or <a href="http://whatever.scalzi.com/">John Scalzi</a> or <a href="http://seanan-mcguire.livejournal.com/">Seanan McGuire</a>?).  The fact is, I would be ok without fandom.  The bulk of my social circle is fannish to some extent, and fandom occupies a huge portion of my family and household&rsquo;s mental and emotional landscape, and fandom is fundamentally entwined with <a href="http://operationhammond.com">my nonprofit</a>, about which I care passionately; it would be traumatic and miserable for me to cut my ties with fandom, and my life would be a poorer and darker and smaller place for it, but it would still be my life, and I would still be me, and I would be ok.</p>
-
-<p>I don&rsquo;t know that I would be ok without the tech world<sup id="fnref:1"><a href="#fn:1" rel="footnote">1</a></sup>.</p>
-
-<p>I don&rsquo;t just mean the commercial aspect of the tech world, the startups and the product launches and the hype and the gadgets (right now there are four computers within an easy arm&rsquo;s reach of me, one of which is almost never out of my vicinity while I&rsquo;m awake, and one of which I <a href="http://www.morpheuz.net/">wear while I sleep</a>); I mean the underlying culture, the <a href="https://en.wikipedia.org/wiki/Hacker_ethic">hacker ethic</a> and the <a href="http://www.catb.org/jargon/">Jargon File</a> and the <a href="https://en.wikipedia.org/wiki/Glider_(Conway%27s_Life">glider</a>) and the <a href="http://www.faqs.org/rfcs/rfc3092.html">metasyntactic variables</a> and the <a href="https://en.wikipedia.org/wiki/Colossal_Cave_Adventure#Maze_of_twisty_little_passages">maze of twisty little passages</a> and the <a href="http://perldoc.perl.org/perlhack.html#WHAT-NEXT%3f">Tolkien quotations in Perl source</a> and the whole raft of other cultural signifiers, the sense I have of belonging to something bigger and more awesome than me, that was here before I was and will be here when I am gone, but neverless is just made up of people, and of which I am a tiny part.</p>
-
-<p>I mean the fundamental assumption that if we don&rsquo;t like the way things are, then we can fix them, and we can fix them together, bit by bit, and other people will help.  <a href="https://duckduckgo.com/?q=%22pull+requests+welcome%22">Pull requests welcome!</a></p>
-
-<p>And yes, I know that there was plenty of collaborative development before there ever was <a href="http://git-scm.com/">git</a> or <a href="https://github.com">GitHub</a>, but my experience has been that GitHub facilitates this kind of creation and problem-solving in a way that other tools and other workflows simply can&rsquo;t match (never mind the fact that GitHub is integral to the way I <a href="http://octopress.org/">write this blog</a> and <a href="https://boxen.github.com/">configure my laptop</a> and work on pretty much all of my projects).  In addition, I realize that I have been lionizing GitHub&rsquo;s corporate culture as well; I&rsquo;ve been boosting <a href="http://tom.preston-werner.com/2010/10/18/optimize-for-happiness.html">optimizing for happiness</a> and <a href="http://zachholman.com/posts/github-speaking-culture/">employees as teachers</a> and <a href="http://tom.preston-werner.com/2011/11/22/open-source-everything.html">open source everything</a> and that sort of thing to anyone who will listen.</p>
-
-<p>So now I am trying to reconcile the two (to my mind very different) narratives being presented about GitHub, and this really hurts.  I guess that in the end, what I am trying to say is that I believe Julie Ann Horvath&rsquo;s story, and I&rsquo;m sad and ashamed that she had the experiences she describes, more so because they happened in a culture with which I identify so strongly.</p>
-
-<p>Let&rsquo;s make things better.</p>
-
-<p>-steve</p>
-<div class="footnotes">
-<hr/>
-<ol>
-<li id="fn:1">
-<p>To be clear: I realize that I have the tremendous good fortune not to be in any way afraid that I might be forced out of the tech world by a majority that is on some level hostile to me just for being who I am, and that there are plenty of other people for whom that is not true.  I am, rather, concerned that I may some day come to the conclusion that I can no longer in good conscience remain affiliated with tech culture.  I don&rsquo;t think that&rsquo;s about to happen; however, every time I read or hear about something like the above, a little part of me is afraid that we won&rsquo;t be able to fix things quickly enough.<a href="#fnref:1" rev="footnote">&#8617;</a></p></li>
-</ol>
-</div>
-
 ]]></content>
   </entry>
   

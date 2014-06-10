@@ -4,7 +4,7 @@
   <title><![CDATA[some guy on the Internet]]></title>
   <link href="http://someguyontheinter.net/atom.xml" rel="self"/>
   <link href="http://someguyontheinter.net/"/>
-  <updated>2014-06-02T22:28:08-04:00</updated>
+  <updated>2014-06-09T23:35:13-04:00</updated>
   <id>http://someguyontheinter.net/</id>
   <author>
     <name><![CDATA[Steve Huff]]></name>
@@ -12,6 +12,153 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[When Philosophy Majors Write Perl]]></title>
+    <link href="http://someguyontheinter.net/blog/when-philosophy-majors-write-perl/"/>
+    <updated>2014-06-09T22:24:35-04:00</updated>
+    <id>http://someguyontheinter.net/blog/when-philosophy-majors-write-perl</id>
+    <content type="html"><![CDATA[<p>In the interest of doing something other than <a href="http://www.fanpop.com/clubs/the-simpsons/images/7414384/title/old-man-yells-cloud-photo">yelling at clouds</a>, it occurred to me that rather than just <a href="http://someguyontheinter.net/blog/when-mathematicians-write-perl/">sniping</a> at other people&rsquo;s Perl, I might step up and demonstrate an alternate path.  So, here goes; reference code is at <a href="https://github.com/hakamadare/Math-Derivative/tree/legible">my convenience fork of Math::Derivative</a>.</p>
+
+<p>The original:</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+</pre></td><td class='code'><pre><code class='perl'><span class='line'><span class="k">sub </span><span class="nf">Derivative1</span> <span class="p">{</span>
+</span><span class='line'>    <span class="k">my</span> <span class="p">(</span><span class="nv">$x</span><span class="p">,</span><span class="nv">$y</span><span class="p">)</span><span class="o">=</span><span class="nv">@_</span><span class="p">;</span>
+</span><span class='line'>    <span class="k">my</span> <span class="nv">@y2</span><span class="p">;</span>
+</span><span class='line'>    <span class="k">my</span> <span class="nv">$n</span><span class="o">=</span><span class="nv">$#</span><span class="p">{</span><span class="nv">$x</span><span class="p">};</span>
+</span><span class='line'>    <span class="nv">$y2</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">=</span><span class="p">(</span><span class="nv">$y</span><span class="o">-&gt;</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">-</span><span class="nv">$y</span><span class="o">-&gt;</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span><span class="o">/</span><span class="p">(</span><span class="nv">$x</span><span class="o">-&gt;</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">-</span><span class="nv">$x</span><span class="o">-&gt;</span><span class="p">[</span><span class="mi">0</span><span class="p">]);</span>
+</span><span class='line'>    <span class="nv">$y2</span><span class="p">[</span><span class="nv">$n</span><span class="p">]</span><span class="o">=</span><span class="p">(</span><span class="nv">$y</span><span class="o">-&gt;</span><span class="p">[</span><span class="nv">$n</span><span class="p">]</span><span class="o">-</span><span class="nv">$y</span><span class="o">-&gt;</span><span class="p">[</span><span class="nv">$n</span><span class="o">-</span><span class="mi">1</span><span class="p">])</span><span class="o">/</span><span class="p">(</span><span class="nv">$x</span><span class="o">-&gt;</span><span class="p">[</span><span class="nv">$n</span><span class="p">]</span><span class="o">-</span><span class="nv">$x</span><span class="o">-&gt;</span><span class="p">[</span><span class="nv">$n</span><span class="o">-</span><span class="mi">1</span><span class="p">]);</span>
+</span><span class='line'>    <span class="k">my</span> <span class="nv">$i</span><span class="p">;</span>
+</span><span class='line'>    <span class="k">for</span><span class="p">(</span><span class="nv">$i</span><span class="o">=</span><span class="mi">1</span><span class="p">;</span> <span class="nv">$i</span><span class="o">&lt;</span><span class="nv">$n</span><span class="p">;</span> <span class="nv">$i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+</span><span class='line'>        <span class="nv">$y2</span><span class="p">[</span><span class="nv">$i</span><span class="p">]</span><span class="o">=</span><span class="p">(</span><span class="nv">$y</span><span class="o">-&gt;</span><span class="p">[</span><span class="nv">$i</span><span class="o">+</span><span class="mi">1</span><span class="p">]</span><span class="o">-</span><span class="nv">$y</span><span class="o">-&gt;</span><span class="p">[</span><span class="nv">$i</span><span class="o">-</span><span class="mi">1</span><span class="p">])</span><span class="o">/</span><span class="p">(</span><span class="nv">$x</span><span class="o">-&gt;</span><span class="p">[</span><span class="nv">$i</span><span class="o">+</span><span class="mi">1</span><span class="p">]</span><span class="o">-</span><span class="nv">$x</span><span class="o">-&gt;</span><span class="p">[</span><span class="nv">$i</span><span class="o">-</span><span class="mi">1</span><span class="p">]);</span>
+</span><span class='line'>    <span class="p">}</span>
+</span><span class='line'>    <span class="k">return</span> <span class="nv">@y2</span><span class="p">;</span>
+</span><span class='line'><span class="p">}</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>My substitute:</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+<span class='line-number'>17</span>
+<span class='line-number'>18</span>
+<span class='line-number'>19</span>
+<span class='line-number'>20</span>
+<span class='line-number'>21</span>
+<span class='line-number'>22</span>
+<span class='line-number'>23</span>
+<span class='line-number'>24</span>
+<span class='line-number'>25</span>
+<span class='line-number'>26</span>
+<span class='line-number'>27</span>
+<span class='line-number'>28</span>
+<span class='line-number'>29</span>
+<span class='line-number'>30</span>
+<span class='line-number'>31</span>
+<span class='line-number'>32</span>
+<span class='line-number'>33</span>
+<span class='line-number'>34</span>
+<span class='line-number'>35</span>
+<span class='line-number'>36</span>
+<span class='line-number'>37</span>
+<span class='line-number'>38</span>
+<span class='line-number'>39</span>
+<span class='line-number'>40</span>
+<span class='line-number'>41</span>
+<span class='line-number'>42</span>
+<span class='line-number'>43</span>
+<span class='line-number'>44</span>
+<span class='line-number'>45</span>
+<span class='line-number'>46</span>
+<span class='line-number'>47</span>
+<span class='line-number'>48</span>
+<span class='line-number'>49</span>
+</pre></td><td class='code'><pre><code class='perl'><span class='line'><span class="k">sub </span><span class="nf">Derivative1</span> <span class="p">{</span>
+</span><span class='line'>    <span class="k">my</span><span class="p">(</span> <span class="nv">$x_vector</span><span class="p">,</span> <span class="nv">$y_vector</span> <span class="p">)</span> <span class="o">=</span> <span class="nv">@_</span><span class="p">;</span>
+</span><span class='line'>    <span class="k">my</span><span class="p">(</span> <span class="nv">@derivatives</span> <span class="p">);</span>
+</span><span class='line'>
+</span><span class='line'>    <span class="k">my</span> <span class="nv">$p1</span> <span class="o">=</span> <span class="n">_getNextPoint</span><span class="p">(</span> <span class="nv">$x_vector</span><span class="p">,</span> <span class="nv">$y_vector</span> <span class="p">);</span>
+</span><span class='line'>    <span class="k">my</span> <span class="nv">$p2</span> <span class="o">=</span> <span class="n">_getNextPoint</span><span class="p">(</span> <span class="nv">$x_vector</span><span class="p">,</span> <span class="nv">$y_vector</span> <span class="p">);</span>
+</span><span class='line'>
+</span><span class='line'>    <span class="nb">push</span><span class="p">(</span> <span class="nv">@derivatives</span><span class="p">,</span> <span class="n">_slope</span><span class="p">(</span> <span class="nv">$p1</span><span class="p">,</span> <span class="nv">$p2</span> <span class="p">)</span> <span class="p">);</span>
+</span><span class='line'>
+</span><span class='line'>    <span class="k">while</span> <span class="p">(</span> <span class="k">my</span> <span class="nv">$p3</span> <span class="o">=</span> <span class="n">_getNextPoint</span><span class="p">(</span> <span class="nv">$x_vector</span><span class="p">,</span> <span class="nv">$y_vector</span> <span class="p">)</span> <span class="p">)</span> <span class="p">{</span>
+</span><span class='line'>        <span class="nb">push</span><span class="p">(</span> <span class="nv">@derivatives</span><span class="p">,</span> <span class="n">_slope</span><span class="p">(</span> <span class="nv">$p1</span><span class="p">,</span> <span class="nv">$p3</span> <span class="p">)</span> <span class="p">);</span>
+</span><span class='line'>
+</span><span class='line'>        <span class="nv">$p1</span> <span class="o">=</span> <span class="nv">$p2</span><span class="p">;</span>
+</span><span class='line'>        <span class="nv">$p2</span> <span class="o">=</span> <span class="nv">$p3</span><span class="p">;</span>
+</span><span class='line'>    <span class="p">}</span>
+</span><span class='line'>
+</span><span class='line'>    <span class="nb">push</span><span class="p">(</span> <span class="nv">@derivatives</span><span class="p">,</span> <span class="n">_slope</span><span class="p">(</span> <span class="nv">$p1</span><span class="p">,</span> <span class="nv">$p2</span> <span class="p">)</span> <span class="p">);</span>
+</span><span class='line'>
+</span><span class='line'>    <span class="k">return</span> <span class="nv">@derivatives</span><span class="p">;</span>
+</span><span class='line'><span class="p">}</span>
+</span><span class='line'>
+</span><span class='line'><span class="k">sub </span><span class="nf">_getNextPoint</span> <span class="p">{</span>
+</span><span class='line'>    <span class="k">my</span><span class="p">(</span> <span class="nv">$x_vector</span><span class="p">,</span> <span class="nv">$y_vector</span> <span class="p">)</span> <span class="o">=</span> <span class="nv">@_</span><span class="p">;</span>
+</span><span class='line'>    <span class="k">my</span> <span class="nv">$point</span><span class="p">;</span>
+</span><span class='line'>
+</span><span class='line'>    <span class="k">my</span> <span class="nv">$x</span> <span class="o">=</span> <span class="nb">shift</span><span class="p">(</span> <span class="nv">@</span><span class="p">{</span><span class="nv">$x_vector</span><span class="p">}</span> <span class="p">);</span>
+</span><span class='line'>    <span class="k">my</span> <span class="nv">$y</span> <span class="o">=</span> <span class="nb">shift</span><span class="p">(</span> <span class="nv">@</span><span class="p">{</span><span class="nv">$y_vector</span><span class="p">}</span> <span class="p">);</span>
+</span><span class='line'>
+</span><span class='line'>    <span class="k">if</span> <span class="p">(</span> <span class="nb">defined</span><span class="p">(</span> <span class="nv">$x</span> <span class="p">)</span> <span class="o">&amp;&amp;</span> <span class="nb">defined</span><span class="p">(</span> <span class="nv">$y</span> <span class="p">)</span> <span class="p">)</span> <span class="p">{</span>
+</span><span class='line'>        <span class="nv">$point</span><span class="o">-&gt;</span><span class="p">{</span><span class="n">x</span><span class="p">}</span> <span class="o">=</span> <span class="nv">$x</span><span class="p">;</span>
+</span><span class='line'>        <span class="nv">$point</span><span class="o">-&gt;</span><span class="p">{</span><span class="n">y</span><span class="p">}</span> <span class="o">=</span> <span class="nv">$y</span><span class="p">;</span>
+</span><span class='line'>    <span class="p">}</span>
+</span><span class='line'>
+</span><span class='line'>    <span class="k">return</span> <span class="nv">$point</span><span class="p">;</span>
+</span><span class='line'><span class="p">}</span>
+</span><span class='line'>
+</span><span class='line'><span class="k">sub </span><span class="nf">_slope</span> <span class="p">{</span>
+</span><span class='line'>    <span class="k">my</span><span class="p">(</span> <span class="nv">$first</span><span class="p">,</span> <span class="nv">$second</span> <span class="p">)</span> <span class="o">=</span> <span class="nv">@_</span><span class="p">;</span>
+</span><span class='line'>
+</span><span class='line'>    <span class="k">my</span> <span class="nv">$dx</span> <span class="o">=</span> <span class="p">(</span> <span class="nv">$second</span><span class="o">-&gt;</span><span class="p">{</span><span class="n">x</span><span class="p">}</span> <span class="o">-</span> <span class="nv">$first</span><span class="o">-&gt;</span><span class="p">{</span><span class="n">x</span><span class="p">}</span> <span class="p">);</span>
+</span><span class='line'>    <span class="k">my</span> <span class="nv">$dy</span> <span class="o">=</span> <span class="p">(</span> <span class="nv">$second</span><span class="o">-&gt;</span><span class="p">{</span><span class="n">y</span><span class="p">}</span> <span class="o">-</span> <span class="nv">$first</span><span class="o">-&gt;</span><span class="p">{</span><span class="n">y</span><span class="p">}</span> <span class="p">);</span>
+</span><span class='line'>
+</span><span class='line'>    <span class="k">my</span> <span class="nv">$slope</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+</span><span class='line'>    <span class="k">if</span> <span class="p">(</span> <span class="nb">defined</span><span class="p">(</span> <span class="nv">$dx</span> <span class="p">)</span> <span class="o">&amp;&amp;</span> <span class="nb">defined</span><span class="p">(</span> <span class="nv">$dy</span> <span class="p">)</span> <span class="o">&amp;&amp;</span> <span class="p">(</span> <span class="nv">$dx</span> <span class="o">&gt;</span> <span class="mi">0</span> <span class="p">)</span> <span class="p">)</span> <span class="p">{</span>
+</span><span class='line'>        <span class="nv">$slope</span> <span class="o">=</span> <span class="p">(</span> <span class="nv">$dy</span> <span class="o">/</span> <span class="nv">$dx</span> <span class="p">);</span>
+</span><span class='line'>    <span class="p">}</span>
+</span><span class='line'>
+</span><span class='line'>    <span class="k">return</span> <span class="nv">$slope</span><span class="p">;</span>
+</span><span class='line'><span class="p">}</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Yikes.  I can&rsquo;t help but notice that my version ended up being on the order of four times as long; however, about one-third of that increase is whitespace.  To my eyes, the use of whitespace, indentation, and grouping characters helps break down the program into manageable, coherent chunks.  And to the best of my knowledge, I didn&rsquo;t cheat and use any syntax that wasn&rsquo;t available at the time the original was written.</p>
+
+<p>It didn&rsquo;t help that there were no tests included with the individual module; I made one simple test, which the original code and my code both pass (<code>prove -l t</code> from the top-level directory to run the test).  There&rsquo;s still plenty of room for additional testing, never mind the fact that neither version has any reasonable amount of input validation, error handling etc.</p>
+
+<p>So, there&rsquo;s my assertion that Perl doesn&rsquo;t have to look like gobbledegook.</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[When Mathematicians Write Perl]]></title>

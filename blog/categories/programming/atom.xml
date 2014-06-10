@@ -4,7 +4,7 @@
   <title><![CDATA[Category: programming | some guy on the Internet]]></title>
   <link href="http://someguyontheinter.net/blog/categories/programming/atom.xml" rel="self"/>
   <link href="http://someguyontheinter.net/"/>
-  <updated>2014-06-02T22:28:08-04:00</updated>
+  <updated>2014-06-09T23:35:13-04:00</updated>
   <id>http://someguyontheinter.net/</id>
   <author>
     <name><![CDATA[Steve Huff]]></name>
@@ -12,6 +12,104 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[When Philosophy Majors Write Perl]]></title>
+    <link href="http://someguyontheinter.net/blog/when-philosophy-majors-write-perl/"/>
+    <updated>2014-06-09T22:24:35-04:00</updated>
+    <id>http://someguyontheinter.net/blog/when-philosophy-majors-write-perl</id>
+    <content type="html"><![CDATA[<p>In the interest of doing something other than <a href="http://www.fanpop.com/clubs/the-simpsons/images/7414384/title/old-man-yells-cloud-photo">yelling at clouds</a>, it occurred to me that rather than just <a href="http://someguyontheinter.net/blog/when-mathematicians-write-perl/">sniping</a> at other people&rsquo;s Perl, I might step up and demonstrate an alternate path.  So, here goes; reference code is at <a href="https://github.com/hakamadare/Math-Derivative/tree/legible">my convenience fork of Math::Derivative</a>.</p>
+
+<p>The original:</p>
+
+<p>```perl
+sub Derivative1 {</p>
+
+<pre><code>my ($x,$y)=@_;
+my @y2;
+my $n=$#{$x};
+$y2[0]=($y-&gt;[1]-$y-&gt;[0])/($x-&gt;[1]-$x-&gt;[0]);
+$y2[$n]=($y-&gt;[$n]-$y-&gt;[$n-1])/($x-&gt;[$n]-$x-&gt;[$n-1]);
+my $i;
+for($i=1; $i&lt;$n; $i++) {
+    $y2[$i]=($y-&gt;[$i+1]-$y-&gt;[$i-1])/($x-&gt;[$i+1]-$x-&gt;[$i-1]);
+}
+return @y2;
+</code></pre>
+
+<p>}
+```</p>
+
+<p>My substitute:</p>
+
+<p>```perl
+sub Derivative1 {</p>
+
+<pre><code>my( $x_vector, $y_vector ) = @_;
+my( @derivatives );
+
+my $p1 = _getNextPoint( $x_vector, $y_vector );
+my $p2 = _getNextPoint( $x_vector, $y_vector );
+
+push( @derivatives, _slope( $p1, $p2 ) );
+
+while ( my $p3 = _getNextPoint( $x_vector, $y_vector ) ) {
+    push( @derivatives, _slope( $p1, $p3 ) );
+
+    $p1 = $p2;
+    $p2 = $p3;
+}
+
+push( @derivatives, _slope( $p1, $p2 ) );
+
+return @derivatives;
+</code></pre>
+
+<p>}</p>
+
+<p>sub _getNextPoint {</p>
+
+<pre><code>my( $x_vector, $y_vector ) = @_;
+my $point;
+
+my $x = shift( @{$x_vector} );
+my $y = shift( @{$y_vector} );
+
+if ( defined( $x ) &amp;&amp; defined( $y ) ) {
+    $point-&gt;{x} = $x;
+    $point-&gt;{y} = $y;
+}
+
+return $point;
+</code></pre>
+
+<p>}</p>
+
+<p>sub _slope {</p>
+
+<pre><code>my( $first, $second ) = @_;
+
+my $dx = ( $second-&gt;{x} - $first-&gt;{x} );
+my $dy = ( $second-&gt;{y} - $first-&gt;{y} );
+
+my $slope = 0;
+if ( defined( $dx ) &amp;&amp; defined( $dy ) &amp;&amp; ( $dx &gt; 0 ) ) {
+    $slope = ( $dy / $dx );
+}
+
+return $slope;
+</code></pre>
+
+<p>}
+```</p>
+
+<p>Yikes.  I can&rsquo;t help but notice that my version ended up being on the order of four times as long; however, about one-third of that increase is whitespace.  To my eyes, the use of whitespace, indentation, and grouping characters helps break down the program into manageable, coherent chunks.  And to the best of my knowledge, I didn&rsquo;t cheat and use any syntax that wasn&rsquo;t available at the time the original was written.</p>
+
+<p>It didn&rsquo;t help that there were no tests included with the individual module; I made one simple test, which the original code and my code both pass (<code>prove -l t</code> from the top-level directory to run the test).  There&rsquo;s still plenty of room for additional testing, never mind the fact that neither version has any reasonable amount of input validation, error handling etc.</p>
+
+<p>So, there&rsquo;s my assertion that Perl doesn&rsquo;t have to look like gobbledegook.</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[When Mathematicians Write Perl]]></title>
