@@ -14,7 +14,9 @@ There's [plenty](http://blog.runkeeper.com/2380/team-runkeeper-is-victorious-in-
 
 # The Problem
 
-One of the features we wanted to showcase in this event was [Live Tracking](http://runkeeper.com/what-is-elite#liveTrackingSectionAnchor).  Live Tracking is an Elite-only feature; essentially, you enable Live Tracking at the start of an activity, and you are assigned a custom URL for that activity that your friends can use to see your progress overlaid on a map, with real-time-esque updates (see [this help doc](http://support.runkeeper.com/hc/en-us/articles/201109836-How-to-enable-RunKeeper-Live) for more information).  During the race our runners would be live tracking, and in addition another team member would be live tracking while riding the trolley.  This feature does impose some extra load on the application stack, however, and given that we had been vigorously promoting the event for several weeks prior, we foresaw (or at least really hoped) that we would be facing a significant traffic spike.  The question was, then, how to deliver a responsive, exciting race to all of the people glued to their browsers starting at 11AM EDT, while at the same time not affecting the user experience of all the rest of our users around the world.
+One of the features we wanted to showcase in this event was [Live Tracking](http://runkeeper.com/what-is-elite#liveTrackingSectionAnchor).  Live Tracking is an Elite-only feature; essentially, you enable Live Tracking at the start of an activity, and you are assigned a custom URL for that activity that your friends can use to see your progress overlaid on a map, with real-time-esque updates (see [this help doc](http://support.runkeeper.com/hc/en-us/articles/201109836-How-to-enable-RunKeeper-Live) for more information).  During the race our runners would be live tracking, and in addition another team member would be live tracking while riding the trolley, so live tracking would be front and center in our presentation of the race; what's more, under normal circumstances a live tracking custom URL tracks only one user at a time, but during this event we would be tracking five users simultaneously in a single browser window.
+
+This feature does impose some extra load on the application stack, however, and given that we had been vigorously promoting the event for several weeks prior, we foresaw (or at least really hoped) that we would be facing a significant traffic spike.  The question was, then, how to deliver a responsive, exciting race to all of the people glued to their browsers starting at 11AM EDT, while at the same time not affecting the user experience of all the rest of our users around the world.
 
 ## The Stack
 
@@ -26,7 +28,7 @@ This infrastructure stands up reasonably well to our normal production load; for
 
 {% img center /images/rkweb_throughput.png 456 203 "RunKeeper web throughput" %}
 
-We have a pretty good idea of where the bottlenecks are in this architecture, and a big traffic spike to one part of the site could absolutely have a degrading effect on other parts, so we started thinking about how to isolate the high-traffic area from everything else.
+We have a pretty good idea of where the bottlenecks are in this architecture, and we know how to scale the individual components given enough time and resources, but rapidly scaling the entire stack in response to a traffic spike is a different story, so we started thinking about how to isolate the high-traffic area from everything else.
 
 ## The Application
 
