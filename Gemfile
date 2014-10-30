@@ -16,6 +16,8 @@ group :development do
   gem 'stringex', '~> 1.4.0'
   gem 'directory_watcher', '~> 1.4.1'
   gem 's3_website', '~> 1.7'
+  gem 'kramdown'
+  gem 'coderay'
 end
 
 gem 'sinatra', '~> 1.4.2'
