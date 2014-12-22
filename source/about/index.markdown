@@ -17,3 +17,5 @@ Let's see how many links I can come up with:
 * [Open Source Report Card](http://osrc.dfm.io/hakamadare)
 * [Coderwall](https://coderwall.com/hakamadare)
 * [Ohloh](https://www.ohloh.net/accounts/hakamadare)
+
+{% img center /images/truth.png 500 800 '' 'Art by Sean Bonner, released under a Creative Commons Attribution-Noncommercial-Share Alike 2.0 license.' %}

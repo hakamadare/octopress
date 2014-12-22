@@ -9,74 +9,72 @@ In the interest of doing something other than [yelling at clouds](http://www.fan
 
 The original:
 
-```perl
-sub Derivative1 {
-    my ($x,$y)=@_;
-    my @y2;
-    my $n=$#{$x};
-    $y2[0]=($y->[1]-$y->[0])/($x->[1]-$x->[0]);
-    $y2[$n]=($y->[$n]-$y->[$n-1])/($x->[$n]-$x->[$n-1]);
-    my $i;
-    for($i=1; $i<$n; $i++) {
-        $y2[$i]=($y->[$i+1]-$y->[$i-1])/($x->[$i+1]-$x->[$i-1]);
+    sub Derivative1 {
+        my ($x,$y)=@_;
+        my @y2;
+        my $n=$#{$x};
+        $y2[0]=($y->[1]-$y->[0])/($x->[1]-$x->[0]);
+        $y2[$n]=($y->[$n]-$y->[$n-1])/($x->[$n]-$x->[$n-1]);
+        my $i;
+        for($i=1; $i<$n; $i++) {
+            $y2[$i]=($y->[$i+1]-$y->[$i-1])/($x->[$i+1]-$x->[$i-1]);
+        }
+        return @y2;
     }
-    return @y2;
-}
-```
+{:.language-perl}
 
 My substitute:
 
-```perl
-sub Derivative1 {
-    my( $x_vector, $y_vector ) = @_;
-    my( @derivatives );
+    sub Derivative1 {
+        my( $x_vector, $y_vector ) = @_;
+        my( @derivatives );
 
-    my $p1 = _getNextPoint( $x_vector, $y_vector );
-    my $p2 = _getNextPoint( $x_vector, $y_vector );
+        my $p1 = _getNextPoint( $x_vector, $y_vector );
+        my $p2 = _getNextPoint( $x_vector, $y_vector );
 
-    push( @derivatives, _slope( $p1, $p2 ) );
+        push( @derivatives, _slope( $p1, $p2 ) );
 
-    while ( my $p3 = _getNextPoint( $x_vector, $y_vector ) ) {
-        push( @derivatives, _slope( $p1, $p3 ) );
+        while ( my $p3 = _getNextPoint( $x_vector, $y_vector ) ) {
+            push( @derivatives, _slope( $p1, $p3 ) );
 
-        $p1 = $p2;
-        $p2 = $p3;
+            $p1 = $p2;
+            $p2 = $p3;
+        }
+
+        push( @derivatives, _slope( $p1, $p2 ) );
+
+        return @derivatives;
     }
 
-    push( @derivatives, _slope( $p1, $p2 ) );
+    sub _getNextPoint {
+        my( $x_vector, $y_vector ) = @_;
+        my $point;
 
-    return @derivatives;
-}
+        my $x = shift( @{$x_vector} );
+        my $y = shift( @{$y_vector} );
 
-sub _getNextPoint {
-    my( $x_vector, $y_vector ) = @_;
-    my $point;
+        if ( defined( $x ) && defined( $y ) ) {
+            $point->{x} = $x;
+            $point->{y} = $y;
+        }
 
-    my $x = shift( @{$x_vector} );
-    my $y = shift( @{$y_vector} );
-
-    if ( defined( $x ) && defined( $y ) ) {
-        $point->{x} = $x;
-        $point->{y} = $y;
+        return $point;
     }
 
-    return $point;
-}
+    sub _slope {
+        my( $first, $second ) = @_;
 
-sub _slope {
-    my( $first, $second ) = @_;
+        my $dx = ( $second->{x} - $first->{x} );
+        my $dy = ( $second->{y} - $first->{y} );
 
-    my $dx = ( $second->{x} - $first->{x} );
-    my $dy = ( $second->{y} - $first->{y} );
+        my $slope = 0;
+        if ( defined( $dx ) && defined( $dy ) && ( $dx > 0 ) ) {
+            $slope = ( $dy / $dx );
+        }
 
-    my $slope = 0;
-    if ( defined( $dx ) && defined( $dy ) && ( $dx > 0 ) ) {
-        $slope = ( $dy / $dx );
+        return $slope;
     }
-
-    return $slope;
-}
-```
+{:.language-perl}
 
 Yikes.  I can't help but notice that my version ended up being on the order of four times as long; however, about one-third of that increase is whitespace.  To my eyes, the use of whitespace, indentation, and grouping characters helps break down the program into manageable, coherent chunks.  And to the best of my knowledge, I didn't cheat and use any syntax that wasn't available at the time the original was written.
 

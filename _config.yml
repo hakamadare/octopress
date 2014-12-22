@@ -33,14 +33,17 @@ destination: public
 plugins: plugins
 code_dir: downloads/code
 category_dir: blog/categories
-markdown: rdiscount
+markdown: kramdown
 kramdown:
   auto_ids: true
   footnote_nr: 1
   entity_output: as_char
   toc_levels: 1..6
   smart_quotes: lsquo,rsquo,ldquo,rdquo
-  use_coderay: false
+  use_coderay: true
+  coderay:
+    coderay_line_numbers: table
+    coderay_css: style
 rdiscount:
   extensions:
     - autolink

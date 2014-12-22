@@ -7,6 +7,7 @@ footer: true
 ---
 Take a look at these sites when you have a moment.
 
+* [the RunKeeper engineering blog](http://engineering.runkeeper.com)
 * [the Puppet Labs blog](http://puppetlabs.com/blog)
 * [Modern Perl](http://modernperlbooks.com/mt/index.html)
 * [DevOps for Fun and Profit](http://blog.ob3y.com)
