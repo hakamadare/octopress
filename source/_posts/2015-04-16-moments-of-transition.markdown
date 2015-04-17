@@ -3,7 +3,7 @@ layout: post
 title: "Moments of Transition"
 date: 2015-04-16 22:26:02 -0400
 comments: true
-categories: signal,drinks,work
+categories: signal drinks work
 ---
 I had a post I had been meaning to write this evening.  I'd been thinking about it since I woke up; essentially, last night an acquaintance posted something on a mailing list (in the course of a discussion of a code of conduct) that really brought home to me that there's a certain population in my community with whom I simply do not share common values and priorities.  Sure, this is not unheard-of, and is not really news to me, but it's still a bit saddening and alienating to realize it so viscerally, and so I was going to write about that feeling, and then get up on my soapbox and declaim for a while.
 
