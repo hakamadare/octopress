@@ -4,11 +4,17 @@ languageCode = "en-us"
 title = "some guy on the Internet"
 
 pygmentsCodeFences = true
-pygmentsStyle = "solarized-dark"
+pygmentsStyle = "solarized-light"
 
 disqusShortname = "someguyontheinternet"
 
 enableRobotsTXT = true
+
+[params]
+  description = "the network engineer fears the backhoe, and the systems engineer fears the network engineer"
+
+  # solar-theme-hugo
+  scheme = "light"
 
 [permalinks]
   blog = "/blog/:filename/"
