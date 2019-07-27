@@ -3,5 +3,12 @@ baseURL = "https://someguyontheinter.net/"
 languageCode = "en-us"
 title = "some guy on the Internet"
 
+pygmentsCodeFences = true
+pygmentsStyle = "solarized-dark"
+
+disqusShortname = "someguyontheinternet"
+
+enableRobotsTXT = true
+
 [permalinks]
   blog = "/blog/:filename/"
