@@ -9,7 +9,7 @@ This morning I learned about [Secret](https://www.secret.ly/) via [Tom Limoncell
 
 As I understand it, the motivation behind this service is that people [self-censor too aggressively](https://medium.com/p/61a73ed561b4/) when posting online, and so Secret offers a platform with many of the benefits of other social network platforms, but with pervasive anonymity.  I understand the concern that people are keeping their real thoughts to themselves due to fear of the real-world consequences of their expressing controversial views; however, I tend to think that more often than not this is a good thing.
 
-<!-- more -->
+<!--more-->
 
 To be clear: I support strong pseudonymity in online discourse.  I don't like Facebook's and Google Plus' "real name" policies; I want to be able to interact with others online without them necessarily knowing where I work and where I live, and I want that for others as well.  I also think that privacy and security in one-to-one communications is an indispensable component of the sort of world I want to live in, and I believe in the value of technologies that make this sort of communication possible ([OpenPGP](https://www.gnupg.org/), [Tor](https://www.torproject.org/), [CAcert](http://www.cacert.org/), [OTR](https://otr.cypherpunks.ca/) [Telegram](https://telegram.org/), to name a few).
 

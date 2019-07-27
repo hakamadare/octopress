@@ -9,7 +9,7 @@ I came home a couple of hours ago, returning from a full day: the first two-thir
 
 But instead I made myself some dinner, and while I was cooking I read Tom Preston-Werner's [blog post about leaving GitHub](http://tom.preston-werner.com/2014/04/21/farewell-github-hello-immersive-computing.html) (for context, a good place to start is [this TechCrunch story](http://techcrunch.com/2014/03/15/julie-ann-horvath-describes-sexism-and-intimidation-behind-her-github-exit/) (trigger warning: hostile work environment)).
 
-<!-- more -->
+<!--more-->
 
 I had already read GitHub's [statement about the investigation](https://github.com/blog/1823-results-of-the-github-investigation) while riding home on the train, and seen some criticism of it on Twitter.  I remember my immediate reaction: dismay at the unworldliness of my fellow posters, who didn't seem to realize that of course the company couldn't formally admit to any wrongdoing due to the threat of legal action, and that "mistakes and errors of judgment" was of course not meant to be some sort of tepid, weaksauce [praising with faint damns](https://en.wikipedia.org/wiki/Damn_with_faint_praise).
 

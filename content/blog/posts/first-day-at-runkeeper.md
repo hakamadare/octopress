@@ -7,7 +7,7 @@ categories: work signal
 ---
 I'm winding down at the end of my first day at [RunKeeper](http://runkeeper.com), and I'm still walking on air :)  Today started with me apparently being a bit jittery while shaving this morning:
 
-{% img center /images/shaving_cuts.jpg 240 320 "ouch" %}
+{{< figure src="/img/shaving_cuts.jpg" width="240" height="320" alt="ouch" >}}
 
 and ended with me running (while wearing [clogs](http://www.amazon.com/Sanita-457806M-20-Professional-Cabrio-Clog/dp/B001CWYZME), ow) to North Station to catch the commuter rail, and today was STILL awesome.
 

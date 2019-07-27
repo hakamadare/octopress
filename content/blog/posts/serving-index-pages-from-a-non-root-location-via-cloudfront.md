@@ -11,18 +11,22 @@ So, as you may be aware, you can use AWS S3 to [host a static website](http://do
 
 As long as your site is laid out something like the following, you'll be in good shape:
 
-    /
-    /index.html
-    /images/
-    /images/foo.png
-    /images/bar.png
-    ...
+```console
+/
+/index.html
+/images/
+/images/foo.png
+/images/bar.png
+...
+```
 
 However, you can run into odd behavior if your site contains paths like this:
 
-    ...
-    /some_subdirectory/index.html
-    ...
+```console
+...
+/some_subdirectory/index.html
+...
+```
 
 and you want to be able to browse to `http://your-site.tld/some_subdirectory/` and have the server automatically serve out the index page.  Since S3 doesn't really have a notion of a directory hierarchy, but rather has a flat structure of keys and values with lots of cleverness that enables it to simulate a hierarchical structure, your request to CloudFront gets converted into "hey S3, give me the object whose key is `some_subdirectory/`", to which S3 correctly replies "there is no such object".
 
@@ -30,7 +34,7 @@ When you enable S3's static website hosting mode, however, some additional trans
 
 Huh?  Ok, here's an example:
 
-<!-- More -->
+<!--more-->
 
 1. Create a S3 bucket called `your-site.tld`.
 2. Upload your site to that bucket.

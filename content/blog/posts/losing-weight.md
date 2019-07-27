@@ -17,7 +17,7 @@ Eventually I found myself a [comically](http://www.commitstrip.com/wp-content/up
 
 So what?
 
-<!-- more -->
+<!--more-->
 
 This spring I started working at [RunKeeper](http://runkeeper.com).  I remember being seriously concerned while I was interviewing that I was simply not athletic enough to fit in at, well, a fitness company.  Then, this past spring, the company launched a sort of informal incentive program for employees called "Earn Your Kicks".  Apparently the initial idea had been that employees would set running-related goals for themselves, and in return the company would buy them new running shoes, but then it grew into something more general: participation was entirely voluntary, and participants were challenged to come up with "big, hairy, audacious goals" related to their own fitness.  They would announce these goals at the weekly all-hands meeting, and then track their progress towards these goals on a big whiteboard at the front of the office.
 
@@ -41,7 +41,7 @@ So, fast-forward to September 2014.  I'm sitting in our weekly all-hands meeting
 
 In order to meet my goal, I'll need to sustain a loss rate of a pound per week.  I believe that this is an achievable goal for me; when I graduated high school, I weighed 185 pounds, and I'm still about the same height I was then.  How have I been doing?
 
-{% img center /images/mfp-weight-20150101.png 745 304 "graph of weight against time" %}
+{{< figure src="/img/mfp-weight-20150101.png" width="745" height="304" alt="graph of weight against time" >}}
 
 The red line indicates when I started the challenge; it looks like so far I'm slightly ahead of where I need to be (yay!).  It helps a lot that I'm using a [smart scale](http://www.amazon.com/Taylor-Bluetooth-Smart-Capacity-SmarTrack/dp/B00NU6H3PQ/); this means that weighing myself daily is less laborious, especially since the companion app to this scale has RunKeeper and MyFitnessPal integration.
 

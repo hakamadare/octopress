@@ -9,15 +9,11 @@ I promise that this is not going to become the All Heartbleed All The Time blog,
 
 A vendor called [CloudFlare](https://www.cloudflare.com/overview) decided to perform a practical test of the exploitability of Heartbleed by setting up a vulnerable site and [challenging people to steal the private key](http://blog.cloudflare.com/answering-the-critical-question-can-you-get-private-ssl-keys-using-heartbleed).  I think these two quotes encapsulate the story perfectly:
 
-{% blockquote %}
-Here’s the good news: after extensive testing on our software stack, we have been unable to successfully use Heartbleed on a vulnerable server to retrieve any private key data.
-{% endblockquote %}
+> Here’s the good news: after extensive testing on our software stack, we have been unable to successfully use Heartbleed on a vulnerable server to retrieve any private key data.
 
 followed by:
 
-{% blockquote %}
-It turns out we were wrong. While it takes effort, it is possible to extract private SSL keys. The challenge was solved by Software Engineer Fedor Indutny and Ilkka Mattila at NCSC-FL roughly 9 hours after the challenge was first published.
-{% endblockquote %}
+> It turns out we were wrong. While it takes effort, it is possible to extract private SSL keys. The challenge was solved by Software Engineer Fedor Indutny and Ilkka Mattila at NCSC-FL roughly 9 hours after the challenge was first published.
 
 Now consider a tool that [my buddy Ventz put together](http://blog.vpetkov.net/2014/04/11/ridiculously-fast-heartbleed-subnet-scanner-nmap-heartbleed-howto-and-tutorial/) for bulk scanning of network segments to detect Heartbleed-vulnerable webservers.  There's no reason to believe that he was the first person to think of building something like this.
 

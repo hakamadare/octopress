@@ -7,22 +7,23 @@ categories: programming work signal
 ---
 OK, see this?  This is why people say uncharitable things about Perl:
 
-    for (@cmd)
+```perl
+for (@cmd)
+{
+    next unless grep /^\Q$cmd\E$/, split(" ", $_->[1]);
+    $cmd_data = $_;
+    push @{$cmd_data->[3]}, ["filter", undef, undef, \&parse_filter] if $_->[1] =~ /\bdescribe/;
+    for (@{$cmd_data->[3]})
     {
-        next unless grep /^\Q$cmd\E$/, split(" ", $_->[1]);
-        $cmd_data = $_;
-        push @{$cmd_data->[3]}, ["filter", undef, undef, \&parse_filter] if $_->[1] =~ /\bdescribe/;
-        for (@{$cmd_data->[3]})
-        {
-      for (split(" ", $_->[0]))
-      {
-          (my $key = $_) =~ s/-/_/g;
-          $keyword{$key} = undef;
-      }
-        }
-        last;
+  for (split(" ", $_->[0]))
+  {
+      (my $key = $_) =~ s/-/_/g;
+      $keyword{$key} = undef;
+  }
     }
-{:.language-perl}
+    last;
+}
+```
 
 It doesn't matter whose code this is.  Suffice it to say that it
 

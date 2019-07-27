@@ -11,25 +11,27 @@ At this point my heart leaps up with a sudden, fierce joy.  Could it be?  Really
 
 "But look, when I try to touch a file..."
 
-    # df -h
-    /dev/xvde             7.9G  5.3G  2.3G  71% /
-    tmpfs                 828M     0  828M   0% /dev/shm
-    # cd /
-    # touch foo
-    touch: cannot touch 'foo': No space left on device
-{:.language-text}
+```console
+# df -h
+/dev/xvde             7.9G  5.3G  2.3G  71% /
+tmpfs                 828M     0  828M   0% /dev/shm
+# cd /
+# touch foo
+touch: cannot touch 'foo': No space left on device
+```
 
 At this point I cannot keep the grin off my face.  "Try `df -ih`", I say.
 
-    # df -ih
-    Filesystem           Inodes IUsed IFree IUse% Mounted on
-    /dev/xvde              512K  512K     0  100% /
-    tmpfs                  207K     1  207K    1% /dev/shm
-{:.language-text}
+```console
+# df -ih
+Filesystem           Inodes IUsed IFree IUse% Mounted on
+/dev/xvde              512K  512K     0  100% /
+tmpfs                  207K     1  207K    1% /dev/shm
+```
 
 Dun-dun-DUNNNNNNNNNNNNNN!
 
-<!-- more -->
+<!--more-->
 
 So, what's all this then?  My colleague had inadvertently presented me with a scenario that I have encountered in job interviews (on both sides of the table) throughout my career; I believe I was asked it when I first interviewed at [NDA](https://en.wikipedia.org/wiki/Net_Daemons_Associates), and I've been using it as a "weeder" question for years when screening junior admins.
 

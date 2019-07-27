@@ -8,7 +8,7 @@ categories: noise tools
 
 Apparently it is high time I had an actual blog.
 
-<!-- more -->
+<!--more-->
 
 ## How The Sausage Is Made
 

@@ -9,9 +9,7 @@ First off, hooray for the MBTA's [commuter rail WiFi](http://www.mbta.com/riding
 
 Double hooray for my [Sesame Ring](http://www.ringtheory.com/), keeping me from having to repeatedly dig my wallet out of my pocket as I traversed various other public transit methods running errands after work.
 
-{% blockquote %}
-Gloria rode the subway Sunday  
+>Gloria rode the subway Sunday  
 Sic transit gloria mundi
-{% endblockquote %}
 
 As a side note, please let me know if you know the source of the above quotation; I have a vague recollection of having encountered it in [Gödel, Escher, Bach](https://en.wikipedia.org/wiki/G%C3%B6del%2C_Escher%2C_Bach), but I don't have my print copy close at hand right now.

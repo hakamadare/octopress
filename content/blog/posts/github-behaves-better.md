@@ -11,7 +11,7 @@ I particularly appreciate their willingness to look at themselves with a critica
 
 This doesn't mean that everything's OK.  I'm still sad about this sequence of events, both about the original incident and then the first blog post (to say nothing of Preston-Werner's personal blog post, yikes), and I suspect it will take more time and more scrutiny before I feel comfortable being the GitHub fanboy I used to be, if ever again.
 
-<!-- more -->
+<!--more-->
 
 I saw [a tweet today](https://twitter.com/rosefox/status/461578257499185152) that really resonated with me.  I understand the gunshy feeling of not wanting to get excited about people (events, organizations, communities, ideas), but on the other hand, I think that in my natural state I'm constitutionally incapable of _not_ getting fired up about someone who's making some AWESOME THING, or who had some GREAT IDEA.
 

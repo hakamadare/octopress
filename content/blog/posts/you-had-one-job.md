@@ -9,7 +9,7 @@ On the way home today I encountered one of our housemates, also homeward bound, 
 
 I was, however, interrupted mid-sentence by a crash from the hallway, where Elijah (one of our cats) had knocked a box of tissues from the shelf to the floor.  He was standing by it staring at me, and I got the distinct sense that this was a warning shot across my bows, indicating that I should shut up about trivialities and focus on the much more important topic of his dinner.
 
-{% img center /images/one_job.jpg 746 550 "you had one job" %}
+{{< figure src="/img/one_job.jpg" width="746" height="550" alt="you had one job" >}}
 
 ### Vim, Pathogen, and dirty submodules
 

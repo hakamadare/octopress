@@ -19,6 +19,6 @@ However, my optician has been having more and more difficulty working on them ev
 
 My new glasses are more substantial; the first day I wore them to work, one of my teammates asked "Have I seen you with glasses before?" (I've worn these glasses during the entirety of my tenure at RunKeeper).  I got them at the beginning of the week, and took them to be fitted yesterday.  I'm still getting used to them, but we're off to a good start: no more double vision from misaligned lenses!  no more constantly pushing them up my nose!  no more trying to tighten tiny bolts using only my fingernails!
 
-Doesn't mean I won't miss the previous pair, though.  Ave atque vale, old friends.
+Doesn't mean I won't miss the previous pair, though.  _Ave atque vale_, old friends.
 
-{% img center /images/kio_yamato.png 768 576 "kio yamato glasses" %}
+{{< figure src="/img/kio_yamato.png" width="768" height="576" alt="kio yamato glasses" >}}
