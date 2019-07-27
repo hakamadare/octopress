@@ -2,3 +2,6 @@ theme = "solar-theme-hugo"
 baseURL = "https://someguyontheinter.net/"
 languageCode = "en-us"
 title = "some guy on the Internet"
+
+[permalinks]
+  blog = "/blog/:filename/"
