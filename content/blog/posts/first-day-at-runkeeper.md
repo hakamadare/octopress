@@ -1,5 +1,5 @@
 ---
-layout: post
+type: post
 title: "First day at RunKeeper"
 date: 2014-04-01 22:57:14 -0400
 comments: true

@@ -1,5 +1,5 @@
 ---
-layout: post
+type: post
 title: "You Had One Job"
 date: 2014-04-02 20:06:13 -0400
 comments: true

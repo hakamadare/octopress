@@ -1,5 +1,5 @@
 ---
-layout: post
+type: post
 title: "More Details About Heartbleed"
 date: 2014-04-09 22:39:30 -0400
 comments: true

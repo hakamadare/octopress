@@ -1,5 +1,5 @@
 ---
-layout: post
+type: post
 title: "Breeze by Runkeeper"
 date: 2014-04-17 11:29:22 -0400
 comments: true

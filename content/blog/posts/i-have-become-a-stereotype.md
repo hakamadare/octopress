@@ -1,5 +1,5 @@
 ---
-layout: post
+type: post
 title: "I Have Become A Stereotype"
 date: 2015-03-06 14:18:05 -0500
 comments: true

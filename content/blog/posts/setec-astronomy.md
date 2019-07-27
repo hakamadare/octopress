@@ -1,5 +1,5 @@
 ---
-layout: post
+type: post
 title: "SETEC ASTRONOMY"
 date: 2014-05-11 11:49:44 -0400
 comments: true

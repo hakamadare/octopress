@@ -1,5 +1,5 @@
 ---
-layout: post
+type: post
 title: "Moments of Transition"
 date: 2015-04-16 22:26:02 -0400
 comments: true

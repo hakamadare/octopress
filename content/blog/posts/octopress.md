@@ -1,5 +1,5 @@
 ---
-layout: post
+type: post
 title: "Octopress, S3, and file exclusion"
 date: 2014-04-03 21:49:10 -0400
 comments: true

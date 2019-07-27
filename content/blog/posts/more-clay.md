@@ -1,5 +1,5 @@
 ---
-layout: post
+type: post
 title: "More Clay"
 date: 2014-04-27 11:20:43 -0400
 comments: true

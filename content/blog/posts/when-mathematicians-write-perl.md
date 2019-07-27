@@ -1,5 +1,5 @@
 ---
-layout: post
+type: post
 title: "When Mathematicians Write Perl"
 date: 2014-06-02 20:30:57 -0400
 comments: true

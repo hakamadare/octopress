@@ -1,5 +1,5 @@
 ---
-layout: post
+type: post
 title: "SSL Root Certificate Hashes"
 date: 2014-07-02 10:10:35 -0400
 comments: true

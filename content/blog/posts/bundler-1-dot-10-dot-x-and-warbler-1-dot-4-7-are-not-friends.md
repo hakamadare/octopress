@@ -1,5 +1,5 @@
 ---
-layout: post
+type: post
 title: "Bundler 1.10.x and Warbler 1.4.7 are NOT friends"
 date: 2015-06-01 14:52:57 -0400
 comments: true

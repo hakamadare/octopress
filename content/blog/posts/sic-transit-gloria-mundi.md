@@ -1,5 +1,5 @@
 ---
-layout: post
+type: post
 title: "Sic Transit Gloria Mundi"
 date: 2014-04-03 21:03:28 -0400
 comments: true

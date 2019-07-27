@@ -1,5 +1,5 @@
 ---
-layout: post
+type: post
 title: "Outrunning the T"
 date: 2014-08-06 12:33:07 -0400
 comments: true

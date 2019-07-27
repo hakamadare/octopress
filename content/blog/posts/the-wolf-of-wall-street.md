@@ -1,5 +1,5 @@
 ---
-layout: post
+type: post
 title: "The Wolf of Wall Street"
 date: 2014-04-04 15:40:48 -0400
 comments: true

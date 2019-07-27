@@ -1,5 +1,5 @@
 ---
-layout: post
+type: post
 title: "A Real-Life Sysadmin Job Interview Question"
 date: 2014-04-16 07:59:44 -0400
 comments: true

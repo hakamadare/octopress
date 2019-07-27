@@ -1,5 +1,5 @@
 ---
-layout: post
+type: post
 title: "A Ruby client for the SurveyMonkey REST API"
 date: 2015-05-04 21:02:39 -0400
 comments: true

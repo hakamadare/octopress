@@ -1,5 +1,5 @@
 ---
-layout: post
+type: post
 title: "Hello World"
 date: 2014-03-30 12:43:50 -0400
 comments: true

@@ -1,5 +1,5 @@
 ---
-layout: post
+type: post
 title: "Legs of Clay"
 date: 2014-04-21 20:02:43 -0400
 comments: true

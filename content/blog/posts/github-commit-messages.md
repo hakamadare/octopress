@@ -1,5 +1,5 @@
 ---
-layout: post
+type: post
 title: "GitHub Commit Messages"
 date: 2014-03-30 18:30:53 -0400
 comments: true

@@ -1,5 +1,5 @@
 ---
-layout: post
+type: post
 title: "GitHub Behaves Better"
 date: 2014-04-30 20:03:05 -0400
 comments: true

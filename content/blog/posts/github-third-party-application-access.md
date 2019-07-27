@@ -1,5 +1,5 @@
 ---
-layout: post
+type: post
 title: "GitHub Third-Party Application Access"
 date: 2015-02-23 09:25:05 -0500
 comments: true

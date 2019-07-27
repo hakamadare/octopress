@@ -1,5 +1,5 @@
 ---
-layout: post
+type: post
 title: "Ada Initiative names new Executive Director"
 date: 2015-03-19 16:49:09 -0400
 comments: true

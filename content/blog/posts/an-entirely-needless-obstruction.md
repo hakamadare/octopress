@@ -1,5 +1,5 @@
 ---
-layout: post
+type: post
 title: "An Entirely Needless Obstruction"
 date: 2014-05-20 14:19:41 -0400
 comments: true

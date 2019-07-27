@@ -1,5 +1,5 @@
 ---
-layout: post
+type: post
 title: "Serving index pages from a non-root location via CloudFront"
 date: 2015-01-12 13:22:36 -0500
 comments: true

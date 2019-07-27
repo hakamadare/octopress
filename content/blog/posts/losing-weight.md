@@ -1,5 +1,5 @@
 ---
-layout: post
+type: post
 title: "Losing Weight"
 date: 2015-01-01 19:47:44 -0500
 comments: true

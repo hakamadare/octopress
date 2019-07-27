@@ -1,5 +1,5 @@
 ---
-layout: post
+type: post
 title: "PEM Files, for the Last Damn Time"
 date: 2014-04-07 20:49:22 -0400
 comments: true
