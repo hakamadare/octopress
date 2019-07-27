@@ -1,3 +1,6 @@
 [submodule ".themes/solarized"]
 	path = .themes/solarized
 	url = http://github.com/erikzaadi/solarized-octopress-theme
+[submodule "themes/solar-theme-hugo"]
+	path = themes/solar-theme-hugo
+	url = https://github.com/bake/solar-theme-hugo.git
