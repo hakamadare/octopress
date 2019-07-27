@@ -1,0 +1,4 @@
+{{ $404path := "static/404.md" -}}
+{{ if fileExists $404path -}}
+{{- readFile $404path | markdownify }}
+{{ end -}}
