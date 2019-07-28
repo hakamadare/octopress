@@ -43,12 +43,12 @@ jobs:
     steps:
       - buildevents/with_job_span:
           steps:
-            - setup_remote_docker
             - run:
                 name: "checkout-submodules"
                 command: |
                   git submodule init
                   git submodule update
+            - setup_remote_docker
             - aws-ecr/build-and-push-image:
                 checkout: false
                 repo: "${ECR_REPO_PROD}"
