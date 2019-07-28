@@ -2,12 +2,34 @@ version: 2.1
 
 orbs:
   aws-ecr: circleci/aws-ecr@6.2.0
+  buildevents: honeycombio/buildevents@0.2.1
+
+jobs:
+  setup:
+    steps:
+      - buildevents/start_trace
+  watch:
+    steps:
+      - buildevents/watch_build_and_finish
+  build-and-publish-docker-image:
+    steps:
+      - buildevents/with_job_span:
+          steps:
+            - aws_ecr/build-and-push-image:
+                repo: "${ECR_REPO_PROD}"
+                tag: "${CIRCLE_SHA1}"
 
 workflows:
   version: 2
   build-and-publish-docker-image:
     jobs:
-      - aws-ecr/build-and-push-image:
+      - setup
           context: "vecna.org"
-          repo: "${ECR_REPO_PROD}"
-          tag: "${CIRCLE_SHA1}"
+      - watch
+          context: "vecna.org"
+          requires:
+            - setup
+      - build-and-publish-docker-image
+          context: "vecna.org"
+          requires:
+            - setup
