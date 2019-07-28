@@ -11,7 +11,7 @@ executors:
         type: "string"
         default: "12"
       docker:
-        - image: "circleci/golang:1.<< parameters.goversion >>"
+        image: "circleci/golang:1.<< parameters.goversion >>"
 
 jobs:
   setup:
