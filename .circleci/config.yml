@@ -6,12 +6,15 @@ orbs:
 
 jobs:
   setup:
+    executor: machine
     steps:
       - buildevents/start_trace
   watch:
+    executor: machine
     steps:
       - buildevents/watch_build_and_finish
   build-and-publish-docker-image:
+    executor: machine
     steps:
       - buildevents/with_job_span:
           steps:
