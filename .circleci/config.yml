@@ -27,7 +27,7 @@ jobs:
     steps:
       - buildevents/with_job_span:
           steps:
-            - aws_ecr/build-and-push-image:
+            - aws-ecr/build-and-push-image:
                 repo: "${ECR_REPO_PROD}"
                 tag: "${CIRCLE_SHA1}"
   publish-latest-tag-docker-image:
@@ -35,7 +35,7 @@ jobs:
     steps:
       - buildevents/with_job_span:
           steps:
-            - aws_ecr/build-and-push-image:
+            - aws-ecr/build-and-push-image:
                 repo: "${ECR_REPO_PROD}"
                 tag: "latest"
 
