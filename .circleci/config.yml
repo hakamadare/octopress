@@ -1,13 +1,11 @@
 version: 2.1
 
 orbs:
-  docker: circleci/docker@0.5.13
+  aws-ecr: circleci/aws-ecr@6.2.0
 
 workflows:
   build-and-publish-docker-image:
     jobs:
-      - docker/publish:
-          lint-dockerfile: true
-          treat-warnings-as-errors: true
-          deploy: false
-          image: $CIRCLE_PROJECT_USERNAME/someguyontheinternet
+      - aws-ecr/build-and-push-image:
+          repo: "${ECR_REPO_PROD}"
+          tag: "${CIRCLE_SHA1}"
