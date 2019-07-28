@@ -4,8 +4,10 @@ orbs:
   aws-ecr: circleci/aws-ecr@6.2.0
 
 workflows:
+  version: 2
   build-and-publish-docker-image:
     jobs:
       - aws-ecr/build-and-push-image:
+          context: "vecna.org"
           repo: "${ECR_REPO_PROD}"
           tag: "${CIRCLE_SHA1}"
