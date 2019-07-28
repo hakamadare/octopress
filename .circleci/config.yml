@@ -43,6 +43,7 @@ jobs:
     steps:
       - buildevents/with_job_span:
           steps:
+            - checkout
             - run:
                 name: "checkout-submodules"
                 command: |
