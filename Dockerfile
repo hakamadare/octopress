@@ -9,5 +9,4 @@ RUN hugo -v --enableGitInfo --cleanDestinationDir
 
 FROM nginx:stable-alpine
 
-RUN rm -f /usr/share/nginx/html/index.html
 COPY --from=hugo /src/public /usr/share/nginx/html
