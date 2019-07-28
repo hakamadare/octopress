@@ -4,17 +4,26 @@ orbs:
   aws-ecr: circleci/aws-ecr@6.2.0
   buildevents: honeycombio/buildevents@0.2.1
 
+executors:
+  go:
+    parameters:
+      goversion:
+        type: "string"
+        default: "12"
+      docker:
+        - image: "circleci/golang:1.<< parameters.goversion >>"
+
 jobs:
   setup:
-    executor: machine
+    executor: go
     steps:
       - buildevents/start_trace
   watch:
-    executor: machine
+    executor: go
     steps:
       - buildevents/watch_build_and_finish
   publish-sha1-tag-docker-image:
-    executor: machine
+    executor: go
     steps:
       - buildevents/with_job_span:
           steps:
@@ -22,7 +31,7 @@ jobs:
                 repo: "${ECR_REPO_PROD}"
                 tag: "${CIRCLE_SHA1}"
   publish-latest-tag-docker-image:
-    executor: machine
+    executor: go
     steps:
       - buildevents/with_job_span:
           steps:
