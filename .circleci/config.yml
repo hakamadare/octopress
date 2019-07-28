@@ -27,8 +27,15 @@ jobs:
     steps:
       - buildevents/with_job_span:
           steps:
+            - checkout
+            - run:
+                name: "checkout-submodules"
+                command: |
+                  git submodule init
+                  git submodule update
             - setup_remote_docker
             - aws-ecr/build-and-push-image:
+                checkout: false
                 repo: "${ECR_REPO_PROD}"
                 tag: "${CIRCLE_SHA1}"
   publish-latest-tag-docker-image:
@@ -37,7 +44,13 @@ jobs:
       - buildevents/with_job_span:
           steps:
             - setup_remote_docker
+            - run:
+                name: "checkout-submodules"
+                command: |
+                  git submodule init
+                  git submodule update
             - aws-ecr/build-and-push-image:
+                checkout: false
                 repo: "${ECR_REPO_PROD}"
                 tag: "latest"
 
