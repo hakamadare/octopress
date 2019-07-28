@@ -5,7 +5,7 @@ ENV HUGO_ENV production
 WORKDIR /src
 COPY . /src
 
-RUN hugo -v
+RUN hugo -v --enableGitInfo --cleanDestinationDir
 
 FROM nginx:stable-alpine
 
