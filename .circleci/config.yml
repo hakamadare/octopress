@@ -13,7 +13,7 @@ jobs:
     executor: machine
     steps:
       - buildevents/watch_build_and_finish
-  build-and-publish-docker-image:
+  publish-sha1-tag-docker-image:
     executor: machine
     steps:
       - buildevents/with_job_span:
@@ -21,6 +21,14 @@ jobs:
             - aws_ecr/build-and-push-image:
                 repo: "${ECR_REPO_PROD}"
                 tag: "${CIRCLE_SHA1}"
+  publish-latest-tag-docker-image:
+    executor: machine
+    steps:
+      - buildevents/with_job_span:
+          steps:
+            - aws_ecr/build-and-push-image:
+                repo: "${ECR_REPO_PROD}"
+                tag: "latest"
 
 workflows:
   version: 2
@@ -32,7 +40,14 @@ workflows:
           context: "vecna.org"
           requires:
             - setup
-      - build-and-publish-docker-image:
+      - publish-sha1-tag-docker-image:
           context: "vecna.org"
           requires:
             - setup
+      - publish-latest-tag-docker-image:
+          context: "vecna.org"
+          requires:
+            - setup
+          filters:
+            branches:
+              only: "master"
