@@ -17,15 +17,15 @@ executors:
 
 jobs:
   setup:
-    executor: default
+    executor: go
     steps:
       - buildevents/start_trace
   watch:
-    executor: default
+    executor: go
     steps:
       - buildevents/watch_build_and_finish
   publish-sha1-tag-docker-image:
-    executor: default
+    executor: go
     steps:
       - buildevents/with_job_span:
           steps:
@@ -41,7 +41,7 @@ jobs:
                 repo: "${ECR_REPO_PROD}"
                 tag: "${CIRCLE_SHA1}"
   publish-latest-tag-docker-image:
-    executor: default
+    executor: go
     steps:
       - buildevents/with_job_span:
           steps:
@@ -57,7 +57,7 @@ jobs:
                 repo: "${ECR_REPO_PROD}"
                 tag: "latest"
   update-version-configmap:
-    executor: default
+    executor: go
     steps:
       - buildevents/with_job_span:
           steps:
