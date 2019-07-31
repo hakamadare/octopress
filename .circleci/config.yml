@@ -57,6 +57,7 @@ jobs:
                 repo: "${ECR_REPO_PROD}"
                 tag: "latest"
   update-version-configmap:
+    executor: default
     steps:
       - buildevents/with_job_span:
           steps:
