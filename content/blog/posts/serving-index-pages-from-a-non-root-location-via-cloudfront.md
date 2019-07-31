@@ -5,7 +5,7 @@ date: 2015-01-12 13:22:36 -0500
 comments: true
 categories: work sysadmin signal tools
 ---
-As a change of pace from my [last post]({% post_url 2015-01-01-losing-weight %}), I now present you with a wonky AWS issue, created mostly by departing from Amazon's standard pattern of S3 static site hosting; hopefully this will be useful to someone else in a similar position.
+As a change of pace from my [last post]({{<  ref "/blog/posts/losing-weight" >}}), I now present you with a wonky AWS issue, created mostly by departing from Amazon's standard pattern of S3 static site hosting; hopefully this will be useful to someone else in a similar position.
 
 So, as you may be aware, you can use AWS S3 to [host a static website](http://docs.aws.amazon.com/AmazonS3/latest/dev/WebsiteHosting.html).  Furthermore, once you've done so it's not difficult to use AWS CloudFront (the content distribution network service) to serve out your site; the CloudFront workflow is clearly set up for you to put CloudFront in front of a S3-hosted website (such as [this blog]({% post_url 2014-03-30-hello-world %})!).
 
