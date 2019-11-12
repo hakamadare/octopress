@@ -1,4 +1,4 @@
-FROM cibuilds/hugo:0.57.1 as hugo
+FROM cibuilds/hugo:0.59 as hugo
 
 ENV HUGO_ENV production
 
